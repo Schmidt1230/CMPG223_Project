@@ -40,6 +40,7 @@ namespace CMPG223_Project
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chbForm = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@ namespace CMPG223_Project
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(60, 277);
+            this.btnLogin.Location = new System.Drawing.Point(61, 263);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(248, 68);
@@ -171,12 +172,24 @@ namespace CMPG223_Project
             this.label1.TabIndex = 8;
             this.label1.Text = "A L E X A N D E R";
             // 
+            // chbForm
+            // 
+            this.chbForm.AutoSize = true;
+            this.chbForm.Location = new System.Drawing.Point(216, 579);
+            this.chbForm.Name = "chbForm";
+            this.chbForm.Size = new System.Drawing.Size(95, 20);
+            this.chbForm.TabIndex = 13;
+            this.chbForm.Text = "checkBox1";
+            this.chbForm.UseVisualStyleBackColor = true;
+            this.chbForm.CheckedChanged += new System.EventHandler(this.chbForm_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(497, 614);
+            this.ClientSize = new System.Drawing.Size(504, 669);
+            this.Controls.Add(this.chbForm);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
@@ -207,6 +220,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chbForm;
     }
 }
 

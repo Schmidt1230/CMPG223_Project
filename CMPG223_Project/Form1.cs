@@ -45,7 +45,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                String sqlstatement = "Select user_name,user_password From Table";
+                String sqlstatement = "Select user_name,user_password From Users";
                 comm = new SqlCommand(sqlstatement, conn);
                 read= comm.ExecuteReader();
 
@@ -57,7 +57,7 @@ namespace CMPG223_Project
                             conn.Close();
                             return false;
                         }
-                        else if (read.GetString(0)==Username && read.GetString(1)==read.GetString(1)) 
+                    else if ((read.GetString(0)==Username) && (read.GetString(1)==password)) 
                         {
                             MessageBox.Show("Login Successfull");
                             conn.Close();
@@ -82,8 +82,14 @@ namespace CMPG223_Project
         {
             if (verifyUser(txtUsername.Text,txtPassword.Text) == true)
             {
-                MessageBox.Show("");
+                MessageBox.Show("Success");
             }
+        }
+
+        private void chbForm_CheckedChanged(object sender, EventArgs e)
+        {
+            frmDevices devices = new frmDevices();
+            devices.Show();
         }
     }
 }
