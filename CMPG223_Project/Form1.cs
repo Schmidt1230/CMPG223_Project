@@ -1,4 +1,6 @@
-﻿using System;
+﻿//41093615
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,7 +64,7 @@ namespace CMPG223_Project
                         }
                 }//While
 
-                //If User was not found and while loop execution has finnished
+                //If User was not found and while loop execution has finished.
                 MessageBox.Show("User was not found");
                 conn.Close();
                 return false;
