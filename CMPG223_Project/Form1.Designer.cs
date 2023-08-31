@@ -50,7 +50,7 @@ namespace CMPG223_Project
             this.lblDate.Location = new System.Drawing.Point(348, 66);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(136, 32);
+            this.lblDate.Size = new System.Drawing.Size(135, 32);
             this.lblDate.TabIndex = 12;
             this.lblDate.Text = "2000/09/27";
             // 
@@ -96,6 +96,7 @@ namespace CMPG223_Project
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Proceed";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -144,7 +145,7 @@ namespace CMPG223_Project
             this.label3.Location = new System.Drawing.Point(13, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 46);
+            this.label3.Size = new System.Drawing.Size(193, 45);
             this.label3.TabIndex = 10;
             this.label3.Text = "R E P A I R S";
             // 
@@ -155,7 +156,7 @@ namespace CMPG223_Project
             this.label2.Location = new System.Drawing.Point(13, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 46);
+            this.label2.Size = new System.Drawing.Size(124, 45);
             this.label2.TabIndex = 9;
             this.label2.Text = "T E C H";
             // 
@@ -166,7 +167,7 @@ namespace CMPG223_Project
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 46);
+            this.label1.Size = new System.Drawing.Size(268, 45);
             this.label1.TabIndex = 8;
             this.label1.Text = "A L E X A N D E R";
             // 
