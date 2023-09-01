@@ -30,19 +30,19 @@ namespace CMPG223_Project
         private void InitializeComponent()
         {
             this.gbxAddClient = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCellNumber = new System.Windows.Forms.Label();
+            this.txtCellNumber = new System.Windows.Forms.TextBox();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblCellNumber = new System.Windows.Forms.Label();
-            this.txtCellNumber = new System.Windows.Forms.TextBox();
             this.gbxRemoveClient = new System.Windows.Forms.GroupBox();
             this.btnRemoveClient = new System.Windows.Forms.Button();
             this.lblClientID = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRemoveClient = new System.Windows.Forms.TextBox();
             this.gbxUpdateClient = new System.Windows.Forms.GroupBox();
             this.txtEmailUpdate = new System.Windows.Forms.TextBox();
             this.lblEmailUpdate = new System.Windows.Forms.Label();
@@ -80,6 +80,42 @@ namespace CMPG223_Project
             this.gbxAddClient.TabStop = false;
             this.gbxAddClient.Text = "Add Client";
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtEmail.Location = new System.Drawing.Point(29, 313);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(186, 33);
+            this.txtEmail.TabIndex = 11;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Yu Gothic UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(54, 280);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(141, 30);
+            this.lblEmail.TabIndex = 10;
+            this.lblEmail.Text = "Email Address:";
+            // 
+            // lblCellNumber
+            // 
+            this.lblCellNumber.AutoSize = true;
+            this.lblCellNumber.Font = new System.Drawing.Font("Yu Gothic UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCellNumber.Location = new System.Drawing.Point(29, 198);
+            this.lblCellNumber.Name = "lblCellNumber";
+            this.lblCellNumber.Size = new System.Drawing.Size(186, 30);
+            this.lblCellNumber.TabIndex = 9;
+            this.lblCellNumber.Text = "Cellphone Number:";
+            // 
+            // txtCellNumber
+            // 
+            this.txtCellNumber.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCellNumber.Location = new System.Drawing.Point(29, 231);
+            this.txtCellNumber.Name = "txtCellNumber";
+            this.txtCellNumber.Size = new System.Drawing.Size(186, 33);
+            this.txtCellNumber.TabIndex = 8;
+            // 
             // btnAddClient
             // 
             this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -90,6 +126,7 @@ namespace CMPG223_Project
             this.btnAddClient.TabIndex = 7;
             this.btnAddClient.Text = "Add Client";
             this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // txtLastName
             // 
@@ -127,47 +164,11 @@ namespace CMPG223_Project
             this.txtFirstName.Size = new System.Drawing.Size(186, 33);
             this.txtFirstName.TabIndex = 0;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtEmail.Location = new System.Drawing.Point(29, 313);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(186, 33);
-            this.txtEmail.TabIndex = 11;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Yu Gothic UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(54, 280);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(141, 30);
-            this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "Email Address:";
-            // 
-            // lblCellNumber
-            // 
-            this.lblCellNumber.AutoSize = true;
-            this.lblCellNumber.Font = new System.Drawing.Font("Yu Gothic UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCellNumber.Location = new System.Drawing.Point(29, 198);
-            this.lblCellNumber.Name = "lblCellNumber";
-            this.lblCellNumber.Size = new System.Drawing.Size(186, 30);
-            this.lblCellNumber.TabIndex = 9;
-            this.lblCellNumber.Text = "Cellphone Number:";
-            // 
-            // txtCellNumber
-            // 
-            this.txtCellNumber.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtCellNumber.Location = new System.Drawing.Point(29, 231);
-            this.txtCellNumber.Name = "txtCellNumber";
-            this.txtCellNumber.Size = new System.Drawing.Size(186, 33);
-            this.txtCellNumber.TabIndex = 8;
-            // 
             // gbxRemoveClient
             // 
             this.gbxRemoveClient.Controls.Add(this.btnRemoveClient);
             this.gbxRemoveClient.Controls.Add(this.lblClientID);
-            this.gbxRemoveClient.Controls.Add(this.textBox4);
+            this.gbxRemoveClient.Controls.Add(this.txtRemoveClient);
             this.gbxRemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxRemoveClient.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxRemoveClient.Location = new System.Drawing.Point(287, 12);
@@ -187,6 +188,7 @@ namespace CMPG223_Project
             this.btnRemoveClient.TabIndex = 7;
             this.btnRemoveClient.Text = "Remove Client";
             this.btnRemoveClient.UseVisualStyleBackColor = true;
+            this.btnRemoveClient.Click += new System.EventHandler(this.btnRemoveClient_Click);
             // 
             // lblClientID
             // 
@@ -198,13 +200,13 @@ namespace CMPG223_Project
             this.lblClientID.TabIndex = 4;
             this.lblClientID.Text = "Client_ID:";
             // 
-            // textBox4
+            // txtRemoveClient
             // 
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox4.Location = new System.Drawing.Point(29, 62);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 33);
-            this.textBox4.TabIndex = 0;
+            this.txtRemoveClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtRemoveClient.Location = new System.Drawing.Point(29, 62);
+            this.txtRemoveClient.Name = "txtRemoveClient";
+            this.txtRemoveClient.Size = new System.Drawing.Size(186, 33);
+            this.txtRemoveClient.TabIndex = 0;
             // 
             // gbxUpdateClient
             // 
@@ -272,6 +274,7 @@ namespace CMPG223_Project
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Client";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtLNUpdate
             // 
@@ -354,7 +357,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.GroupBox gbxRemoveClient;
         private System.Windows.Forms.Button btnRemoveClient;
         private System.Windows.Forms.Label lblClientID;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRemoveClient;
         private System.Windows.Forms.GroupBox gbxUpdateClient;
         private System.Windows.Forms.TextBox txtEmailUpdate;
         private System.Windows.Forms.Label lblEmailUpdate;

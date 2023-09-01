@@ -31,7 +31,14 @@ namespace CMPG223_Project
 
         private void btnAddTechnician_Click(object sender, EventArgs e)
         {
+            string technicianFN = txtFirstName.Text;
+            string technicianLN = txtLastName.Text;
+            string technicianCN = txtCellNumber.Text;
+            string technicianEmail = txtEmail.Text;
 
+            //Call Add Method
+
+            MessageBox.Show("Technician added successfully.");
         }
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
