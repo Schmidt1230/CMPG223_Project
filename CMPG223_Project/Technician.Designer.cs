@@ -127,6 +127,7 @@ namespace CMPG223_Project
             this.btnAddTechnician.TabIndex = 7;
             this.btnAddTechnician.Text = "Add Technician";
             this.btnAddTechnician.UseVisualStyleBackColor = true;
+            this.btnAddTechnician.Click += new System.EventHandler(this.btnAddTechnician_Click);
             // 
             // txtLastName
             // 
@@ -329,6 +330,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.gbxAddTechnician);
             this.Name = "Technician";
             this.Text = "Technician";
+            this.Load += new System.EventHandler(this.Technician_Load);
             this.gbxAddTechnician.ResumeLayout(false);
             this.gbxAddTechnician.PerformLayout();
             this.gbxUpdateTechnician.ResumeLayout(false);
