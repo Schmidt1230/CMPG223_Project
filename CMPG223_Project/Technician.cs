@@ -19,6 +19,25 @@ namespace CMPG223_Project
             InitializeComponent();
         }
 
+        //MessageBox method.
+        private void showMessage(string message, string title)
+        {
+            int technicianID = int.Parse(txtTech_ID.Text);
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+
+            //Display messagebox.
+            if (result == DialogResult.Yes)
+            {
+                //Call Remove Method
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
         private void gbxAddClient_Enter(object sender, EventArgs e)
         {
 
@@ -43,7 +62,21 @@ namespace CMPG223_Project
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
         {
+            string technicianFNUpdate = txtFNUpdate.Text;
+            string technicianLNUpdate = txtLNUpdate.Text;
+            string technicianCNUpdate = txtCNUpdate.Text;
+            string technicianEmailUpdate = txtEmailUpdate.Text;
 
+            //Call Update Method
+
+            //Call showMessage Method
+            showMessage("Update client information?", "Update Client Information");
+        }
+
+        private void btnRemoveTechnician_Click(object sender, EventArgs e)
+        {
+            //Call showMessage method.
+            showMessage("Permanently remove technician information?", "Remove Technician Information");
         }
     }
 }

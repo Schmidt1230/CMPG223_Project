@@ -183,7 +183,7 @@ namespace CMPG223_Project
             this.gbxUpdateTechnician.Size = new System.Drawing.Size(246, 451);
             this.gbxUpdateTechnician.TabIndex = 14;
             this.gbxUpdateTechnician.TabStop = false;
-            this.gbxUpdateTechnician.Text = "Update Technician Information";
+            this.gbxUpdateTechnician.Text = "Update Technician";
             // 
             // txtEmailUpdate
             // 
@@ -293,6 +293,7 @@ namespace CMPG223_Project
             this.btnRemoveTechnician.TabIndex = 7;
             this.btnRemoveTechnician.Text = "Remove Technician";
             this.btnRemoveTechnician.UseVisualStyleBackColor = true;
+            this.btnRemoveTechnician.Click += new System.EventHandler(this.btnRemoveTechnician_Click);
             // 
             // lblTechnicianID
             // 
@@ -325,7 +326,7 @@ namespace CMPG223_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 749);
+            this.ClientSize = new System.Drawing.Size(807, 749);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbxUpdateTechnician);
             this.Controls.Add(this.gbxRemoveTechnician);

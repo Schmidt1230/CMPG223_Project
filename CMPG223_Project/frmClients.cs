@@ -19,7 +19,7 @@ namespace CMPG223_Project
         }
 
         //MessageBox method.
-        public void showMessage(string message, string title)
+        private void showMessage(string message, string title)
         {
             int clientID = int.Parse(txtRemoveClient.Text);
 
