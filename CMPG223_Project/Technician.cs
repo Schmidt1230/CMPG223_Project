@@ -16,5 +16,10 @@ namespace CMPG223_Project
         {
             InitializeComponent();
         }
+
+        private void gbxAddClient_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
