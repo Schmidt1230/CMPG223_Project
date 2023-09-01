@@ -33,5 +33,10 @@ namespace CMPG223_Project
         {
 
         }
+
+        private void btnUpdateTechnician_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

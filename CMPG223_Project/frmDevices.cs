@@ -51,15 +51,25 @@ namespace CMPG223_Project
         private void rdbUpdate_CheckedChanged(object sender, EventArgs e)
         {
             lblNavigate.Text = "Update Devices";
-            grpbxUpdate.Visible = true;
+            grpbxRemove.Visible = false;
             grpbxAddDevices.Visible = false;
+            grpEdit.Visible = true;
         }
 
         private void rdbAdd_CheckedChanged(object sender, EventArgs e)
         {
             lblNavigate.Text = "Add Devices";
             grpbxAddDevices.Visible = true;
-            grpbxUpdate.Visible = false;
+            grpbxRemove.Visible = false;
+            grpEdit.Visible = false;
+        }
+
+        private void rdbRemove_CheckedChanged(object sender, EventArgs e)
+        {
+            lblNavigate.Text = "Remove Devices";
+            grpbxRemove.Visible = true;
+            grpbxAddDevices.Visible = false;
+            grpEdit.Visible = false;
         }
     }
 }

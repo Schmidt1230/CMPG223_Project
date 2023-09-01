@@ -8,7 +8,6 @@ C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.csproj.CoreCompileInputs.cache
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.exe
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.pdb
-C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.csproj.SuggestedBindingRedirects.cache
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmDevices.resources
 C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.csproj.AssemblyReference.cache
 C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmLogin.resources
@@ -23,3 +22,5 @@ C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\C
 C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\bin\Debug\CMPG223_Project.exe.config
 C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\bin\Debug\CMPG223_Project.exe
 C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\bin\Debug\CMPG223_Project.pdb
+C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmClients.resources
+C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.Technician.resources
