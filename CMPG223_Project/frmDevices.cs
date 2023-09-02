@@ -43,7 +43,7 @@ namespace CMPG223_Project
         private void txtNewDetails_TextChanged(object sender, EventArgs e)
         {
             int Characters = 100 - txtNewDetails.Text.Length;
-            lblWords.Text = "Characters left = "+Characters;
+            lblWords.Text = "Characters left = "+ Characters;
 
             if(Characters<0)
                 lblWords.ForeColor= Color.Red;
@@ -152,7 +152,7 @@ namespace CMPG223_Project
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            sqlstatement = $"Select * from devices where ID LIKE %{txtFind}%";
+            sqlstatement = $"Select * from devices where ID LIKE %{txtFind.Text}%";
             dispDevices(sqlstatement);
 
         }

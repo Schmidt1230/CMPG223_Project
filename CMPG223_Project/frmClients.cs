@@ -13,9 +13,96 @@ namespace CMPG223_Project
 {
     public partial class frmClients : Form
     {
+        SqlConnection conn = new SqlConnection(@"");
+        SqlCommand com = new SqlCommand();
+        String query;
+        SqlDataAdapter dataAdapter = new SqlDataAdapter();
+
+        //Declare public variables.
+        public string clientFN;
+        public string clientLN;
+        public string clientCN;
+        public string clientEmail;
+
+        public string clientFNUpdate;
+        public string clientLNUpdate;
+        public string clientCNUpdate;
+        public string clientEmailUpdate;
+
+        public int clientID;
+
         public frmClients()
         {
             InitializeComponent();
+        }
+
+        //addClient Method.
+        private void addClient(String query)
+        {
+            try
+            {
+                conn.Open();
+
+                query = $"INSERT INTO Clients (FirstName, LastName, ContactNumber, Email) VALUES ({clientFN}, {clientLN}, {clientCN}, {clientEmail})";
+                com = new SqlCommand(query, conn);
+                dataAdapter.InsertCommand = com;
+                com.ExecuteNonQuery();
+
+                MessageBox.Show("Client added successfully");
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        //UpdateClient Method
+        private void UpdateClient(String query)
+        {
+            try
+            {
+                conn.Open();
+
+                query = $"UPDATE Clients SET FirstName = {clientFNUpdate}, LastName = {clientLNUpdate}, ContactNumber = {clientCNUpdate}, Email = {clientEmailUpdate} WHERE FirstName = {clientFNUpdate}";
+                com = new SqlCommand(query, conn);
+                dataAdapter.UpdateCommand = com;
+                com.ExecuteNonQuery();
+
+                MessageBox.Show("Client information updated successfully.");
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        //DeleteClient Method
+        private void DeleteClient(string query, int clientID)
+        {
+            try
+            {
+                conn.Open();
+
+                query = $"DELETE FROM Clients WHERE ClientID = {clientID}";
+                com = new SqlCommand(query, conn);
+                dataAdapter.DeleteCommand = com;
+                com.ExecuteNonQuery();
+
+                MessageBox.Show("Client information deleted successfully.");
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+
+                MessageBox.Show(error.Message);
+            }
         }
 
         //MessageBox method.
@@ -29,7 +116,7 @@ namespace CMPG223_Project
             //Display messagebox.
             if (result == DialogResult.Yes)
             {
-                //Call Remove Method
+                //Call Remove/Update Method ?????
             }
             else
             {
@@ -39,33 +126,41 @@ namespace CMPG223_Project
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            string clientFN = txtFirstName.Text;
-            string clientLN = txtLastName.Text;
-            string clientCN = txtCellNumber.Text;
-            string clientEmail = txtEmail.Text;
+            clientFN = txtFirstName.Text;
+            clientLN = txtLastName.Text;
+            clientCN = txtCellNumber.Text;
+            clientEmail = txtEmail.Text;
 
-            //Call Add Method
+            //Call addClient Method
+            addClient(query);
 
             MessageBox.Show("Client added successfully.");
+
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtCellNumber.Clear();
+            txtEmail.Clear();
         }
 
         private void btnRemoveClient_Click(object sender, EventArgs e)
         {
+            clientID = int.Parse(txtRemoveClient.Text);
+            
             //Call showMessage method.
             showMessage("Permanently remove client information?", "Remove Client");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string clientFNUpdate = txtFNUpdate.Text;
-            string clientLNUpdate = txtLNUpdate.Text;
-            string clientCNUpdate = txtCNUpdate.Text;
-            string clientEmailUpdate = txtEmailUpdate.Text;
-
-            //Call Update Method
+            clientFNUpdate = txtFNUpdate.Text;
+            clientLNUpdate = txtLNUpdate.Text;
+            clientCNUpdate = txtCNUpdate.Text;
+            clientEmailUpdate = txtEmailUpdate.Text;
 
             //Call showMessage Method
             showMessage("Update client information?", "Update Client Information");
+
+            //Call Update Method
         }
     }
 }
