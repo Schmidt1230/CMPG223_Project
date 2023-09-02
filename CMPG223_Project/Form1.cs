@@ -88,5 +88,10 @@ namespace CMPG223_Project
             frmDevices devices = new frmDevices();
             devices.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //IGNORE THIS
+        }
     }
 }
