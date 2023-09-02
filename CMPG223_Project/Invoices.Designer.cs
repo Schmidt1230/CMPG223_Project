@@ -1,7 +1,7 @@
 ﻿
 namespace CMPG223_Project
 {
-    partial class Invoices
+    partial class frmInvoices
     {
         /// <summary>
         /// Required designer variable.
@@ -33,10 +33,10 @@ namespace CMPG223_Project
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxKeyboard = new System.Windows.Forms.CheckBox();
-            this.cbxScreen = new System.Windows.Forms.CheckBox();
-            this.cbxBattery = new System.Windows.Forms.CheckBox();
-            this.cbxVirus = new System.Windows.Forms.CheckBox();
-            this.cbxMotherboard = new System.Windows.Forms.CheckBox();
+            this.cbxCompScreen = new System.Windows.Forms.CheckBox();
+            this.cbxCompBattery = new System.Windows.Forms.CheckBox();
+            this.cbxCompVirus = new System.Windows.Forms.CheckBox();
+            this.cbxCompMotherboard = new System.Windows.Forms.CheckBox();
             this.cbxDisk = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,13 +54,13 @@ namespace CMPG223_Project
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.cbxCellMotherboard = new System.Windows.Forms.CheckBox();
+            this.cbxCellVirus = new System.Windows.Forms.CheckBox();
+            this.cbxCellBattery = new System.Windows.Forms.CheckBox();
+            this.cbxCellScreen = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbxCharge = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCompExcVAT = new System.Windows.Forms.TextBox();
             this.txtCompVAT = new System.Windows.Forms.TextBox();
@@ -101,10 +101,10 @@ namespace CMPG223_Project
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.cbxDisk);
-            this.groupBox1.Controls.Add(this.cbxMotherboard);
-            this.groupBox1.Controls.Add(this.cbxVirus);
-            this.groupBox1.Controls.Add(this.cbxBattery);
-            this.groupBox1.Controls.Add(this.cbxScreen);
+            this.groupBox1.Controls.Add(this.cbxCompMotherboard);
+            this.groupBox1.Controls.Add(this.cbxCompVirus);
+            this.groupBox1.Controls.Add(this.cbxCompBattery);
+            this.groupBox1.Controls.Add(this.cbxCompScreen);
             this.groupBox1.Controls.Add(this.cbxKeyboard);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -133,46 +133,51 @@ namespace CMPG223_Project
             this.cbxKeyboard.TabIndex = 2;
             this.cbxKeyboard.Text = "Broken Keyboard";
             this.cbxKeyboard.UseVisualStyleBackColor = true;
+            this.cbxKeyboard.CheckedChanged += new System.EventHandler(this.cbxKeyboard_CheckedChanged);
             // 
-            // cbxScreen
+            // cbxCompScreen
             // 
-            this.cbxScreen.AutoSize = true;
-            this.cbxScreen.Location = new System.Drawing.Point(18, 108);
-            this.cbxScreen.Name = "cbxScreen";
-            this.cbxScreen.Size = new System.Drawing.Size(97, 17);
-            this.cbxScreen.TabIndex = 3;
-            this.cbxScreen.Text = "Broken Screen";
-            this.cbxScreen.UseVisualStyleBackColor = true;
+            this.cbxCompScreen.AutoSize = true;
+            this.cbxCompScreen.Location = new System.Drawing.Point(18, 108);
+            this.cbxCompScreen.Name = "cbxCompScreen";
+            this.cbxCompScreen.Size = new System.Drawing.Size(97, 17);
+            this.cbxCompScreen.TabIndex = 3;
+            this.cbxCompScreen.Text = "Broken Screen";
+            this.cbxCompScreen.UseVisualStyleBackColor = true;
+            this.cbxCompScreen.CheckedChanged += new System.EventHandler(this.cbxScreen_CheckedChanged);
             // 
-            // cbxBattery
+            // cbxCompBattery
             // 
-            this.cbxBattery.AutoSize = true;
-            this.cbxBattery.Location = new System.Drawing.Point(18, 131);
-            this.cbxBattery.Name = "cbxBattery";
-            this.cbxBattery.Size = new System.Drawing.Size(96, 17);
-            this.cbxBattery.TabIndex = 4;
-            this.cbxBattery.Text = "Broken Battery";
-            this.cbxBattery.UseVisualStyleBackColor = true;
+            this.cbxCompBattery.AutoSize = true;
+            this.cbxCompBattery.Location = new System.Drawing.Point(18, 131);
+            this.cbxCompBattery.Name = "cbxCompBattery";
+            this.cbxCompBattery.Size = new System.Drawing.Size(96, 17);
+            this.cbxCompBattery.TabIndex = 4;
+            this.cbxCompBattery.Text = "Broken Battery";
+            this.cbxCompBattery.UseVisualStyleBackColor = true;
+            this.cbxCompBattery.CheckedChanged += new System.EventHandler(this.cbxBattery_CheckedChanged);
             // 
-            // cbxVirus
+            // cbxCompVirus
             // 
-            this.cbxVirus.AutoSize = true;
-            this.cbxVirus.Location = new System.Drawing.Point(18, 154);
-            this.cbxVirus.Name = "cbxVirus";
-            this.cbxVirus.Size = new System.Drawing.Size(93, 17);
-            this.cbxVirus.TabIndex = 5;
-            this.cbxVirus.Text = "Virus Infection";
-            this.cbxVirus.UseVisualStyleBackColor = true;
+            this.cbxCompVirus.AutoSize = true;
+            this.cbxCompVirus.Location = new System.Drawing.Point(18, 154);
+            this.cbxCompVirus.Name = "cbxCompVirus";
+            this.cbxCompVirus.Size = new System.Drawing.Size(93, 17);
+            this.cbxCompVirus.TabIndex = 5;
+            this.cbxCompVirus.Text = "Virus Infection";
+            this.cbxCompVirus.UseVisualStyleBackColor = true;
+            this.cbxCompVirus.CheckedChanged += new System.EventHandler(this.cbxVirus_CheckedChanged);
             // 
-            // cbxMotherboard
+            // cbxCompMotherboard
             // 
-            this.cbxMotherboard.AutoSize = true;
-            this.cbxMotherboard.Location = new System.Drawing.Point(18, 177);
-            this.cbxMotherboard.Name = "cbxMotherboard";
-            this.cbxMotherboard.Size = new System.Drawing.Size(120, 17);
-            this.cbxMotherboard.TabIndex = 6;
-            this.cbxMotherboard.Text = "Motherboard Failure";
-            this.cbxMotherboard.UseVisualStyleBackColor = true;
+            this.cbxCompMotherboard.AutoSize = true;
+            this.cbxCompMotherboard.Location = new System.Drawing.Point(18, 177);
+            this.cbxCompMotherboard.Name = "cbxCompMotherboard";
+            this.cbxCompMotherboard.Size = new System.Drawing.Size(120, 17);
+            this.cbxCompMotherboard.TabIndex = 6;
+            this.cbxCompMotherboard.Text = "Motherboard Failure";
+            this.cbxCompMotherboard.UseVisualStyleBackColor = true;
+            this.cbxCompMotherboard.CheckedChanged += new System.EventHandler(this.cbxMotherboard_CheckedChanged);
             // 
             // cbxDisk
             // 
@@ -183,6 +188,7 @@ namespace CMPG223_Project
             this.cbxDisk.TabIndex = 7;
             this.cbxDisk.Text = "HardDrive Failure";
             this.cbxDisk.UseVisualStyleBackColor = true;
+            this.cbxDisk.CheckedChanged += new System.EventHandler(this.cbxDisk_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -271,12 +277,12 @@ namespace CMPG223_Project
             this.groupBox3.Controls.Add(this.txtCellVAT);
             this.groupBox3.Controls.Add(this.txtCellExcVAT);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.cbxCharge);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.checkBox5);
+            this.groupBox3.Controls.Add(this.cbxCellMotherboard);
+            this.groupBox3.Controls.Add(this.cbxCellVirus);
+            this.groupBox3.Controls.Add(this.cbxCellBattery);
+            this.groupBox3.Controls.Add(this.cbxCellScreen);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Location = new System.Drawing.Point(270, 12);
@@ -355,45 +361,49 @@ namespace CMPG223_Project
             this.label16.TabIndex = 0;
             this.label16.Text = "R 250";
             // 
-            // checkBox2
+            // cbxCellMotherboard
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 151);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(120, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "Motherboard Failure";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbxCellMotherboard.AutoSize = true;
+            this.cbxCellMotherboard.Location = new System.Drawing.Point(14, 151);
+            this.cbxCellMotherboard.Name = "cbxCellMotherboard";
+            this.cbxCellMotherboard.Size = new System.Drawing.Size(120, 17);
+            this.cbxCellMotherboard.TabIndex = 6;
+            this.cbxCellMotherboard.Text = "Motherboard Failure";
+            this.cbxCellMotherboard.UseVisualStyleBackColor = true;
+            this.cbxCellMotherboard.CheckedChanged += new System.EventHandler(this.cbxCellMotherboard_CheckedChanged);
             // 
-            // checkBox3
+            // cbxCellVirus
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(14, 128);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(93, 17);
-            this.checkBox3.TabIndex = 5;
-            this.checkBox3.Text = "Virus Infection";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbxCellVirus.AutoSize = true;
+            this.cbxCellVirus.Location = new System.Drawing.Point(14, 128);
+            this.cbxCellVirus.Name = "cbxCellVirus";
+            this.cbxCellVirus.Size = new System.Drawing.Size(93, 17);
+            this.cbxCellVirus.TabIndex = 5;
+            this.cbxCellVirus.Text = "Virus Infection";
+            this.cbxCellVirus.UseVisualStyleBackColor = true;
+            this.cbxCellVirus.CheckedChanged += new System.EventHandler(this.cbxCellVirus_CheckedChanged);
             // 
-            // checkBox4
+            // cbxCellBattery
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(14, 108);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(96, 17);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "Broken Battery";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbxCellBattery.AutoSize = true;
+            this.cbxCellBattery.Location = new System.Drawing.Point(14, 108);
+            this.cbxCellBattery.Name = "cbxCellBattery";
+            this.cbxCellBattery.Size = new System.Drawing.Size(96, 17);
+            this.cbxCellBattery.TabIndex = 4;
+            this.cbxCellBattery.Text = "Broken Battery";
+            this.cbxCellBattery.UseVisualStyleBackColor = true;
+            this.cbxCellBattery.CheckedChanged += new System.EventHandler(this.cbxCellBattery_CheckedChanged);
             // 
-            // checkBox5
+            // cbxCellScreen
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(14, 85);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(97, 17);
-            this.checkBox5.TabIndex = 3;
-            this.checkBox5.Text = "Broken Screen";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbxCellScreen.AutoSize = true;
+            this.cbxCellScreen.Location = new System.Drawing.Point(14, 85);
+            this.cbxCellScreen.Name = "cbxCellScreen";
+            this.cbxCellScreen.Size = new System.Drawing.Size(97, 17);
+            this.cbxCellScreen.TabIndex = 3;
+            this.cbxCellScreen.Text = "Broken Screen";
+            this.cbxCellScreen.UseVisualStyleBackColor = true;
+            this.cbxCellScreen.CheckedChanged += new System.EventHandler(this.cbxCellScreen_CheckedChanged);
             // 
             // label17
             // 
@@ -413,20 +423,21 @@ namespace CMPG223_Project
             this.label18.TabIndex = 0;
             this.label18.Text = "Base Inspection Fee:";
             // 
-            // checkBox1
+            // cbxCharge
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(14, 174);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(139, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Damaged Charging Port";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxCharge.AutoSize = true;
+            this.cbxCharge.Location = new System.Drawing.Point(14, 174);
+            this.cbxCharge.Name = "cbxCharge";
+            this.cbxCharge.Size = new System.Drawing.Size(139, 17);
+            this.cbxCharge.TabIndex = 9;
+            this.cbxCharge.Text = "Damaged Charging Port";
+            this.cbxCharge.UseVisualStyleBackColor = true;
+            this.cbxCharge.CheckedChanged += new System.EventHandler(this.cbxCharge_CheckedChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 233);
+            this.label15.Location = new System.Drawing.Point(24, 233);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 13);
             this.label15.TabIndex = 9;
@@ -436,6 +447,7 @@ namespace CMPG223_Project
             // 
             this.txtCompExcVAT.Location = new System.Drawing.Point(137, 230);
             this.txtCompExcVAT.Name = "txtCompExcVAT";
+            this.txtCompExcVAT.ReadOnly = true;
             this.txtCompExcVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCompExcVAT.TabIndex = 10;
             // 
@@ -443,13 +455,14 @@ namespace CMPG223_Project
             // 
             this.txtCompVAT.Location = new System.Drawing.Point(137, 257);
             this.txtCompVAT.Name = "txtCompVAT";
+            this.txtCompVAT.ReadOnly = true;
             this.txtCompVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCompVAT.TabIndex = 11;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(16, 260);
+            this.label19.Location = new System.Drawing.Point(24, 257);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 13);
             this.label19.TabIndex = 12;
@@ -458,7 +471,7 @@ namespace CMPG223_Project
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 282);
+            this.label20.Location = new System.Drawing.Point(24, 282);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 13);
             this.label20.TabIndex = 13;
@@ -468,6 +481,7 @@ namespace CMPG223_Project
             // 
             this.txtCompTotal.Location = new System.Drawing.Point(137, 284);
             this.txtCompTotal.Name = "txtCompTotal";
+            this.txtCompTotal.ReadOnly = true;
             this.txtCompTotal.Size = new System.Drawing.Size(100, 20);
             this.txtCompTotal.TabIndex = 14;
             // 
@@ -475,6 +489,7 @@ namespace CMPG223_Project
             // 
             this.txtCellTotal.Location = new System.Drawing.Point(133, 284);
             this.txtCellTotal.Name = "txtCellTotal";
+            this.txtCellTotal.ReadOnly = true;
             this.txtCellTotal.Size = new System.Drawing.Size(100, 20);
             this.txtCellTotal.TabIndex = 20;
             // 
@@ -500,6 +515,7 @@ namespace CMPG223_Project
             // 
             this.txtCellVAT.Location = new System.Drawing.Point(133, 257);
             this.txtCellVAT.Name = "txtCellVAT";
+            this.txtCellVAT.ReadOnly = true;
             this.txtCellVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCellVAT.TabIndex = 17;
             // 
@@ -507,6 +523,7 @@ namespace CMPG223_Project
             // 
             this.txtCellExcVAT.Location = new System.Drawing.Point(133, 230);
             this.txtCellExcVAT.Name = "txtCellExcVAT";
+            this.txtCellExcVAT.ReadOnly = true;
             this.txtCellExcVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCellExcVAT.TabIndex = 16;
             // 
@@ -545,7 +562,7 @@ namespace CMPG223_Project
             this.btnPrintInvoice.Text = "Print Invoice";
             this.btnPrintInvoice.UseVisualStyleBackColor = true;
             // 
-            // Invoices
+            // frmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -555,8 +572,9 @@ namespace CMPG223_Project
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Invoices";
+            this.Name = "frmInvoices";
             this.Text = "Invoices";
+            this.Load += new System.EventHandler(this.frmInvoices_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -582,10 +600,10 @@ namespace CMPG223_Project
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox cbxDisk;
-        private System.Windows.Forms.CheckBox cbxMotherboard;
-        private System.Windows.Forms.CheckBox cbxVirus;
-        private System.Windows.Forms.CheckBox cbxBattery;
-        private System.Windows.Forms.CheckBox cbxScreen;
+        private System.Windows.Forms.CheckBox cbxCompMotherboard;
+        private System.Windows.Forms.CheckBox cbxCompVirus;
+        private System.Windows.Forms.CheckBox cbxCompBattery;
+        private System.Windows.Forms.CheckBox cbxCompScreen;
         private System.Windows.Forms.CheckBox cbxKeyboard;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -596,10 +614,10 @@ namespace CMPG223_Project
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox cbxCellMotherboard;
+        private System.Windows.Forms.CheckBox cbxCellVirus;
+        private System.Windows.Forms.CheckBox cbxCellBattery;
+        private System.Windows.Forms.CheckBox cbxCellScreen;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtCompTotal;
@@ -614,7 +632,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.TextBox txtCellVAT;
         private System.Windows.Forms.TextBox txtCellExcVAT;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbxCharge;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnViewInvoice;
         private System.Windows.Forms.Button btnPrintInvoice;
