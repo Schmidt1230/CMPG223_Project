@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CMPG223_Project
 {
     public partial class frmDevices : Form
     {
+        SqlConnection conn = new SqlConnection(@"");
+        SqlCommand comm = new SqlCommand();
+        String sqlstatement;
+        SqlDataAdapter adap = new SqlDataAdapter();
+        
+
+
         public frmDevices()
         {
             InitializeComponent();
@@ -48,28 +56,135 @@ namespace CMPG223_Project
 
         }
 
-        private void rdbUpdate_CheckedChanged(object sender, EventArgs e)
+        private void frmDevices_Load(object sender, EventArgs e)
         {
-            lblNavigate.Text = "Update Devices";
-            grpbxRemove.Visible = false;
-            grpbxAddDevices.Visible = false;
-            grpEdit.Visible = true;
+
         }
 
-        private void rdbAdd_CheckedChanged(object sender, EventArgs e)
+        private void AddDevice(String sqlStatement)
         {
-            lblNavigate.Text = "Add Devices";
-            grpbxAddDevices.Visible = true;
-            grpbxRemove.Visible = false;
-            grpEdit.Visible = false;
+            Boolean fixable = false;
+            try
+            {
+                conn.Open();
+                if (chbFixable.Checked)
+                {
+                    fixable = true;
+                }
+                sqlstatement = $"Insert Into Devices (Device_Type,Fixable,Details,Repair_History) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
+                comm = new SqlCommand(sqlStatement, conn);
+                adap.InsertCommand = comm;
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Device was added successfully");
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+
+            }
+        }
+        private void removeDevice(int ID)
+        {
+            try
+            {
+                conn.Open();
+                sqlstatement = $"Delete FROM Devices where Device_ID = {ID}";
+                comm = new SqlCommand(sqlstatement, conn);
+                adap.DeleteCommand = comm;
+                comm.ExecuteNonQuery();
+                MessageBox.Show($"Device with ID : {ID} has been deleted from Devices.");
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+            }
         }
 
-        private void rdbRemove_CheckedChanged(object sender, EventArgs e)
+        private void updateDevices(int ID)
         {
-            lblNavigate.Text = "Remove Devices";
-            grpbxRemove.Visible = true;
-            grpbxAddDevices.Visible = false;
-            grpEdit.Visible = false;
+            try
+            {
+                conn.Open();
+                sqlstatement = $"Update Devices SET ";
+                comm = new SqlCommand(sqlstatement, conn);
+                adap.UpdateCommand = comm;
+                adap.UpdateCommand.ExecuteNonQuery();
+                MessageBox.Show($"Device with ID {ID} has been updated successfully!");
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+            }
+        }
+
+        private void dispDevices(String sql)
+        {
+            try
+            {
+                lstDevices.Items.Clear();                                                                           //Clear Listbox
+                lstDevices.Items.Add("ID\tType\tFixable");                                                         //Add Headings
+                conn.Open();
+                comm = new SqlCommand(sql, conn);
+                SqlDataReader read;
+                read = comm.ExecuteReader();
+
+                while (read.Read())
+                 {
+                    lstDevices.Items.Add($"{read.GetInt32(0)}\t{read.GetString(1)}\t{read.GetString(2)}");          //Populate List Box
+                 }
+
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+                conn.Close();
+            }
+        }
+
+        private void pnlDevices_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            sqlstatement = $"Select * from devices where ID LIKE %{txtFind}%";
+            dispDevices(sqlstatement);
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int ID;
+            if (int.TryParse(txtRemove.Text, out ID))
+                if (verifyDelete(ID) == true)
+                    removeDevice(ID);
+                else
+                {
+                    MessageBox.Show("Please enter a valid ID for the device you wish to delete");
+                    txtRemove.Focus();
+                }
+        }
+
+        private Boolean verifyDelete(int deleteID)
+        {
+            DialogResult result = MessageBox.Show($"Are you sure you want to delete device with ID {deleteID}?", "Delete Device Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Device has been deleted");
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Deletion process has been aborted");
+                return false;
+
+            }
         }
     }
 }

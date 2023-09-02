@@ -35,18 +35,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlAddDevice = new System.Windows.Forms.Panel();
-            this.grpEdit = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.grpbxRemove = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.lblNavigate = new System.Windows.Forms.Label();
-            this.rdbRemove = new System.Windows.Forms.RadioButton();
-            this.rdbUpdate = new System.Windows.Forms.RadioButton();
-            this.rdbAdd = new System.Windows.Forms.RadioButton();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.grpbxAddDevices = new System.Windows.Forms.GroupBox();
             this.lblWords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,12 +48,23 @@
             this.chbFixable = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDevices = new System.Windows.Forms.ComboBox();
+            this.pnlDevices = new System.Windows.Forms.Panel();
+            this.lstDevices = new System.Windows.Forms.ListBox();
+            this.txtFind = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRemove = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblDeviceID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbFind = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAddDevice.SuspendLayout();
-            this.grpEdit.SuspendLayout();
             this.grpbxRemove.SuspendLayout();
             this.grpbxAddDevices.SuspendLayout();
+            this.pnlDevices.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 658);
+            this.panel1.Size = new System.Drawing.Size(186, 629);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -108,7 +112,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 601);
+            this.button1.Location = new System.Drawing.Point(0, 572);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 57);
             this.button1.TabIndex = 1;
@@ -130,68 +134,24 @@
             // pnlAddDevice
             // 
             this.pnlAddDevice.BackColor = System.Drawing.Color.White;
-            this.pnlAddDevice.Controls.Add(this.grpEdit);
             this.pnlAddDevice.Controls.Add(this.grpbxRemove);
-            this.pnlAddDevice.Controls.Add(this.lblNavigate);
-            this.pnlAddDevice.Controls.Add(this.rdbRemove);
-            this.pnlAddDevice.Controls.Add(this.rdbUpdate);
-            this.pnlAddDevice.Controls.Add(this.rdbAdd);
             this.pnlAddDevice.Controls.Add(this.grpbxAddDevices);
             this.pnlAddDevice.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAddDevice.Location = new System.Drawing.Point(186, 0);
             this.pnlAddDevice.Name = "pnlAddDevice";
-            this.pnlAddDevice.Size = new System.Drawing.Size(1253, 658);
+            this.pnlAddDevice.Size = new System.Drawing.Size(1253, 629);
             this.pnlAddDevice.TabIndex = 1;
-            // 
-            // grpEdit
-            // 
-            this.grpEdit.Controls.Add(this.label6);
-            this.grpEdit.Controls.Add(this.label7);
-            this.grpEdit.Controls.Add(this.button4);
-            this.grpEdit.Controls.Add(this.textBox2);
-            this.grpEdit.Controls.Add(this.checkBox2);
-            this.grpEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpEdit.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grpEdit.Location = new System.Drawing.Point(839, 35);
-            this.grpEdit.Name = "grpEdit";
-            this.grpEdit.Size = new System.Drawing.Size(396, 464);
-            this.grpEdit.TabIndex = 8;
-            this.grpEdit.TabStop = false;
-            this.grpEdit.Text = "Edit Device";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label6.Location = new System.Drawing.Point(202, 318);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Character Left  = 100";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(176, 139);
+            this.label7.Location = new System.Drawing.Point(176, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(195, 25);
             this.label7.TabIndex = 5;
             this.label7.Text = "Device/Repair details";
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button4.Location = new System.Drawing.Point(67, 360);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(287, 75);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Submit Device";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -208,7 +168,7 @@
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(18, 107);
+            this.checkBox2.Location = new System.Drawing.Point(18, 102);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(219, 29);
             this.checkBox2.TabIndex = 2;
@@ -217,79 +177,35 @@
             // 
             // grpbxRemove
             // 
-            this.grpbxRemove.Controls.Add(this.button3);
+            this.grpbxRemove.Controls.Add(this.lblDeviceID);
+            this.grpbxRemove.Controls.Add(this.pnlDevices);
+            this.grpbxRemove.Controls.Add(this.btnUpdate);
+            this.grpbxRemove.Controls.Add(this.label4);
+            this.grpbxRemove.Controls.Add(this.txtRemove);
+            this.grpbxRemove.Controls.Add(this.label7);
+            this.grpbxRemove.Controls.Add(this.textBox2);
+            this.grpbxRemove.Controls.Add(this.btnRemove);
+            this.grpbxRemove.Controls.Add(this.checkBox2);
             this.grpbxRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbxRemove.Location = new System.Drawing.Point(420, 35);
             this.grpbxRemove.Name = "grpbxRemove";
-            this.grpbxRemove.Size = new System.Drawing.Size(396, 464);
+            this.grpbxRemove.Size = new System.Drawing.Size(809, 566);
             this.grpbxRemove.TabIndex = 7;
             this.grpbxRemove.TabStop = false;
-            this.grpbxRemove.Text = "Remove Device";
+            this.grpbxRemove.Text = "Manage Devices";
             // 
-            // button3
+            // btnRemove
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(64, 362);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(287, 75);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Remove Device";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // lblNavigate
-            // 
-            this.lblNavigate.AutoSize = true;
-            this.lblNavigate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavigate.Location = new System.Drawing.Point(125, 502);
-            this.lblNavigate.Name = "lblNavigate";
-            this.lblNavigate.Size = new System.Drawing.Size(123, 25);
-            this.lblNavigate.TabIndex = 7;
-            this.lblNavigate.Text = "Add Devices";
-            // 
-            // rdbRemove
-            // 
-            this.rdbRemove.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdbRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbRemove.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.rdbRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbRemove.Location = new System.Drawing.Point(154, 530);
-            this.rdbRemove.Name = "rdbRemove";
-            this.rdbRemove.Size = new System.Drawing.Size(68, 57);
-            this.rdbRemove.TabIndex = 4;
-            this.rdbRemove.TabStop = true;
-            this.rdbRemove.UseVisualStyleBackColor = true;
-            this.rdbRemove.CheckedChanged += new System.EventHandler(this.rdbRemove_CheckedChanged);
-            // 
-            // rdbUpdate
-            // 
-            this.rdbUpdate.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdbUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.rdbUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbUpdate.Location = new System.Drawing.Point(80, 530);
-            this.rdbUpdate.Name = "rdbUpdate";
-            this.rdbUpdate.Size = new System.Drawing.Size(68, 57);
-            this.rdbUpdate.TabIndex = 3;
-            this.rdbUpdate.TabStop = true;
-            this.rdbUpdate.UseVisualStyleBackColor = true;
-            this.rdbUpdate.CheckedChanged += new System.EventHandler(this.rdbUpdate_CheckedChanged);
-            // 
-            // rdbAdd
-            // 
-            this.rdbAdd.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdbAdd.BackColor = System.Drawing.Color.PaleGreen;
-            this.rdbAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.rdbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbAdd.Location = new System.Drawing.Point(6, 529);
-            this.rdbAdd.Name = "rdbAdd";
-            this.rdbAdd.Size = new System.Drawing.Size(68, 57);
-            this.rdbAdd.TabIndex = 2;
-            this.rdbAdd.TabStop = true;
-            this.rdbAdd.UseVisualStyleBackColor = false;
-            this.rdbAdd.CheckedChanged += new System.EventHandler(this.rdbAdd_CheckedChanged);
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.ForeColor = System.Drawing.Color.Red;
+            this.btnRemove.Location = new System.Drawing.Point(40, 472);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(305, 66);
+            this.btnRemove.TabIndex = 4;
+            this.btnRemove.Text = "Remove Device";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // grpbxAddDevices
             // 
@@ -385,25 +301,137 @@
             this.cmbDevices.Size = new System.Drawing.Size(181, 33);
             this.cmbDevices.TabIndex = 0;
             // 
+            // pnlDevices
+            // 
+            this.pnlDevices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDevices.Controls.Add(this.label6);
+            this.pnlDevices.Controls.Add(this.cmbFind);
+            this.pnlDevices.Controls.Add(this.label5);
+            this.pnlDevices.Controls.Add(this.label3);
+            this.pnlDevices.Controls.Add(this.txtFind);
+            this.pnlDevices.Controls.Add(this.lstDevices);
+            this.pnlDevices.Location = new System.Drawing.Point(397, 29);
+            this.pnlDevices.Name = "pnlDevices";
+            this.pnlDevices.Size = new System.Drawing.Size(406, 522);
+            this.pnlDevices.TabIndex = 9;
+            this.pnlDevices.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDevices_Paint);
+            // 
+            // lstDevices
+            // 
+            this.lstDevices.FormattingEnabled = true;
+            this.lstDevices.ItemHeight = 25;
+            this.lstDevices.Location = new System.Drawing.Point(19, 109);
+            this.lstDevices.Name = "lstDevices";
+            this.lstDevices.Size = new System.Drawing.Size(370, 404);
+            this.lstDevices.TabIndex = 0;
+            // 
+            // txtFind
+            // 
+            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.Location = new System.Drawing.Point(208, 28);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(136, 30);
+            this.txtFind.TabIndex = 1;
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(3, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Search for a Device (ID) : ";
+            // 
+            // txtRemove
+            // 
+            this.txtRemove.Location = new System.Drawing.Point(29, 434);
+            this.txtRemove.Name = "txtRemove";
+            this.txtRemove.Size = new System.Drawing.Size(327, 30);
+            this.txtRemove.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(121, 401);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Enter a Device ID";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.Location = new System.Drawing.Point(18, 295);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(353, 63);
+            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // lblDeviceID
+            // 
+            this.lblDeviceID.AutoSize = true;
+            this.lblDeviceID.Location = new System.Drawing.Point(13, 68);
+            this.lblDeviceID.Name = "lblDeviceID";
+            this.lblDeviceID.Size = new System.Drawing.Size(118, 25);
+            this.lblDeviceID.TabIndex = 11;
+            this.lblDeviceID.Text = "Device ID :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, -1);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 29);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Select a Device";
+            // 
+            // cmbFind
+            // 
+            this.cmbFind.FormattingEnabled = true;
+            this.cmbFind.Location = new System.Drawing.Point(208, 68);
+            this.cmbFind.Name = "cmbFind";
+            this.cmbFind.Size = new System.Drawing.Size(181, 33);
+            this.cmbFind.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(15, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Filter Device Types :";
+            // 
             // frmDevices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1433, 658);
+            this.ClientSize = new System.Drawing.Size(1437, 629);
             this.Controls.Add(this.pnlAddDevice);
             this.Controls.Add(this.panel1);
             this.Name = "frmDevices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDevices";
+            this.Load += new System.EventHandler(this.frmDevices_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAddDevice.ResumeLayout(false);
-            this.pnlAddDevice.PerformLayout();
-            this.grpEdit.ResumeLayout(false);
-            this.grpEdit.PerformLayout();
             this.grpbxRemove.ResumeLayout(false);
+            this.grpbxRemove.PerformLayout();
             this.grpbxAddDevices.ResumeLayout(false);
             this.grpbxAddDevices.PerformLayout();
+            this.pnlDevices.ResumeLayout(false);
+            this.pnlDevices.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -424,17 +452,21 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblWords;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rdbAdd;
-        private System.Windows.Forms.RadioButton rdbRemove;
-        private System.Windows.Forms.RadioButton rdbUpdate;
-        private System.Windows.Forms.Label lblNavigate;
         private System.Windows.Forms.GroupBox grpbxRemove;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox grpEdit;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Panel pnlDevices;
+        private System.Windows.Forms.ListBox lstDevices;
+        private System.Windows.Forms.TextBox txtFind;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtRemove;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblDeviceID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbFind;
     }
 }
