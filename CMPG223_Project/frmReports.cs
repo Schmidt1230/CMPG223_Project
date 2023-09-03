@@ -139,5 +139,19 @@ namespace CMPG223_Project
         {
 
         }
+
+        private void btnBestPerforming_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace CMPG223_Project
 {
     public partial class Technician : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
         SqlCommand com = new SqlCommand();
         String query;
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
