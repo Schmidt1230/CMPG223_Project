@@ -31,6 +31,7 @@ namespace CMPG223_Project
         {
             this.pnlReports = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBestPerforming = new System.Windows.Forms.Button();
             this.rdbAscending = new System.Windows.Forms.RadioButton();
             this.rdbDescending = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace CMPG223_Project
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lstReport = new System.Windows.Forms.ListBox();
-            this.btnBestPerforming = new System.Windows.Forms.Button();
             this.pnlReports.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,17 @@ namespace CMPG223_Project
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Technicians Report";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnBestPerforming
+            // 
+            this.btnBestPerforming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBestPerforming.Location = new System.Drawing.Point(31, 255);
+            this.btnBestPerforming.Name = "btnBestPerforming";
+            this.btnBestPerforming.Size = new System.Drawing.Size(367, 78);
+            this.btnBestPerforming.TabIndex = 1;
+            this.btnBestPerforming.Text = "Show Best Performing Technician";
+            this.btnBestPerforming.UseVisualStyleBackColor = true;
+            this.btnBestPerforming.Click += new System.EventHandler(this.btnBestPerforming_Click);
             // 
             // rdbAscending
             // 
@@ -148,17 +159,6 @@ namespace CMPG223_Project
             this.lstReport.Name = "lstReport";
             this.lstReport.Size = new System.Drawing.Size(478, 404);
             this.lstReport.TabIndex = 1;
-            // 
-            // btnBestPerforming
-            // 
-            this.btnBestPerforming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBestPerforming.Location = new System.Drawing.Point(31, 279);
-            this.btnBestPerforming.Name = "btnBestPerforming";
-            this.btnBestPerforming.Size = new System.Drawing.Size(367, 78);
-            this.btnBestPerforming.TabIndex = 1;
-            this.btnBestPerforming.Text = "Show Best Performing Technician";
-            this.btnBestPerforming.UseVisualStyleBackColor = true;
-            this.btnBestPerforming.Click += new System.EventHandler(this.btnBestPerforming_Click);
             // 
             // frmReports
             // 
