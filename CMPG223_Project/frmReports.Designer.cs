@@ -31,7 +31,7 @@ namespace CMPG223_Project
         {
             this.pnlReports = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTechnician = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rdbAscending = new System.Windows.Forms.RadioButton();
             this.rdbDescending = new System.Windows.Forms.RadioButton();
@@ -68,13 +68,13 @@ namespace CMPG223_Project
             this.label1.TabIndex = 0;
             this.label1.Text = "Generate a Report";
             // 
-            // comboBox1
+            // cmbTechnician
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(203, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 35);
-            this.comboBox1.TabIndex = 1;
+            this.cmbTechnician.FormattingEnabled = true;
+            this.cmbTechnician.Location = new System.Drawing.Point(228, 41);
+            this.cmbTechnician.Name = "cmbTechnician";
+            this.cmbTechnician.Size = new System.Drawing.Size(179, 35);
+            this.cmbTechnician.TabIndex = 1;
             // 
             // label2
             // 
@@ -172,11 +172,11 @@ namespace CMPG223_Project
             this.groupBox2.Controls.Add(this.rdbDescending);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbTechnician);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Cascadia Code", 12F);
             this.groupBox2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.groupBox2.Location = new System.Drawing.Point(19, 53);
+            this.groupBox2.Location = new System.Drawing.Point(19, 48);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(427, 227);
             this.groupBox2.TabIndex = 8;
@@ -194,6 +194,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.label1);
             this.Name = "frmReports";
             this.Text = "frmReports";
+            this.Load += new System.EventHandler(this.frmReports_Load);
             this.pnlReports.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -208,7 +209,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.Panel pnlReports;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTechnician;
         private System.Windows.Forms.RadioButton rdbAscending;
         private System.Windows.Forms.RadioButton rdbDescending;
         private System.Windows.Forms.CheckBox checkBox1;
