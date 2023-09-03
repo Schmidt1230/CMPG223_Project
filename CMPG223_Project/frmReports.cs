@@ -36,9 +36,11 @@ namespace CMPG223_Project
             int repairs = 0;
             try
             {
+                conn.Close();
                 conn.Open();
                 sqlStatement = $"Select * from Repair_Orders WHERE Technician_ID = {tech_id}";
                 comm = new SqlCommand(sqlStatement, conn);
+                read = comm.ExecuteReader();
                 while (read.Read())
                 {
                     repairs += 1;
@@ -70,6 +72,7 @@ namespace CMPG223_Project
             }
             catch (SqlException exception)
             {
+                conn.Close();
                 MessageBox.Show(exception.Message);
             }
         }
@@ -79,12 +82,15 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                sqlStatement = $"Select Technician_ID From Technicians Where First_Name = '{name}' from Technicians";
+                sqlStatement = $"Select Technician_ID From Technicians Where First_Name = '{name}'";
                 comm = new SqlCommand(sqlStatement,conn);
+                read = comm.ExecuteReader();
                 while (read.Read())
                 {
                     return read.GetInt32(0);    
                 }
+
+                read.Close();
                 return 0;
                 conn.Close();
             }
@@ -113,7 +119,10 @@ namespace CMPG223_Project
 
         private void cmbTechnician_TextChanged(object sender, EventArgs e)
         {
-
+            lstReport.Items.Clear();
+            lstReport.Items.Add("Technician Name : "+cmbTechnician.Text);
+            lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(getID(cmbTechnician.Text)));
+            lstReport.Items.Add("............................................................");
         }
     }
 }
