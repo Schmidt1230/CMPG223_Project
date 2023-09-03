@@ -124,5 +124,20 @@ namespace CMPG223_Project
             lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(getID(cmbTechnician.Text)));
             lstReport.Items.Add("............................................................");
         }
+
+        private void chbAllTechnicians_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDescending_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
