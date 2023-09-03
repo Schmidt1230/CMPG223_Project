@@ -76,3 +76,4 @@ C:\Users\user-pc\OneDrive\Desktop\Klas Werk\GitHub\CMPG223_Project\CMPG223_Proje
 C:\Users\user-pc\OneDrive\Desktop\Klas Werk\GitHub\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.csproj.CoreCompileInputs.cache
 C:\Users\user-pc\OneDrive\Desktop\Klas Werk\GitHub\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.exe
 C:\Users\user-pc\OneDrive\Desktop\Klas Werk\GitHub\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.pdb
+C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmReports.resources

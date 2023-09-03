@@ -83,7 +83,7 @@ namespace CMPG223_Project
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTechnician = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbClient = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
@@ -527,6 +527,7 @@ namespace CMPG223_Project
             this.btnPrintInvoice.TabIndex = 9;
             this.btnPrintInvoice.Text = "Print Invoice";
             this.btnPrintInvoice.UseVisualStyleBackColor = true;
+            this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click);
             // 
             // listBoxInvoice
             // 
@@ -686,14 +687,16 @@ namespace CMPG223_Project
             this.cmbTechnician.Name = "cmbTechnician";
             this.cmbTechnician.Size = new System.Drawing.Size(121, 21);
             this.cmbTechnician.TabIndex = 10;
+            this.cmbTechnician.SelectedIndexChanged += new System.EventHandler(this.cmbTechnician_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cmbClient
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(734, 379);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 11;
+            this.cmbClient.FormattingEnabled = true;
+            this.cmbClient.Location = new System.Drawing.Point(734, 379);
+            this.cmbClient.Name = "cmbClient";
+            this.cmbClient.Size = new System.Drawing.Size(121, 21);
+            this.cmbClient.TabIndex = 11;
+            this.cmbClient.SelectedIndexChanged += new System.EventHandler(this.cmbClient_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -724,7 +727,7 @@ namespace CMPG223_Project
             this.ClientSize = new System.Drawing.Size(1028, 513);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbClient);
             this.Controls.Add(this.cmbTechnician);
             this.Controls.Add(this.btnPrintInvoice);
             this.Controls.Add(this.listBoxInvoice);
@@ -801,7 +804,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTechnician;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbClient;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
     }

@@ -16,12 +16,15 @@ namespace CMPG223_Project
     public partial class frmInvoices : Form
     {
         SqlDataAdapter adap;
-        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection conn; //= new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
         String sqlStatement;
         SqlDataReader read;
         SqlCommand comm;
-        string connectionString = @"";
-        
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlexandersDatabase.mdf;Integrated Security=True";
+
+        private int selectedTechnicianId = -1; 
+        private int selectedClientId = -1;
+
 
         public frmInvoices()
         {
@@ -30,28 +33,49 @@ namespace CMPG223_Project
 
         private void PopulateTechniciansComboBox()
         {
-            // SQL query to retrieve technician names and IDs from the Technicians table
-            string query = "SELECT TechnicianID, TechnicianName FROM Technicians";
+            string query = "SELECT FirstName FROM Technicians";
 
-            conn = new SqlConnection(connectionString);
-
-            comm = new SqlCommand(query, conn);
-                
-            conn.Open();
-            read = comm.ExecuteReader();
-
-            while (reader.Read())
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                   int technicianId = read.GetInt32(0);
-                   string technicianName = read.GetString(1);
-                   cmbTechnician.Items.Add(new ComboBoxItem(technicianName, technicianId));
-                }
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string technicianName = reader.GetString(0);
+                        cmbTechnician.Items.Add(technicianName);
+                    }
 
                     reader.Close();
-                
+                }
             }
+        }
 
-            private void UpdateCompTotal()
+        private void PopulateClientsComboBox()
+        {
+            string query = "SELECT FirstName FROM Clients";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string clientName = reader.GetString(0);
+                        cmbClient.Items.Add(clientName);
+                    }
+
+                    reader.Close();
+                }
+            }
+        }
+
+        private void UpdateCompTotal()
         {
             decimal total = 0;
 
@@ -126,6 +150,8 @@ namespace CMPG223_Project
         private void frmInvoices_Load(object sender, EventArgs e)
         {
             UpdateCompTotal();
+            PopulateTechniciansComboBox();
+            PopulateClientsComboBox();
         }
 
         private void UpdateCellTotal()
@@ -294,5 +320,89 @@ namespace CMPG223_Project
             }
             
         }
+
+        private void cmbTechnician_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTechnician.SelectedItem != null)
+            {
+                // Retrieve the selected technician name
+                string technicianName = cmbTechnician.SelectedItem.ToString();
+
+                // Retrieve the selected technician ID based on the name
+                selectedTechnicianId = GetTechnicianIdByName(technicianName);
+            }
+        }
+
+        private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbClient.SelectedItem != null)
+            {
+                // Retrieve the selected client name
+                string clientName = cmbClient.SelectedItem.ToString();
+
+                // Retrieve the selected client ID based on the name
+                selectedClientId = GetClientIdByName(clientName);
+            }
+        }
+
+        private int GetTechnicianIdByName(string name)
+        {
+            int technicianId = -1; // Initialize with an invalid value
+
+            string query = "SELECT Technician_ID FROM Technicians WHERE FirstName = @Name";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", name);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        technicianId = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return technicianId;
+        }
+
+        private int GetClientIdByName(string name)
+        {
+            int clientId = -1; // Initialize with an invalid value
+
+            string query = "SELECT Client_ID FROM Clients WHERE FirstName = @Name";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", name);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        clientId = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return clientId;
+        }
+
+        private void btnPrintInvoice_Click(object sender, EventArgs e)
+        {
+            if (selectedTechnicianId != -1 && selectedClientId != -1)
+            {
+                string message = $"Selected Technician ID: {selectedTechnicianId}\nSelected Client ID: {selectedClientId}";
+                MessageBox.Show(message, "IDs Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please select a Technician and a Client first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+
