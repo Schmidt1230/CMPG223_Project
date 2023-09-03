@@ -162,6 +162,7 @@ namespace CMPG223_Project
             this.btnUpdateTechnician.TabIndex = 7;
             this.btnUpdateTechnician.Text = "Update Technician";
             this.btnUpdateTechnician.UseVisualStyleBackColor = true;
+            this.btnUpdateTechnician.Click += new System.EventHandler(this.btnUpdateTechnician_Click);
             // 
             // txtLNUpdate
             // 
@@ -233,6 +234,7 @@ namespace CMPG223_Project
             this.btnRemoveTechnician.TabIndex = 7;
             this.btnRemoveTechnician.Text = "Remove Technician";
             this.btnRemoveTechnician.UseVisualStyleBackColor = true;
+            this.btnRemoveTechnician.Click += new System.EventHandler(this.btnRemoveTechnician_Click);
             // 
             // lblClientID
             // 
@@ -330,6 +332,7 @@ namespace CMPG223_Project
             this.btnAddTechnician.TabIndex = 7;
             this.btnAddTechnician.Text = "Add Technician";
             this.btnAddTechnician.UseVisualStyleBackColor = true;
+            this.btnAddTechnician.Click += new System.EventHandler(this.btnAddTechnician_Click);
             // 
             // txtLastName
             // 
@@ -383,7 +386,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.gbxUpdateTechnician);
             this.Controls.Add(this.gbxRemoveTechnician);
             this.Controls.Add(this.gbxAddTechnician);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Technician";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Technician_Load);
