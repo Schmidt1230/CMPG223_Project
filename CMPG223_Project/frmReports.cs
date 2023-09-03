@@ -28,7 +28,7 @@ namespace CMPG223_Project
 
         private void frmReports_Load(object sender, EventArgs e)
         {
-
+            getTechnicians();
         }
 
         private int calcTotalRepairs(int tech_id)
@@ -58,13 +58,34 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
+                sqlStatement = "Select Distinct First_Name from Technicians";
+                comm = new SqlCommand(sqlStatement, conn);
 
+                read = comm.ExecuteReader();
+
+                while (read.Read())
+                    cmbTechnician.Items.Add(read.GetString(0));
 
                 conn.Close();
             }
             catch (SqlException exception)
             {
                 MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void dispReport(string sql)
+        {
+            try
+            {
+                conn.Open();
+                
+                conn.Close();
+
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
             }
         }
     }

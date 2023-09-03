@@ -90,11 +90,11 @@ namespace CMPG223_Project
             // 
             // txtCellTotal
             // 
-            this.txtCellTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtCellTotal.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCellTotal.Location = new System.Drawing.Point(168, 335);
             this.txtCellTotal.Name = "txtCellTotal";
             this.txtCellTotal.ReadOnly = true;
-            this.txtCellTotal.Size = new System.Drawing.Size(153, 24);
+            this.txtCellTotal.Size = new System.Drawing.Size(153, 26);
             this.txtCellTotal.TabIndex = 20;
             // 
             // label22
