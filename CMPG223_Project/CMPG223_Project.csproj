@@ -85,6 +85,12 @@
     <Compile Include="frmNavigate.Designer.cs">
       <DependentUpon>frmNavigate.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <EmbeddedResource Include="frmNavigate.resx">
       <DependentUpon>frmNavigate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices.resx">
       <DependentUpon>Invoices.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Technician.resx">
       <DependentUpon>Technician.cs</DependentUpon>
@@ -147,6 +157,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AlexandersDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Assets\Back 4.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
