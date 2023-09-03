@@ -241,7 +241,7 @@ namespace CMPG223_Project
 
                 if (cbxCharge.Checked)
                 {
-                    listBoxInvoice.Items.Add("Charging Port Repair - R350.00");
+                    listBoxInvoice.Items.Add("Charging Port Repair - \tR350.00");
                 }
 
                 decimal cellTotal = decimal.Parse(txtCellExcVAT.Text);
