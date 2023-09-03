@@ -58,5 +58,15 @@ namespace CMPG223_Project
         {
             Application.Exit();
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            pnldashBoard.Controls.Clear();
+            
+            frmReports reportForm = new frmReports() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            reportForm.FormBorderStyle = FormBorderStyle.None;
+            this.pnldashBoard.Controls.Add(reportForm);
+            reportForm.Show();
+        }
     }
 }
