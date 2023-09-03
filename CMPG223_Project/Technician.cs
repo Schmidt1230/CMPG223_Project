@@ -110,7 +110,7 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                query = $"DELETE FROM Clients WHERE TechnicianID = {technicianID}";
+                query = $"DELETE FROM Technicians WHERE TechnicianID = {technicianID}";
                 com = new SqlCommand(query, conn);
                 dataAdapter.DeleteCommand = com;
                 com.ExecuteNonQuery();
