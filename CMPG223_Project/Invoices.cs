@@ -294,5 +294,10 @@ namespace CMPG223_Project
             }
             
         }
+
+        private void btnPrintInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

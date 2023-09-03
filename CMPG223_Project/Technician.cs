@@ -44,7 +44,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                query = $"INSERT INTO Technicians (First_Name, Last_Name, Cellphone_Number, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmailUpdate.Text}')";
+                query = $"INSERT INTO Technicians (First_Name, Last_Name, Cellphone_Number, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmail.Text}')";
                 com = new SqlCommand(query, conn);
                 dataAdapter.InsertCommand = com;
                 com.ExecuteNonQuery();
