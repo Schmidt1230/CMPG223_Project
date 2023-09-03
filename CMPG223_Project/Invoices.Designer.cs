@@ -730,7 +730,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.listBoxInvoice);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInvoices";
             this.Text = "Invoices";
             this.Load += new System.EventHandler(this.frmInvoices_Load);
