@@ -44,8 +44,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-
-                query = $"INSERT INTO Technicians (FirstName, LastName, CellphoneNumber, Email) VALUES ({technicianFN}, {technicianLN}, {technicianCN}, {technicianEmail})";
+                query = $"INSERT INTO Technicians (First_Name, Last_Name, Cellphone_Number, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmailUpdate.Text}')";
                 com = new SqlCommand(query, conn);
                 dataAdapter.InsertCommand = com;
                 com.ExecuteNonQuery();
@@ -78,7 +77,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Technicians SET FirstName = {technicianFNUpdate}, LastName = {technicianLNUpdate}, CellphoneNumber = {technicianCNUpdate}, Email = {technicianEmail}";
+                    query = $"UPDATE Technicians SET First_Name = '{txtFirstName.Text}', Last_Name = '{txtLastName.Text}', Cellphone_Number = '{txtCellNumber.Text}', Email = '{txtEmail.Text}'";
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();

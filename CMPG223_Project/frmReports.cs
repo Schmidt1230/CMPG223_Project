@@ -145,7 +145,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-
+                
                 conn.Close();
             }
             catch (SqlException err)
