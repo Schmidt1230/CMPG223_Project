@@ -29,13 +29,22 @@ namespace CMPG223_Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlReports = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // pnlReports
+            // 
+            this.pnlReports.Location = new System.Drawing.Point(0, 0);
+            this.pnlReports.Name = "pnlReports";
+            this.pnlReports.Size = new System.Drawing.Size(1042, 184);
+            this.pnlReports.TabIndex = 0;
             // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 528);
+            this.Controls.Add(this.pnlReports);
             this.Name = "frmReports";
             this.Text = "frmReports";
             this.ResumeLayout(false);
@@ -43,5 +52,7 @@ namespace CMPG223_Project
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlReports;
     }
 }
