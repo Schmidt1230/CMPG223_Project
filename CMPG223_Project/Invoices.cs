@@ -7,18 +7,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+
 
 namespace CMPG223_Project
 {
     public partial class frmInvoices : Form
     {
+        SqlDataAdapter adap;
+        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        String sqlStatement;
+        SqlDataReader read;
+        SqlCommand comm;
+        string connectionString = @"";
+        
 
         public frmInvoices()
         {
             InitializeComponent();
         }
 
-        private void UpdateCompTotal()
+        private void PopulateTechniciansComboBox()
+        {
+            // SQL query to retrieve technician names and IDs from the Technicians table
+            string query = "SELECT TechnicianID, TechnicianName FROM Technicians";
+
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(query, conn);
+                
+            conn.Open();
+            read = comm.ExecuteReader();
+
+            while (reader.Read())
+                {
+                   int technicianId = read.GetInt32(0);
+                   string technicianName = read.GetString(1);
+                   cmbTechnician.Items.Add(new ComboBoxItem(technicianName, technicianId));
+                }
+
+                    reader.Close();
+                
+            }
+
+            private void UpdateCompTotal()
         {
             decimal total = 0;
 

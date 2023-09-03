@@ -70,7 +70,7 @@
             this.pnlAddDevice.Controls.Add(this.grpbxAddDevices);
             this.pnlAddDevice.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAddDevice.Location = new System.Drawing.Point(0, 0);
-            this.pnlAddDevice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAddDevice.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAddDevice.Name = "pnlAddDevice";
             this.pnlAddDevice.Size = new System.Drawing.Size(1332, 544);
             this.pnlAddDevice.TabIndex = 1;
@@ -92,9 +92,9 @@
             this.grpbxRemove.Font = new System.Drawing.Font("Bookman Old Style", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbxRemove.ForeColor = System.Drawing.Color.White;
             this.grpbxRemove.Location = new System.Drawing.Point(315, 44);
-            this.grpbxRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbxRemove.Margin = new System.Windows.Forms.Padding(2);
             this.grpbxRemove.Name = "grpbxRemove";
-            this.grpbxRemove.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbxRemove.Padding = new System.Windows.Forms.Padding(2);
             this.grpbxRemove.Size = new System.Drawing.Size(672, 399);
             this.grpbxRemove.TabIndex = 13;
             this.grpbxRemove.TabStop = false;
@@ -103,7 +103,7 @@
             // txtUpdateID
             // 
             this.txtUpdateID.Location = new System.Drawing.Point(159, 35);
-            this.txtUpdateID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateID.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateID.Name = "txtUpdateID";
             this.txtUpdateID.Size = new System.Drawing.Size(76, 31);
             this.txtUpdateID.TabIndex = 12;
@@ -129,7 +129,7 @@
             this.pnlDevices.Controls.Add(this.txtFind);
             this.pnlDevices.Controls.Add(this.lstDevices);
             this.pnlDevices.Location = new System.Drawing.Point(298, 24);
-            this.pnlDevices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDevices.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDevices.Name = "pnlDevices";
             this.pnlDevices.Size = new System.Drawing.Size(370, 368);
             this.pnlDevices.TabIndex = 9;
@@ -151,7 +151,7 @@
             this.cmbFind.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFind.FormattingEnabled = true;
             this.cmbFind.Location = new System.Drawing.Point(197, 64);
-            this.cmbFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFind.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFind.Name = "cmbFind";
             this.cmbFind.Size = new System.Drawing.Size(155, 28);
             this.cmbFind.TabIndex = 13;
@@ -184,7 +184,7 @@
             // 
             this.txtFind.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.Location = new System.Drawing.Point(197, 31);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(2);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(155, 26);
             this.txtFind.TabIndex = 1;
@@ -195,7 +195,7 @@
             this.lstDevices.FormattingEnabled = true;
             this.lstDevices.ItemHeight = 24;
             this.lstDevices.Location = new System.Drawing.Point(15, 108);
-            this.lstDevices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstDevices.Margin = new System.Windows.Forms.Padding(2);
             this.lstDevices.Name = "lstDevices";
             this.lstDevices.Size = new System.Drawing.Size(351, 220);
             this.lstDevices.TabIndex = 0;
@@ -206,7 +206,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Location = new System.Drawing.Point(14, 225);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(266, 35);
             this.btnUpdate.TabIndex = 10;
@@ -230,7 +230,7 @@
             // 
             this.txtRemove.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemove.Location = new System.Drawing.Point(14, 299);
-            this.txtRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRemove.Margin = new System.Windows.Forms.Padding(2);
             this.txtRemove.Name = "txtRemove";
             this.txtRemove.Size = new System.Drawing.Size(266, 26);
             this.txtRemove.TabIndex = 5;
@@ -251,7 +251,7 @@
             // 
             this.txtUpdateDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdateDetails.Location = new System.Drawing.Point(14, 120);
-            this.txtUpdateDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateDetails.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateDetails.Multiline = true;
             this.txtUpdateDetails.Name = "txtUpdateDetails";
             this.txtUpdateDetails.Size = new System.Drawing.Size(266, 101);
@@ -263,7 +263,7 @@
             this.btnRemove.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.Black;
             this.btnRemove.Location = new System.Drawing.Point(30, 338);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(238, 39);
             this.btnRemove.TabIndex = 4;
@@ -278,7 +278,7 @@
             this.chbRepairable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbRepairable.ForeColor = System.Drawing.Color.White;
             this.chbRepairable.Location = new System.Drawing.Point(38, 71);
-            this.chbRepairable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbRepairable.Margin = new System.Windows.Forms.Padding(2);
             this.chbRepairable.Name = "chbRepairable";
             this.chbRepairable.Size = new System.Drawing.Size(166, 22);
             this.chbRepairable.TabIndex = 2;
@@ -299,9 +299,9 @@
             this.grpbxAddDevices.Font = new System.Drawing.Font("Bookman Old Style", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbxAddDevices.ForeColor = System.Drawing.Color.White;
             this.grpbxAddDevices.Location = new System.Drawing.Point(14, 44);
-            this.grpbxAddDevices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbxAddDevices.Margin = new System.Windows.Forms.Padding(2);
             this.grpbxAddDevices.Name = "grpbxAddDevices";
-            this.grpbxAddDevices.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbxAddDevices.Padding = new System.Windows.Forms.Padding(2);
             this.grpbxAddDevices.Size = new System.Drawing.Size(297, 399);
             this.grpbxAddDevices.TabIndex = 12;
             this.grpbxAddDevices.TabStop = false;
@@ -336,7 +336,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(17, 338);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(255, 39);
             this.btnSubmit.TabIndex = 4;
@@ -348,7 +348,7 @@
             // 
             this.txtNewDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewDetails.Location = new System.Drawing.Point(17, 155);
-            this.txtNewDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewDetails.Multiline = true;
             this.txtNewDetails.Name = "txtNewDetails";
             this.txtNewDetails.Size = new System.Drawing.Size(266, 131);
@@ -361,7 +361,7 @@
             this.chbFixable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chbFixable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbFixable.Location = new System.Drawing.Point(69, 93);
-            this.chbFixable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbFixable.Margin = new System.Windows.Forms.Padding(2);
             this.chbFixable.Name = "chbFixable";
             this.chbFixable.Size = new System.Drawing.Size(166, 22);
             this.chbFixable.TabIndex = 2;
@@ -392,7 +392,7 @@
             "Laptop",
             "Mac"});
             this.cmbDevices.Location = new System.Drawing.Point(63, 55);
-            this.cmbDevices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDevices.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDevices.Name = "cmbDevices";
             this.cmbDevices.Size = new System.Drawing.Size(162, 27);
             this.cmbDevices.TabIndex = 0;
@@ -403,7 +403,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 544);
             this.Controls.Add(this.pnlAddDevice);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDevices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clients\' Devices Information";
