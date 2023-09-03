@@ -74,6 +74,28 @@ namespace CMPG223_Project
             }
         }
 
+        private int getID(string name)
+        {
+            try
+            {
+                conn.Open();
+                sqlStatement = $"Select Technician_ID From Technicians Where First_Name = '{name}' from Technicians";
+                comm = new SqlCommand(sqlStatement,conn);
+                while (read.Read())
+                {
+                    return read.GetInt32(0);    
+                }
+                return 0;
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+            }
+
+            return 0;
+        }
+
         private void dispReport(string sql)
         {
             try
