@@ -96,10 +96,9 @@ namespace CMPG223_Project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 20F, System.Drawing.FontStyle.Underline);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(412, 468);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(309, 380);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 41);
+            this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 20;
             this.label1.Text = "Client Information:";
             // 
@@ -107,20 +106,18 @@ namespace CMPG223_Project
             // 
             this.txtEmailUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtEmailUpdate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailUpdate.Location = new System.Drawing.Point(39, 385);
-            this.txtEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailUpdate.Location = new System.Drawing.Point(29, 313);
             this.txtEmailUpdate.Name = "txtEmailUpdate";
-            this.txtEmailUpdate.Size = new System.Drawing.Size(247, 29);
+            this.txtEmailUpdate.Size = new System.Drawing.Size(186, 25);
             this.txtEmailUpdate.TabIndex = 11;
             // 
             // lblEmailUpdate
             // 
             this.lblEmailUpdate.AutoSize = true;
             this.lblEmailUpdate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailUpdate.Location = new System.Drawing.Point(72, 345);
-            this.lblEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailUpdate.Location = new System.Drawing.Point(54, 280);
             this.lblEmailUpdate.Name = "lblEmailUpdate";
-            this.lblEmailUpdate.Size = new System.Drawing.Size(165, 29);
+            this.lblEmailUpdate.Size = new System.Drawing.Size(133, 22);
             this.lblEmailUpdate.TabIndex = 10;
             this.lblEmailUpdate.Text = "Email Address:";
             // 
@@ -128,10 +125,9 @@ namespace CMPG223_Project
             // 
             this.lblCNUpdate.AutoSize = true;
             this.lblCNUpdate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNUpdate.Location = new System.Drawing.Point(39, 244);
-            this.lblCNUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCNUpdate.Location = new System.Drawing.Point(29, 198);
             this.lblCNUpdate.Name = "lblCNUpdate";
-            this.lblCNUpdate.Size = new System.Drawing.Size(211, 29);
+            this.lblCNUpdate.Size = new System.Drawing.Size(165, 22);
             this.lblCNUpdate.TabIndex = 9;
             this.lblCNUpdate.Text = "Cellphone Number:";
             // 
@@ -139,10 +135,9 @@ namespace CMPG223_Project
             // 
             this.txtCNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCNUpdate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNUpdate.Location = new System.Drawing.Point(39, 284);
-            this.txtCNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCNUpdate.Location = new System.Drawing.Point(29, 231);
             this.txtCNUpdate.Name = "txtCNUpdate";
-            this.txtCNUpdate.Size = new System.Drawing.Size(247, 29);
+            this.txtCNUpdate.Size = new System.Drawing.Size(186, 25);
             this.txtCNUpdate.TabIndex = 8;
             // 
             // btnUpdate
@@ -151,10 +146,9 @@ namespace CMPG223_Project
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnUpdate.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(39, 448);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(29, 364);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(248, 47);
+            this.btnUpdate.Size = new System.Drawing.Size(186, 38);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Client";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -164,20 +158,18 @@ namespace CMPG223_Project
             // 
             this.txtLNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLNUpdate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLNUpdate.Location = new System.Drawing.Point(39, 177);
-            this.txtLNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLNUpdate.Location = new System.Drawing.Point(29, 144);
             this.txtLNUpdate.Name = "txtLNUpdate";
-            this.txtLNUpdate.Size = new System.Drawing.Size(247, 29);
+            this.txtLNUpdate.Size = new System.Drawing.Size(186, 25);
             this.txtLNUpdate.TabIndex = 6;
             // 
             // lblLNUpdate
             // 
             this.lblLNUpdate.AutoSize = true;
             this.lblLNUpdate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLNUpdate.Location = new System.Drawing.Point(92, 137);
-            this.lblLNUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLNUpdate.Location = new System.Drawing.Point(69, 111);
             this.lblLNUpdate.Name = "lblLNUpdate";
-            this.lblLNUpdate.Size = new System.Drawing.Size(128, 29);
+            this.lblLNUpdate.Size = new System.Drawing.Size(100, 22);
             this.lblLNUpdate.TabIndex = 5;
             this.lblLNUpdate.Text = "Last Name:";
             // 
@@ -185,10 +177,9 @@ namespace CMPG223_Project
             // 
             this.lblFNUpdate.AutoSize = true;
             this.lblFNUpdate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNUpdate.Location = new System.Drawing.Point(92, 36);
-            this.lblFNUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFNUpdate.Location = new System.Drawing.Point(69, 29);
             this.lblFNUpdate.Name = "lblFNUpdate";
-            this.lblFNUpdate.Size = new System.Drawing.Size(130, 29);
+            this.lblFNUpdate.Size = new System.Drawing.Size(104, 22);
             this.lblFNUpdate.TabIndex = 4;
             this.lblFNUpdate.Text = "First Name:";
             // 
@@ -196,10 +187,9 @@ namespace CMPG223_Project
             // 
             this.txtFNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtFNUpdate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFNUpdate.Location = new System.Drawing.Point(39, 76);
-            this.txtFNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFNUpdate.Location = new System.Drawing.Point(29, 62);
             this.txtFNUpdate.Name = "txtFNUpdate";
-            this.txtFNUpdate.Size = new System.Drawing.Size(247, 29);
+            this.txtFNUpdate.Size = new System.Drawing.Size(186, 25);
             this.txtFNUpdate.TabIndex = 0;
             // 
             // gbxUpdateClient
@@ -217,11 +207,9 @@ namespace CMPG223_Project
             this.gbxUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxUpdateClient.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxUpdateClient.ForeColor = System.Drawing.Color.White;
-            this.gbxUpdateClient.Location = new System.Drawing.Point(769, 20);
-            this.gbxUpdateClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxUpdateClient.Location = new System.Drawing.Point(577, 16);
             this.gbxUpdateClient.Name = "gbxUpdateClient";
-            this.gbxUpdateClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxUpdateClient.Size = new System.Drawing.Size(331, 529);
+            this.gbxUpdateClient.Size = new System.Drawing.Size(248, 430);
             this.gbxUpdateClient.TabIndex = 17;
             this.gbxUpdateClient.TabStop = false;
             this.gbxUpdateClient.Text = "Update Client Information";
@@ -231,10 +219,9 @@ namespace CMPG223_Project
             this.btnRemoveClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRemoveClient.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveClient.Location = new System.Drawing.Point(39, 161);
-            this.btnRemoveClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveClient.Location = new System.Drawing.Point(29, 131);
             this.btnRemoveClient.Name = "btnRemoveClient";
-            this.btnRemoveClient.Size = new System.Drawing.Size(248, 47);
+            this.btnRemoveClient.Size = new System.Drawing.Size(186, 38);
             this.btnRemoveClient.TabIndex = 7;
             this.btnRemoveClient.Text = "Remove Client";
             this.btnRemoveClient.UseVisualStyleBackColor = true;
@@ -244,10 +231,9 @@ namespace CMPG223_Project
             // 
             this.lblClientID.AutoSize = true;
             this.lblClientID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientID.Location = new System.Drawing.Point(95, 36);
-            this.lblClientID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClientID.Location = new System.Drawing.Point(71, 29);
             this.lblClientID.Name = "lblClientID";
-            this.lblClientID.Size = new System.Drawing.Size(118, 29);
+            this.lblClientID.Size = new System.Drawing.Size(94, 22);
             this.lblClientID.TabIndex = 4;
             this.lblClientID.Text = "Client_ID:";
             // 
@@ -255,10 +241,9 @@ namespace CMPG223_Project
             // 
             this.txtRemoveClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtRemoveClient.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemoveClient.Location = new System.Drawing.Point(39, 76);
-            this.txtRemoveClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRemoveClient.Location = new System.Drawing.Point(29, 62);
             this.txtRemoveClient.Name = "txtRemoveClient";
-            this.txtRemoveClient.Size = new System.Drawing.Size(247, 29);
+            this.txtRemoveClient.Size = new System.Drawing.Size(186, 25);
             this.txtRemoveClient.TabIndex = 0;
             // 
             // gbxRemoveClient
@@ -270,11 +255,9 @@ namespace CMPG223_Project
             this.gbxRemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxRemoveClient.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxRemoveClient.ForeColor = System.Drawing.Color.White;
-            this.gbxRemoveClient.Location = new System.Drawing.Point(413, 20);
-            this.gbxRemoveClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxRemoveClient.Location = new System.Drawing.Point(310, 16);
             this.gbxRemoveClient.Name = "gbxRemoveClient";
-            this.gbxRemoveClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxRemoveClient.Size = new System.Drawing.Size(331, 249);
+            this.gbxRemoveClient.Size = new System.Drawing.Size(248, 202);
             this.gbxRemoveClient.TabIndex = 18;
             this.gbxRemoveClient.TabStop = false;
             this.gbxRemoveClient.Text = "Remove Client";
@@ -283,20 +266,18 @@ namespace CMPG223_Project
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(39, 385);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(29, 313);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(247, 29);
+            this.txtEmail.Size = new System.Drawing.Size(186, 25);
             this.txtEmail.TabIndex = 11;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(72, 345);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(54, 280);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(165, 29);
+            this.lblEmail.Size = new System.Drawing.Size(133, 22);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email Address:";
             // 
@@ -304,10 +285,9 @@ namespace CMPG223_Project
             // 
             this.lblCellNumber.AutoSize = true;
             this.lblCellNumber.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCellNumber.Location = new System.Drawing.Point(39, 244);
-            this.lblCellNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCellNumber.Location = new System.Drawing.Point(29, 198);
             this.lblCellNumber.Name = "lblCellNumber";
-            this.lblCellNumber.Size = new System.Drawing.Size(211, 29);
+            this.lblCellNumber.Size = new System.Drawing.Size(165, 22);
             this.lblCellNumber.TabIndex = 9;
             this.lblCellNumber.Text = "Cellphone Number:";
             // 
@@ -315,10 +295,9 @@ namespace CMPG223_Project
             // 
             this.txtCellNumber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCellNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCellNumber.Location = new System.Drawing.Point(39, 284);
-            this.txtCellNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellNumber.Location = new System.Drawing.Point(29, 231);
             this.txtCellNumber.Name = "txtCellNumber";
-            this.txtCellNumber.Size = new System.Drawing.Size(247, 29);
+            this.txtCellNumber.Size = new System.Drawing.Size(186, 25);
             this.txtCellNumber.TabIndex = 8;
             // 
             // btnAddClient
@@ -326,10 +305,9 @@ namespace CMPG223_Project
             this.btnAddClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAddClient.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.Location = new System.Drawing.Point(39, 448);
-            this.btnAddClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddClient.Location = new System.Drawing.Point(29, 364);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(248, 47);
+            this.btnAddClient.Size = new System.Drawing.Size(186, 38);
             this.btnAddClient.TabIndex = 7;
             this.btnAddClient.Text = "Add Client";
             this.btnAddClient.UseVisualStyleBackColor = true;
@@ -339,20 +317,18 @@ namespace CMPG223_Project
             // 
             this.txtLastName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLastName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(39, 177);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Location = new System.Drawing.Point(29, 144);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(247, 29);
+            this.txtLastName.Size = new System.Drawing.Size(186, 25);
             this.txtLastName.TabIndex = 6;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(92, 137);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastName.Location = new System.Drawing.Point(69, 111);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(128, 29);
+            this.lblLastName.Size = new System.Drawing.Size(100, 22);
             this.lblLastName.TabIndex = 5;
             this.lblLastName.Text = "Last Name:";
             // 
@@ -360,10 +336,9 @@ namespace CMPG223_Project
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(92, 36);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFirstName.Location = new System.Drawing.Point(69, 29);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(130, 29);
+            this.lblFirstName.Size = new System.Drawing.Size(104, 22);
             this.lblFirstName.TabIndex = 4;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -371,21 +346,19 @@ namespace CMPG223_Project
             // 
             this.txtFirstName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtFirstName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(39, 76);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Location = new System.Drawing.Point(29, 62);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(247, 29);
+            this.txtFirstName.Size = new System.Drawing.Size(186, 25);
             this.txtFirstName.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 566);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 460);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1055, 134);
+            this.dataGridView1.Size = new System.Drawing.Size(791, 109);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -404,11 +377,9 @@ namespace CMPG223_Project
             this.gbxAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxAddClient.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAddClient.ForeColor = System.Drawing.Color.White;
-            this.gbxAddClient.Location = new System.Drawing.Point(45, 20);
-            this.gbxAddClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAddClient.Location = new System.Drawing.Point(34, 16);
             this.gbxAddClient.Name = "gbxAddClient";
-            this.gbxAddClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxAddClient.Size = new System.Drawing.Size(331, 529);
+            this.gbxAddClient.Size = new System.Drawing.Size(248, 430);
             this.gbxAddClient.TabIndex = 16;
             this.gbxAddClient.TabStop = false;
             this.gbxAddClient.Text = "Add Client";
@@ -428,11 +399,9 @@ namespace CMPG223_Project
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(45, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(34, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(331, 529);
+            this.groupBox1.Size = new System.Drawing.Size(248, 430);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Client";
@@ -441,20 +410,18 @@ namespace CMPG223_Project
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(39, 385);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(29, 313);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 29);
+            this.textBox1.Size = new System.Drawing.Size(186, 25);
             this.textBox1.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 345);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(54, 280);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 29);
+            this.label2.Size = new System.Drawing.Size(133, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Email Address:";
             // 
@@ -462,10 +429,9 @@ namespace CMPG223_Project
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 244);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(29, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 29);
+            this.label3.Size = new System.Drawing.Size(165, 22);
             this.label3.TabIndex = 9;
             this.label3.Text = "Cellphone Number:";
             // 
@@ -473,10 +439,9 @@ namespace CMPG223_Project
             // 
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(39, 284);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(29, 231);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 29);
+            this.textBox2.Size = new System.Drawing.Size(186, 25);
             this.textBox2.TabIndex = 8;
             // 
             // button1
@@ -484,10 +449,9 @@ namespace CMPG223_Project
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(39, 448);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(29, 364);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 47);
+            this.button1.Size = new System.Drawing.Size(186, 38);
             this.button1.TabIndex = 7;
             this.button1.Text = "Add Client";
             this.button1.UseVisualStyleBackColor = true;
@@ -497,20 +461,18 @@ namespace CMPG223_Project
             // 
             this.textBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(39, 177);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(29, 144);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 29);
+            this.textBox3.Size = new System.Drawing.Size(186, 25);
             this.textBox3.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 137);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(69, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 29);
+            this.label4.Size = new System.Drawing.Size(100, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "Last Name:";
             // 
@@ -518,10 +480,9 @@ namespace CMPG223_Project
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(92, 36);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(69, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 29);
+            this.label5.Size = new System.Drawing.Size(104, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "First Name:";
             // 
@@ -529,10 +490,9 @@ namespace CMPG223_Project
             // 
             this.textBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(39, 76);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(29, 62);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(247, 29);
+            this.textBox4.Size = new System.Drawing.Size(186, 25);
             this.textBox4.TabIndex = 0;
             // 
             // groupBox2
@@ -544,11 +504,9 @@ namespace CMPG223_Project
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(413, 20);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(310, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(331, 249);
+            this.groupBox2.Size = new System.Drawing.Size(248, 202);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove Client";
@@ -558,10 +516,9 @@ namespace CMPG223_Project
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(39, 161);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(29, 131);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 47);
+            this.button2.Size = new System.Drawing.Size(186, 38);
             this.button2.TabIndex = 7;
             this.button2.Text = "Remove Client";
             this.button2.UseVisualStyleBackColor = true;
@@ -571,10 +528,9 @@ namespace CMPG223_Project
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(95, 36);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(71, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 29);
+            this.label6.Size = new System.Drawing.Size(94, 22);
             this.label6.TabIndex = 4;
             this.label6.Text = "Client_ID:";
             // 
@@ -582,10 +538,9 @@ namespace CMPG223_Project
             // 
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(39, 76);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Location = new System.Drawing.Point(29, 62);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(247, 29);
+            this.textBox5.Size = new System.Drawing.Size(186, 25);
             this.textBox5.TabIndex = 0;
             // 
             // groupBox3
@@ -603,11 +558,9 @@ namespace CMPG223_Project
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(769, 20);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(577, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(331, 529);
+            this.groupBox3.Size = new System.Drawing.Size(248, 430);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Update Client Information";
@@ -616,20 +569,18 @@ namespace CMPG223_Project
             // 
             this.textBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(39, 385);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(29, 313);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(247, 29);
+            this.textBox6.Size = new System.Drawing.Size(186, 25);
             this.textBox6.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(72, 345);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(54, 280);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 29);
+            this.label7.Size = new System.Drawing.Size(133, 22);
             this.label7.TabIndex = 10;
             this.label7.Text = "Email Address:";
             // 
@@ -637,10 +588,9 @@ namespace CMPG223_Project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(39, 244);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(29, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(211, 29);
+            this.label8.Size = new System.Drawing.Size(165, 22);
             this.label8.TabIndex = 9;
             this.label8.Text = "Cellphone Number:";
             // 
@@ -648,10 +598,9 @@ namespace CMPG223_Project
             // 
             this.textBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(39, 284);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Location = new System.Drawing.Point(29, 231);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(247, 29);
+            this.textBox7.Size = new System.Drawing.Size(186, 25);
             this.textBox7.TabIndex = 8;
             // 
             // button3
@@ -660,10 +609,9 @@ namespace CMPG223_Project
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(39, 448);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(29, 364);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(248, 47);
+            this.button3.Size = new System.Drawing.Size(186, 38);
             this.button3.TabIndex = 7;
             this.button3.Text = "Update Client";
             this.button3.UseVisualStyleBackColor = false;
@@ -673,20 +621,18 @@ namespace CMPG223_Project
             // 
             this.textBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(39, 177);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Location = new System.Drawing.Point(29, 144);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(247, 29);
+            this.textBox8.Size = new System.Drawing.Size(186, 25);
             this.textBox8.TabIndex = 6;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(92, 137);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(69, 111);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 29);
+            this.label9.Size = new System.Drawing.Size(100, 22);
             this.label9.TabIndex = 5;
             this.label9.Text = "Last Name:";
             // 
@@ -694,10 +640,9 @@ namespace CMPG223_Project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(92, 36);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(69, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 29);
+            this.label10.Size = new System.Drawing.Size(104, 22);
             this.label10.TabIndex = 4;
             this.label10.Text = "First Name:";
             // 
@@ -705,10 +650,9 @@ namespace CMPG223_Project
             // 
             this.textBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(39, 76);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Location = new System.Drawing.Point(29, 62);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(247, 29);
+            this.textBox9.Size = new System.Drawing.Size(186, 25);
             this.textBox9.TabIndex = 0;
             // 
             // label11
@@ -717,21 +661,20 @@ namespace CMPG223_Project
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Bookman Old Style", 20F, System.Drawing.FontStyle.Underline);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(412, 468);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(309, 380);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(332, 41);
+            this.label11.Size = new System.Drawing.Size(266, 32);
             this.label11.TabIndex = 20;
             this.label11.Text = "Client Information:";
             // 
             // frmClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(69)))), ((int)(((byte)(79)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1195, 731);
+            this.ClientSize = new System.Drawing.Size(896, 594);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
@@ -741,9 +684,9 @@ namespace CMPG223_Project
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxAddClient);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmClients";
             this.Text = "Client Information";
+            this.Load += new System.EventHandler(this.frmClients_Load);
             this.gbxUpdateClient.ResumeLayout(false);
             this.gbxUpdateClient.PerformLayout();
             this.gbxRemoveClient.ResumeLayout(false);
