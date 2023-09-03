@@ -227,7 +227,7 @@ namespace CMPG223_Project
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int id;
-            if (int.TryParse(txtUpdateID.Text, out id))
+            if (int.TryParse(txtUpdateDetails.Text, out id))
             {
                 String heading = "Are you sure you wish to UPDATE device";
                 String message = "Update Device";
