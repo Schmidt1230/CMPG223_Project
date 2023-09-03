@@ -41,6 +41,7 @@ namespace CMPG223_Project
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chbForm = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,7 +165,7 @@ namespace CMPG223_Project
             // 
             this.chbForm.AutoSize = true;
             this.chbForm.Location = new System.Drawing.Point(162, 470);
-            this.chbForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbForm.Margin = new System.Windows.Forms.Padding(2);
             this.chbForm.Name = "chbForm";
             this.chbForm.Size = new System.Drawing.Size(80, 17);
             this.chbForm.TabIndex = 13;
@@ -172,12 +173,23 @@ namespace CMPG223_Project
             this.chbForm.UseVisualStyleBackColor = true;
             this.chbForm.CheckedChanged += new System.EventHandler(this.chbForm_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(152, 504);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Invoices \"TOETS\"";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(378, 544);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chbForm);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.groupBox1);
@@ -185,7 +197,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -211,6 +223,7 @@ namespace CMPG223_Project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chbForm;
+        private System.Windows.Forms.Button button1;
     }
 }
 

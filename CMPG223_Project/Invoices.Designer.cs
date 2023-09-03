@@ -73,9 +73,10 @@ namespace CMPG223_Project
             this.cbxCellScreen = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnViewInvoice = new System.Windows.Forms.Button();
+            this.listBoxInvoice = new System.Windows.Forms.ListBox();
+            this.btnCompViewInvoice = new System.Windows.Forms.Button();
             this.btnPrintInvoice = new System.Windows.Forms.Button();
+            this.btnCellViewInvoice = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,16 +86,16 @@ namespace CMPG223_Project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 17);
+            this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Base Inspection Fee:";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCompTotal);
+            this.groupBox1.Controls.Add(this.btnCompViewInvoice);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtCompVAT);
@@ -109,69 +110,61 @@ namespace CMPG223_Project
             this.groupBox1.Controls.Add(this.cbxKeyboard);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(324, 389);
+            this.groupBox1.Size = new System.Drawing.Size(243, 343);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Calculate Amount Computer/Laptop";
+            this.groupBox1.Text = "Calculate Amount Computer";
             // 
             // txtCompTotal
             // 
-            this.txtCompTotal.Location = new System.Drawing.Point(183, 350);
-            this.txtCompTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompTotal.Location = new System.Drawing.Point(137, 284);
             this.txtCompTotal.Name = "txtCompTotal";
             this.txtCompTotal.ReadOnly = true;
-            this.txtCompTotal.Size = new System.Drawing.Size(132, 22);
+            this.txtCompTotal.Size = new System.Drawing.Size(100, 20);
             this.txtCompTotal.TabIndex = 14;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(32, 347);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(24, 282);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(93, 17);
+            this.label20.Size = new System.Drawing.Size(70, 13);
             this.label20.TabIndex = 13;
             this.label20.Text = "Overall Total:";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(32, 316);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(24, 257);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 17);
+            this.label19.Size = new System.Drawing.Size(70, 13);
             this.label19.TabIndex = 12;
             this.label19.Text = "VAT Amount:";
             // 
             // txtCompVAT
             // 
-            this.txtCompVAT.Location = new System.Drawing.Point(183, 316);
-            this.txtCompVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompVAT.Location = new System.Drawing.Point(137, 257);
             this.txtCompVAT.Name = "txtCompVAT";
             this.txtCompVAT.ReadOnly = true;
-            this.txtCompVAT.Size = new System.Drawing.Size(132, 22);
+            this.txtCompVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCompVAT.TabIndex = 11;
             // 
             // txtCompExcVAT
             // 
-            this.txtCompExcVAT.Location = new System.Drawing.Point(183, 283);
-            this.txtCompExcVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompExcVAT.Location = new System.Drawing.Point(137, 230);
             this.txtCompExcVAT.Name = "txtCompExcVAT";
             this.txtCompExcVAT.ReadOnly = true;
-            this.txtCompExcVAT.Size = new System.Drawing.Size(132, 22);
+            this.txtCompExcVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCompExcVAT.TabIndex = 10;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 287);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(24, 233);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(139, 17);
+            this.label15.Size = new System.Drawing.Size(107, 13);
             this.label15.TabIndex = 9;
             this.label15.Text = "Total Excluding VAT:";
             // 
@@ -184,11 +177,9 @@ namespace CMPG223_Project
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(225, 16);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(169, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(80, 251);
+            this.groupBox2.Size = new System.Drawing.Size(60, 204);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Price";
@@ -196,80 +187,72 @@ namespace CMPG223_Project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 90);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "R 500";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 118);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "R 1200";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 146);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "R 800";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 175);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(7, 142);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.Size = new System.Drawing.Size(36, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "R 200";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 203);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(6, 165);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 17);
+            this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "R 1500";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 231);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(6, 188);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
+            this.label9.Size = new System.Drawing.Size(36, 13);
             this.label9.TabIndex = 7;
             this.label9.Text = "R 600";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "R 250";
             // 
             // cbxDisk
             // 
             this.cbxDisk.AutoSize = true;
-            this.cbxDisk.Location = new System.Drawing.Point(24, 246);
-            this.cbxDisk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxDisk.Location = new System.Drawing.Point(18, 200);
             this.cbxDisk.Name = "cbxDisk";
-            this.cbxDisk.Size = new System.Drawing.Size(141, 21);
+            this.cbxDisk.Size = new System.Drawing.Size(108, 17);
             this.cbxDisk.TabIndex = 7;
             this.cbxDisk.Text = "HardDrive Failure";
             this.cbxDisk.UseVisualStyleBackColor = true;
@@ -278,10 +261,9 @@ namespace CMPG223_Project
             // cbxCompMotherboard
             // 
             this.cbxCompMotherboard.AutoSize = true;
-            this.cbxCompMotherboard.Location = new System.Drawing.Point(24, 218);
-            this.cbxCompMotherboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompMotherboard.Location = new System.Drawing.Point(18, 177);
             this.cbxCompMotherboard.Name = "cbxCompMotherboard";
-            this.cbxCompMotherboard.Size = new System.Drawing.Size(158, 21);
+            this.cbxCompMotherboard.Size = new System.Drawing.Size(120, 17);
             this.cbxCompMotherboard.TabIndex = 6;
             this.cbxCompMotherboard.Text = "Motherboard Failure";
             this.cbxCompMotherboard.UseVisualStyleBackColor = true;
@@ -290,10 +272,9 @@ namespace CMPG223_Project
             // cbxCompVirus
             // 
             this.cbxCompVirus.AutoSize = true;
-            this.cbxCompVirus.Location = new System.Drawing.Point(24, 190);
-            this.cbxCompVirus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompVirus.Location = new System.Drawing.Point(18, 154);
             this.cbxCompVirus.Name = "cbxCompVirus";
-            this.cbxCompVirus.Size = new System.Drawing.Size(119, 21);
+            this.cbxCompVirus.Size = new System.Drawing.Size(93, 17);
             this.cbxCompVirus.TabIndex = 5;
             this.cbxCompVirus.Text = "Virus Infection";
             this.cbxCompVirus.UseVisualStyleBackColor = true;
@@ -302,10 +283,9 @@ namespace CMPG223_Project
             // cbxCompBattery
             // 
             this.cbxCompBattery.AutoSize = true;
-            this.cbxCompBattery.Location = new System.Drawing.Point(24, 161);
-            this.cbxCompBattery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompBattery.Location = new System.Drawing.Point(18, 131);
             this.cbxCompBattery.Name = "cbxCompBattery";
-            this.cbxCompBattery.Size = new System.Drawing.Size(124, 21);
+            this.cbxCompBattery.Size = new System.Drawing.Size(96, 17);
             this.cbxCompBattery.TabIndex = 4;
             this.cbxCompBattery.Text = "Broken Battery";
             this.cbxCompBattery.UseVisualStyleBackColor = true;
@@ -314,10 +294,9 @@ namespace CMPG223_Project
             // cbxCompScreen
             // 
             this.cbxCompScreen.AutoSize = true;
-            this.cbxCompScreen.Location = new System.Drawing.Point(24, 133);
-            this.cbxCompScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompScreen.Location = new System.Drawing.Point(18, 108);
             this.cbxCompScreen.Name = "cbxCompScreen";
-            this.cbxCompScreen.Size = new System.Drawing.Size(124, 21);
+            this.cbxCompScreen.Size = new System.Drawing.Size(97, 17);
             this.cbxCompScreen.TabIndex = 3;
             this.cbxCompScreen.Text = "Broken Screen";
             this.cbxCompScreen.UseVisualStyleBackColor = true;
@@ -326,10 +305,9 @@ namespace CMPG223_Project
             // cbxKeyboard
             // 
             this.cbxKeyboard.AutoSize = true;
-            this.cbxKeyboard.Location = new System.Drawing.Point(24, 105);
-            this.cbxKeyboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxKeyboard.Location = new System.Drawing.Point(18, 85);
             this.cbxKeyboard.Name = "cbxKeyboard";
-            this.cbxKeyboard.Size = new System.Drawing.Size(140, 21);
+            this.cbxKeyboard.Size = new System.Drawing.Size(108, 17);
             this.cbxKeyboard.TabIndex = 2;
             this.cbxKeyboard.Text = "Broken Keyboard";
             this.cbxKeyboard.UseVisualStyleBackColor = true;
@@ -338,15 +316,15 @@ namespace CMPG223_Project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 70);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(15, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 17);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Broken Parts:";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnCellViewInvoice);
             this.groupBox3.Controls.Add(this.txtCellTotal);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label22);
@@ -361,79 +339,70 @@ namespace CMPG223_Project
             this.groupBox3.Controls.Add(this.cbxCellScreen);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Location = new System.Drawing.Point(360, 15);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(270, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(324, 389);
+            this.groupBox3.Size = new System.Drawing.Size(243, 343);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Calculate Amount Smartphone/Tablet";
+            this.groupBox3.Text = "Calculate Amount Smartphone";
             // 
             // txtCellTotal
             // 
-            this.txtCellTotal.Location = new System.Drawing.Point(177, 350);
-            this.txtCellTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellTotal.Location = new System.Drawing.Point(133, 284);
             this.txtCellTotal.Name = "txtCellTotal";
             this.txtCellTotal.ReadOnly = true;
-            this.txtCellTotal.Size = new System.Drawing.Size(132, 22);
+            this.txtCellTotal.Size = new System.Drawing.Size(100, 20);
             this.txtCellTotal.TabIndex = 20;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(15, 347);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(11, 282);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 17);
+            this.label21.Size = new System.Drawing.Size(70, 13);
             this.label21.TabIndex = 19;
             this.label21.Text = "Overall Total:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 320);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(12, 260);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 17);
+            this.label22.Size = new System.Drawing.Size(70, 13);
             this.label22.TabIndex = 18;
             this.label22.Text = "VAT Amount:";
             // 
             // txtCellVAT
             // 
-            this.txtCellVAT.Location = new System.Drawing.Point(177, 316);
-            this.txtCellVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellVAT.Location = new System.Drawing.Point(133, 257);
             this.txtCellVAT.Name = "txtCellVAT";
             this.txtCellVAT.ReadOnly = true;
-            this.txtCellVAT.Size = new System.Drawing.Size(132, 22);
+            this.txtCellVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCellVAT.TabIndex = 17;
             // 
             // txtCellExcVAT
             // 
-            this.txtCellExcVAT.Location = new System.Drawing.Point(177, 283);
-            this.txtCellExcVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellExcVAT.Location = new System.Drawing.Point(133, 230);
             this.txtCellExcVAT.Name = "txtCellExcVAT";
             this.txtCellExcVAT.ReadOnly = true;
-            this.txtCellExcVAT.Size = new System.Drawing.Size(132, 22);
+            this.txtCellExcVAT.Size = new System.Drawing.Size(100, 20);
             this.txtCellExcVAT.TabIndex = 16;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(15, 287);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(11, 233);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(139, 17);
+            this.label23.Size = new System.Drawing.Size(107, 13);
             this.label23.TabIndex = 15;
             this.label23.Text = "Total Excluding VAT:";
             // 
             // cbxCharge
             // 
             this.cbxCharge.AutoSize = true;
-            this.cbxCharge.Location = new System.Drawing.Point(19, 214);
-            this.cbxCharge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCharge.Location = new System.Drawing.Point(14, 174);
             this.cbxCharge.Name = "cbxCharge";
-            this.cbxCharge.Size = new System.Drawing.Size(182, 21);
+            this.cbxCharge.Size = new System.Drawing.Size(139, 17);
             this.cbxCharge.TabIndex = 9;
             this.cbxCharge.Text = "Damaged Charging Port";
             this.cbxCharge.UseVisualStyleBackColor = true;
@@ -447,11 +416,9 @@ namespace CMPG223_Project
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Location = new System.Drawing.Point(225, 16);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(169, 13);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(80, 223);
+            this.groupBox4.Size = new System.Drawing.Size(60, 181);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Price";
@@ -459,70 +426,63 @@ namespace CMPG223_Project
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 90);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(7, 73);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 17);
+            this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "R 900";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 118);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(6, 96);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 17);
+            this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 3;
             this.label11.Text = "R 600";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 146);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(7, 119);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 17);
+            this.label12.Size = new System.Drawing.Size(36, 13);
             this.label12.TabIndex = 4;
             this.label12.Text = "R 200";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 175);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(7, 142);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
+            this.label13.Size = new System.Drawing.Size(42, 13);
             this.label13.TabIndex = 5;
             this.label13.Text = "R 1200";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 203);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(6, 165);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 17);
+            this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 6;
             this.label14.Text = "R 350";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 20);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(6, 16);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 17);
+            this.label16.Size = new System.Drawing.Size(36, 13);
             this.label16.TabIndex = 0;
             this.label16.Text = "R 250";
             // 
             // cbxCellMotherboard
             // 
             this.cbxCellMotherboard.AutoSize = true;
-            this.cbxCellMotherboard.Location = new System.Drawing.Point(19, 186);
-            this.cbxCellMotherboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellMotherboard.Location = new System.Drawing.Point(14, 151);
             this.cbxCellMotherboard.Name = "cbxCellMotherboard";
-            this.cbxCellMotherboard.Size = new System.Drawing.Size(158, 21);
+            this.cbxCellMotherboard.Size = new System.Drawing.Size(120, 17);
             this.cbxCellMotherboard.TabIndex = 6;
             this.cbxCellMotherboard.Text = "Motherboard Failure";
             this.cbxCellMotherboard.UseVisualStyleBackColor = true;
@@ -531,10 +491,9 @@ namespace CMPG223_Project
             // cbxCellVirus
             // 
             this.cbxCellVirus.AutoSize = true;
-            this.cbxCellVirus.Location = new System.Drawing.Point(19, 158);
-            this.cbxCellVirus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellVirus.Location = new System.Drawing.Point(14, 128);
             this.cbxCellVirus.Name = "cbxCellVirus";
-            this.cbxCellVirus.Size = new System.Drawing.Size(119, 21);
+            this.cbxCellVirus.Size = new System.Drawing.Size(93, 17);
             this.cbxCellVirus.TabIndex = 5;
             this.cbxCellVirus.Text = "Virus Infection";
             this.cbxCellVirus.UseVisualStyleBackColor = true;
@@ -543,10 +502,9 @@ namespace CMPG223_Project
             // cbxCellBattery
             // 
             this.cbxCellBattery.AutoSize = true;
-            this.cbxCellBattery.Location = new System.Drawing.Point(19, 133);
-            this.cbxCellBattery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellBattery.Location = new System.Drawing.Point(14, 108);
             this.cbxCellBattery.Name = "cbxCellBattery";
-            this.cbxCellBattery.Size = new System.Drawing.Size(124, 21);
+            this.cbxCellBattery.Size = new System.Drawing.Size(96, 17);
             this.cbxCellBattery.TabIndex = 4;
             this.cbxCellBattery.Text = "Broken Battery";
             this.cbxCellBattery.UseVisualStyleBackColor = true;
@@ -555,10 +513,9 @@ namespace CMPG223_Project
             // cbxCellScreen
             // 
             this.cbxCellScreen.AutoSize = true;
-            this.cbxCellScreen.Location = new System.Drawing.Point(19, 105);
-            this.cbxCellScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellScreen.Location = new System.Drawing.Point(14, 85);
             this.cbxCellScreen.Name = "cbxCellScreen";
-            this.cbxCellScreen.Size = new System.Drawing.Size(124, 21);
+            this.cbxCellScreen.Size = new System.Drawing.Size(97, 17);
             this.cbxCellScreen.TabIndex = 3;
             this.cbxCellScreen.Text = "Broken Screen";
             this.cbxCellScreen.UseVisualStyleBackColor = true;
@@ -567,65 +524,67 @@ namespace CMPG223_Project
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(20, 70);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(15, 57);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(94, 17);
+            this.label17.Size = new System.Drawing.Size(71, 13);
             this.label17.TabIndex = 1;
             this.label17.Text = "Broken Parts:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(20, 36);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(15, 29);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(140, 17);
+            this.label18.Size = new System.Drawing.Size(107, 13);
             this.label18.TabIndex = 0;
             this.label18.Text = "Base Inspection Fee:";
             // 
-            // listBox1
+            // listBoxInvoice
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(692, 23);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(301, 308);
-            this.listBox1.TabIndex = 3;
+            this.listBoxInvoice.FormattingEnabled = true;
+            this.listBoxInvoice.Location = new System.Drawing.Point(519, 19);
+            this.listBoxInvoice.Name = "listBoxInvoice";
+            this.listBoxInvoice.Size = new System.Drawing.Size(261, 290);
+            this.listBoxInvoice.TabIndex = 3;
             // 
-            // btnViewInvoice
+            // btnCompViewInvoice
             // 
-            this.btnViewInvoice.Location = new System.Drawing.Point(692, 357);
-            this.btnViewInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnViewInvoice.Name = "btnViewInvoice";
-            this.btnViewInvoice.Size = new System.Drawing.Size(137, 38);
-            this.btnViewInvoice.TabIndex = 4;
-            this.btnViewInvoice.Text = "View Invoice";
-            this.btnViewInvoice.UseVisualStyleBackColor = true;
-            this.btnViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
+            this.btnCompViewInvoice.Location = new System.Drawing.Point(134, 310);
+            this.btnCompViewInvoice.Name = "btnCompViewInvoice";
+            this.btnCompViewInvoice.Size = new System.Drawing.Size(103, 27);
+            this.btnCompViewInvoice.TabIndex = 4;
+            this.btnCompViewInvoice.Text = "View Invoice";
+            this.btnCompViewInvoice.UseVisualStyleBackColor = true;
+            this.btnCompViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
             // 
             // btnPrintInvoice
             // 
-            this.btnPrintInvoice.Location = new System.Drawing.Point(857, 357);
-            this.btnPrintInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrintInvoice.Location = new System.Drawing.Point(519, 322);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
-            this.btnPrintInvoice.Size = new System.Drawing.Size(137, 38);
+            this.btnPrintInvoice.Size = new System.Drawing.Size(261, 29);
             this.btnPrintInvoice.TabIndex = 5;
             this.btnPrintInvoice.Text = "Print Invoice";
             this.btnPrintInvoice.UseVisualStyleBackColor = true;
             // 
+            // btnCellViewInvoice
+            // 
+            this.btnCellViewInvoice.Location = new System.Drawing.Point(133, 310);
+            this.btnCellViewInvoice.Name = "btnCellViewInvoice";
+            this.btnCellViewInvoice.Size = new System.Drawing.Size(99, 26);
+            this.btnCellViewInvoice.TabIndex = 21;
+            this.btnCellViewInvoice.Text = "View Invoice";
+            this.btnCellViewInvoice.UseVisualStyleBackColor = true;
+            this.btnCellViewInvoice.Click += new System.EventHandler(this.btnCellViewInvoice_Click);
+            // 
             // frmInvoices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 423);
+            this.ClientSize = new System.Drawing.Size(792, 367);
             this.Controls.Add(this.btnPrintInvoice);
-            this.Controls.Add(this.btnViewInvoice);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxInvoice);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmInvoices";
             this.Text = "Invoices";
             this.Load += new System.EventHandler(this.frmInvoices_Load);
@@ -687,8 +646,9 @@ namespace CMPG223_Project
         private System.Windows.Forms.TextBox txtCellExcVAT;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox cbxCharge;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnViewInvoice;
+        private System.Windows.Forms.ListBox listBoxInvoice;
+        private System.Windows.Forms.Button btnCompViewInvoice;
         private System.Windows.Forms.Button btnPrintInvoice;
+        private System.Windows.Forms.Button btnCellViewInvoice;
     }
 }

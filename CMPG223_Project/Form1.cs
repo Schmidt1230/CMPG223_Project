@@ -93,5 +93,11 @@ namespace CMPG223_Project
         {
             //IGNORE THIS
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmInvoices invoices = new frmInvoices();
+            invoices.Show();
+        }
     }
 }

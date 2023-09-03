@@ -12,6 +12,7 @@ namespace CMPG223_Project
 {
     public partial class frmInvoices : Form
     {
+
         public frmInvoices()
         {
             InitializeComponent();
@@ -96,37 +97,37 @@ namespace CMPG223_Project
 
         private void UpdateCellTotal()
         {
-            decimal total = 0;
+            decimal cellTotal = 0;
 
             if (cbxCellScreen.Checked)
-            {                
-                total += 900.00m; 
+            {
+                cellTotal += 900.00m; 
             }
 
             if (cbxCellBattery.Checked)
-            {                
-                total += 600.00m; 
+            {
+                cellTotal += 600.00m; 
             }
 
             if (cbxCellVirus.Checked)
-            {                
-                total += 200.00m; 
+            {
+                cellTotal += 200.00m; 
             }
 
             if (cbxCellMotherboard.Checked)
-            {                
-                total += 1200.00m; 
+            {
+                cellTotal += 1200.00m; 
             }
 
             if (cbxCharge.Checked)
             {
-                total += 350.00m;
+                cellTotal += 350.00m;
             }        
                         
-            decimal vat = total * 0.15m;            
-            decimal totalWithVat = total + vat;
+            decimal vat = cellTotal * 0.15m;            
+            decimal totalWithVat = cellTotal + vat;
             
-            txtCellExcVAT.Text = total.ToString("0.00");
+            txtCellExcVAT.Text = cellTotal.ToString("0.00");
             txtCellVAT.Text = vat.ToString("0.00");
             txtCellTotal.Text = totalWithVat.ToString("0.00");
 
@@ -159,7 +160,106 @@ namespace CMPG223_Project
 
         private void btnViewInvoice_Click(object sender, EventArgs e)
         {
+            
+            listBoxInvoice.Items.Clear();
 
+            listBoxInvoice.Items.Add("Computer Invoice:\n\n");
+            listBoxInvoice.Items.Add("--------------------------------------------------------------------------------------------- ");
+
+
+            
+            if (cbxKeyboard.Checked)
+            {
+                listBoxInvoice.Items.Add("Keyboard - \tR500.00");
+            }
+
+            if (cbxCompScreen.Checked)
+            {
+                listBoxInvoice.Items.Add("Computer Screen - \tR1200.00");
+            }
+
+            if (cbxCompBattery.Checked)
+            {
+                listBoxInvoice.Items.Add("Computer Battery - \tR800.00");
+            }
+
+            if (cbxCompVirus.Checked)
+            {
+                listBoxInvoice.Items.Add("Virus Removal - \tR200.00");
+            }
+
+            if (cbxCompMotherboard.Checked)
+            {
+                listBoxInvoice.Items.Add("Motherboard - \tR1500.00");
+            }
+
+            if (cbxDisk.Checked)
+            {
+                listBoxInvoice.Items.Add("Hard Drive - \tR600.00");
+            }
+            
+            decimal compTotal = decimal.Parse(txtCompExcVAT.Text);
+            decimal compVat = decimal.Parse(txtCompVAT.Text);
+            decimal compTotalWithVat = decimal.Parse(txtCompTotal.Text);
+
+           
+            listBoxInvoice.Items.Add("***************************************************************************************************************************");
+            listBoxInvoice.Items.Add($"Component Total (excluding VAT): ${compTotal.ToString("0.00")}");
+            listBoxInvoice.Items.Add($"Component VAT (15%): ${compVat.ToString("0.00")}");
+            listBoxInvoice.Items.Add($"Component Total (including VAT): ${compTotalWithVat.ToString("0.00")}");
+            listBoxInvoice.Items.Add("");
+        }
+
+        private void btnCellViewInvoice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listBoxInvoice.Items.Clear();
+                listBoxInvoice.Items.Add("Smartphone Invoice:\n\n");
+                listBoxInvoice.Items.Add("--------------------------------------------------------------------------------------------- ");
+
+
+                if (cbxCellScreen.Checked)
+                {
+                    listBoxInvoice.Items.Add("Screen Replacement - \tR900.00");
+                }
+
+                if (cbxCellBattery.Checked)
+                {
+                    listBoxInvoice.Items.Add("Battery Replacement - \tR600.00");
+                }
+
+                if (cbxCellVirus.Checked)
+                {
+                    listBoxInvoice.Items.Add("Virus Removal - \tR200.00");
+                }
+
+                if (cbxCellMotherboard.Checked)
+                {
+                    listBoxInvoice.Items.Add("Motherboard - \tR1200.00");
+                }
+
+                if (cbxCharge.Checked)
+                {
+                    listBoxInvoice.Items.Add("Charging Port Repair - R350.00");
+                }
+
+                decimal cellTotal = decimal.Parse(txtCellExcVAT.Text);
+                decimal cellVat = decimal.Parse(txtCellVAT.Text);
+                decimal cellTotalWithVat = decimal.Parse(txtCellTotal.Text);
+
+               
+                listBoxInvoice.Items.Add("***************************************************************************************************************************");
+                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): ${cellTotal.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"Component VAT (15%): ${cellVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"Component Total (including VAT): ${cellTotalWithVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add(" ");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Please select item to View Invoice");
+            }
+            
         }
     }
 }
