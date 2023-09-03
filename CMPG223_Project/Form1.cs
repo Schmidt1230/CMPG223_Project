@@ -20,13 +20,11 @@ namespace CMPG223_Project
 
         private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
-            
             if (chbShow.Checked)
                 txtPassword.UseSystemPasswordChar = false;
             else
                 txtPassword.UseSystemPasswordChar = true;
-             
-         }
+        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -39,33 +37,35 @@ namespace CMPG223_Project
             SqlDataReader read;
             SqlCommand comm;
 
+
+
             try
             {
                 conn.Open();
-                String sqlstatement = "Select user_name,user_password From Users";
+                String sqlstatement = "Select user_name,user_password From SystemUsers";
                 comm = new SqlCommand(sqlstatement, conn);
                 read= comm.ExecuteReader();
-                Boolean match = false;
 
                 while (read.Read()) 
                 {//While
-                    if((read.GetString(0)==Username) && (read.GetString(1)!= password)) 
+                    if(read.GetString(0)==Username && read.GetString(1)!= password) 
                         {
                             MessageBox.Show("Password was incorrect for " + Username);
                             conn.Close();
-                        match = false;
+                            return false;
                         }
-                     if ((read.GetString(0)==Username)) //&& (read.GetString(1)==password)
-                    {
+                    else if ((read.GetString(0)==Username) && (read.GetString(1)==password)) 
+                        {
                             MessageBox.Show("Login Successfull");
                             conn.Close();
-                        match = true;
+                            return true;
                         }
                 }//While
 
-                //If User was not found and while loop execution has finished
+                //If User was not found and while loop execution has finished.
+                MessageBox.Show("User was not found");
                 conn.Close();
-                return match;
+                return false;
             }
             catch (SqlException exc)
             {
@@ -77,19 +77,10 @@ namespace CMPG223_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String username = txtUsername.Text;
-            String password = txtPassword.Text;
-            
-            //Validate if user has entered details
-            if (username.Length < 0)
-                MessageBox.Show("Please enter your user name");
-            else if (password.Length < 0)
-                MessageBox.Show("Please enter your password");
-            else
-                if (verifyUser(username,password) == true)
-                {
+            if (verifyUser(txtUsername.Text,txtPassword.Text) == true)
+            {
                 MessageBox.Show("Success");
-                 }
+            }
         }
 
         private void chbForm_CheckedChanged(object sender, EventArgs e)

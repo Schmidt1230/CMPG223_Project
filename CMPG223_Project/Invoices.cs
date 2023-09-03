@@ -204,9 +204,9 @@ namespace CMPG223_Project
 
            
             listBoxInvoice.Items.Add("***************************************************************************************************************************");
-            listBoxInvoice.Items.Add($"Component Total (excluding VAT): ${compTotal.ToString("0.00")}");
-            listBoxInvoice.Items.Add($"Component VAT (15%): ${compVat.ToString("0.00")}");
-            listBoxInvoice.Items.Add($"Component Total (including VAT): ${compTotalWithVat.ToString("0.00")}");
+            listBoxInvoice.Items.Add($"Component Total (excluding VAT): \tR{compTotal.ToString("0.00")}");
+            listBoxInvoice.Items.Add($"Component VAT (15%): \t\tR{compVat.ToString("0.00")}");
+            listBoxInvoice.Items.Add($"Component Total (including VAT): \tR{compTotalWithVat.ToString("0.00")}");
             listBoxInvoice.Items.Add("");
         }
 
@@ -231,17 +231,17 @@ namespace CMPG223_Project
 
                 if (cbxCellVirus.Checked)
                 {
-                    listBoxInvoice.Items.Add("Virus Removal - \tR200.00");
+                    listBoxInvoice.Items.Add("Virus Removal - \t\tR200.00");
                 }
 
                 if (cbxCellMotherboard.Checked)
                 {
-                    listBoxInvoice.Items.Add("Motherboard - \tR1200.00");
+                    listBoxInvoice.Items.Add("Motherboard - \t\tR1200.00");
                 }
 
                 if (cbxCharge.Checked)
                 {
-                    listBoxInvoice.Items.Add("Charging Port Repair - R350.00");
+                    listBoxInvoice.Items.Add("Charging Port Repair - \tR350.00");
                 }
 
                 decimal cellTotal = decimal.Parse(txtCellExcVAT.Text);
@@ -250,9 +250,9 @@ namespace CMPG223_Project
 
                
                 listBoxInvoice.Items.Add("***************************************************************************************************************************");
-                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): ${cellTotal.ToString("0.00")}");
-                listBoxInvoice.Items.Add($"Component VAT (15%): ${cellVat.ToString("0.00")}");
-                listBoxInvoice.Items.Add($"Component Total (including VAT): ${cellTotalWithVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): \tR{cellTotal.ToString("R0.00")}");
+                listBoxInvoice.Items.Add($"Component VAT (15%): \t\tR{cellVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"Component Total (including VAT): \tR{cellTotalWithVat.ToString("0.00")}");
                 listBoxInvoice.Items.Add(" ");
             }
             catch(Exception)

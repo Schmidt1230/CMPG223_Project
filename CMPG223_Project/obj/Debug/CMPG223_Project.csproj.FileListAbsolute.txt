@@ -55,3 +55,7 @@ C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase.mdf
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase_log.ldf
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmNavigate.resources
+C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase.mdf
+C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase_log.ldf
+C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmNavigate.resources
+C:\Users\ka zaber\OneDrive\Documents\2de Jaar\CMPG 223\Project\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmInvoices.resources
