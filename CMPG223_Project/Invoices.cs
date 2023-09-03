@@ -231,12 +231,12 @@ namespace CMPG223_Project
 
                 if (cbxCellVirus.Checked)
                 {
-                    listBoxInvoice.Items.Add("Virus Removal - \tR200.00");
+                    listBoxInvoice.Items.Add("Virus Removal - \t\tR200.00");
                 }
 
                 if (cbxCellMotherboard.Checked)
                 {
-                    listBoxInvoice.Items.Add("Motherboard - \tR1200.00");
+                    listBoxInvoice.Items.Add("Motherboard - \t\tR1200.00");
                 }
 
                 if (cbxCharge.Checked)
@@ -250,9 +250,9 @@ namespace CMPG223_Project
 
                
                 listBoxInvoice.Items.Add("***************************************************************************************************************************");
-                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): ${cellTotal.ToString("0.00")}");
-                listBoxInvoice.Items.Add($"Component VAT (15%): ${cellVat.ToString("0.00")}");
-                listBoxInvoice.Items.Add($"Component Total (including VAT): ${cellTotalWithVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): R{cellTotal.ToString("R0.00")}");
+                listBoxInvoice.Items.Add($"Component VAT (15%): R{cellVat.ToString("0.00")}");
+                listBoxInvoice.Items.Add($"Component Total (including VAT): R{cellTotalWithVat.ToString("0.00")}");
                 listBoxInvoice.Items.Add(" ");
             }
             catch(Exception)
