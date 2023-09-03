@@ -18,12 +18,6 @@ namespace CMPG223_Project
         String query;
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
 
-        //Declare public variables.
-        public string clientFN;
-        public string clientLN;
-        public string clientCN;
-        public string clientEmail;
-
         public string clientFNUpdate;
         public string clientLNUpdate;
         public string clientCNUpdate;
@@ -42,11 +36,6 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-
-                //clientFN = txtFirstName.Text;
-                //clientLN = txtLastName.Text;
-                //clientCN = txtCellNumber.Text;
-                //clientEmail = txtEmail.Text;
 
                 query = $"INSERT INTO Clients (FirstName, LastName, ContactNumber, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmail.Text}')";
                 com = new SqlCommand(query, conn);
@@ -82,7 +71,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Clients SET FirstName = {clientFNUpdate}, LastName = {clientLNUpdate}, ContactNumber = {clientCNUpdate}, Email = {clientEmailUpdate} WHERE FirstName = {clientFNUpdate}";
+                    query = $"UPDATE Clients SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', ContactNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE FirstName = '{txtFirstName.Text}'";
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
@@ -181,7 +170,7 @@ namespace CMPG223_Project
 
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "Clients";
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
