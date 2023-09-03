@@ -49,7 +49,7 @@ namespace CMPG223_Project
             //Display messagebox.
             if (result == DialogResult.Yes)
             {
-                //Call Remove/Update Method using delegate.
+                
             }
             else
             {
@@ -110,7 +110,7 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                query = $"DELETE FROM Technicians WHERE TechnicianID = {technicianID}";
+                query = "";
                 com = new SqlCommand(query, conn);
                 dataAdapter.DeleteCommand = com;
                 com.ExecuteNonQuery();
@@ -166,7 +166,7 @@ namespace CMPG223_Project
             technicianCNUpdate = txtCNUpdate.Text;
             technicianEmailUpdate = txtEmailUpdate.Text;
 
-            //Call Update Method using delegate.
+            //Call Update Method
 
             //Call showMessage Method
             showMessage("Update client information?", "Update Client Information");
@@ -177,7 +177,10 @@ namespace CMPG223_Project
             //Call showMessage method.
             showMessage("Permanently remove technician information?", "Remove Technician Information");
 
-            //Call remove method using delegate above.
+            int technicianID = int.Parse(txtTech_ID.Text);
+
+            //Call RemoveTechnician Method
+            RemoveTechnician($"DELETE FROM Technicians WHERE TechnicianID = {technicianID}", technicianID);
         }
     }
 }
