@@ -156,5 +156,10 @@ namespace CMPG223_Project
         {
             UpdateCellTotal();
         }
+
+        private void btnViewInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
