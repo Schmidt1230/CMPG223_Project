@@ -183,5 +183,10 @@ namespace CMPG223_Project
             dataGridView1.DataMember = "Clients";
             
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
