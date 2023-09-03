@@ -85,8 +85,8 @@ namespace CMPG223_Project
 
         private void chbForm_CheckedChanged(object sender, EventArgs e)
         {
-            frmDevices devices = new frmDevices();
-            devices.Show();
+            frmNavigate n1 = new frmNavigate();
+            n1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,6 +98,11 @@ namespace CMPG223_Project
         {
             frmInvoices invoices = new frmInvoices();
             invoices.Show();
+        }
+
+        private void chbForm_CheckedChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

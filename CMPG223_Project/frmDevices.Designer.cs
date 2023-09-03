@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevices));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAddDevice = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlAddDevice = new System.Windows.Forms.Panel();
             this.grpbxRemove = new System.Windows.Forms.GroupBox();
+            this.txtUpdateID = new System.Windows.Forms.TextBox();
             this.lblDeviceID = new System.Windows.Forms.Label();
             this.pnlDevices = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,78 +53,11 @@
             this.chbFixable = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDevices = new System.Windows.Forms.ComboBox();
-            this.txtUpdateID = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAddDevice.SuspendLayout();
             this.grpbxRemove.SuspendLayout();
             this.pnlDevices.SuspendLayout();
             this.grpbxAddDevices.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnAddDevice);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 629);
-            this.panel1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 248);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 87);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Devices Information";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnAddDevice
-            // 
-            this.btnAddDevice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddDevice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDevice.Font = new System.Drawing.Font("Yu Gothic Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDevice.Location = new System.Drawing.Point(0, 174);
-            this.btnAddDevice.Name = "btnAddDevice";
-            this.btnAddDevice.Size = new System.Drawing.Size(186, 74);
-            this.btnAddDevice.TabIndex = 1;
-            this.btnAddDevice.Text = "Add Device";
-            this.btnAddDevice.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 174);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pnlAddDevice
             // 
@@ -137,9 +65,9 @@
             this.pnlAddDevice.Controls.Add(this.grpbxRemove);
             this.pnlAddDevice.Controls.Add(this.grpbxAddDevices);
             this.pnlAddDevice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlAddDevice.Location = new System.Drawing.Point(186, 0);
+            this.pnlAddDevice.Location = new System.Drawing.Point(0, 0);
             this.pnlAddDevice.Name = "pnlAddDevice";
-            this.pnlAddDevice.Size = new System.Drawing.Size(1253, 629);
+            this.pnlAddDevice.Size = new System.Drawing.Size(1776, 715);
             this.pnlAddDevice.TabIndex = 1;
             // 
             // grpbxRemove
@@ -162,6 +90,13 @@
             this.grpbxRemove.TabIndex = 7;
             this.grpbxRemove.TabStop = false;
             this.grpbxRemove.Text = "Manage Devices";
+            // 
+            // txtUpdateID
+            // 
+            this.txtUpdateID.Location = new System.Drawing.Point(158, 38);
+            this.txtUpdateID.Name = "txtUpdateID";
+            this.txtUpdateID.Size = new System.Drawing.Size(100, 30);
+            this.txtUpdateID.TabIndex = 12;
             // 
             // lblDeviceID
             // 
@@ -420,26 +355,16 @@
             this.cmbDevices.Size = new System.Drawing.Size(181, 33);
             this.cmbDevices.TabIndex = 0;
             // 
-            // txtUpdateID
-            // 
-            this.txtUpdateID.Location = new System.Drawing.Point(158, 38);
-            this.txtUpdateID.Name = "txtUpdateID";
-            this.txtUpdateID.Size = new System.Drawing.Size(100, 30);
-            this.txtUpdateID.TabIndex = 12;
-            // 
             // frmDevices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 629);
+            this.ClientSize = new System.Drawing.Size(1040, 572);
             this.Controls.Add(this.pnlAddDevice);
-            this.Controls.Add(this.panel1);
             this.Name = "frmDevices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDevices";
             this.Load += new System.EventHandler(this.frmDevices_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAddDevice.ResumeLayout(false);
             this.grpbxRemove.ResumeLayout(false);
             this.grpbxRemove.PerformLayout();
@@ -452,13 +377,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAddDevice;
         private System.Windows.Forms.Panel pnlAddDevice;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox grpbxAddDevices;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDevices;

@@ -67,6 +67,7 @@ namespace CMPG223_Project
             this.chbForm.TabIndex = 19;
             this.chbForm.Text = "checkBox1";
             this.chbForm.UseVisualStyleBackColor = false;
+            this.chbForm.CheckedChanged += new System.EventHandler(this.chbForm_CheckedChanged_1);
             this.chbForm.CheckStateChanged += new System.EventHandler(this.chbForm_CheckedChanged);
             // 
             // lblDate
