@@ -150,7 +150,7 @@ namespace CMPG223_Project
             technicianEmail = txtEmail.Text;
 
             //Call Add Method
-            AddTechnician($"INSERT INTO Technicians (TechnicianName, TechnicianLastName, TechnicianCellNumber, TechnicianEmail) VALUES ({technicianFN}, {technicianLN}, {technicianCN}, {technicianEmail})");
+            AddTechnician($"INSERT INTO Technicians (FirstName, LastName, CellphoneNumber, Email) VALUES ({technicianFN}, {technicianLN}, {technicianCN}, {technicianEmail})");
 
             //Clear textboxes
             txtFirstName.Clear();
