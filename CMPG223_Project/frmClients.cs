@@ -43,7 +43,7 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                query = $"INSERT INTO Clients (FirstName, LastName, ContactNumber, Email) VALUES ({clientFN}, {clientLN}, {clientCN}, {clientEmail})";
+                query = "";
                 com = new SqlCommand(query, conn);
                 dataAdapter.InsertCommand = com;
                 com.ExecuteNonQuery();
@@ -66,7 +66,7 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                query = $"UPDATE Clients SET FirstName = {clientFNUpdate}, LastName = {clientLNUpdate}, ContactNumber = {clientCNUpdate}, Email = {clientEmailUpdate} WHERE FirstName = {clientFNUpdate}";
+                query = "";
                 com = new SqlCommand(query, conn);
                 dataAdapter.UpdateCommand = com;
                 com.ExecuteNonQuery();
@@ -116,7 +116,7 @@ namespace CMPG223_Project
             //Display messagebox.
             if (result == DialogResult.Yes)
             {
-                //Call Remove/Update Method ?????
+                //Call Remove/Update Method using delegate. !!!!
             }
             else
             {
@@ -132,7 +132,7 @@ namespace CMPG223_Project
             clientEmail = txtEmail.Text;
 
             //Call addClient Method
-            addClient(query);
+            addClient($"INSERT INTO Clients (FirstName, LastName, ContactNumber, Email) VALUES ({clientFN}, {clientLN}, {clientCN}, {clientEmail})");
 
             MessageBox.Show("Client added successfully.");
 
@@ -161,6 +161,7 @@ namespace CMPG223_Project
             showMessage("Update client information?", "Update Client Information");
 
             //Call Update Method
+            UpdateClient($"UPDATE Clients SET FirstName = {clientFNUpdate}, LastName = {clientLNUpdate}, ContactNumber = {clientCNUpdate}, Email = {clientEmailUpdate} WHERE FirstName = {clientFNUpdate}");
         }
     }
 }
