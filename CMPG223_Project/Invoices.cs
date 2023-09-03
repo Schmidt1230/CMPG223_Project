@@ -40,14 +40,14 @@ namespace CMPG223_Project
             conn.Open();
             read = comm.ExecuteReader();
 
-            while (reader.Read())
-                {
-                   int technicianId = read.GetInt32(0);
-                   string technicianName = read.GetString(1);
-                   cmbTechnician.Items.Add(new ComboBoxItem(technicianName, technicianId));
-                }
+            //while (reader.Read())
+            //    {
+            //       int technicianId = read.GetInt32(0);
+            //       string technicianName = read.GetString(1);
+            //       cmbTechnician.Items.Add(new ComboBoxItem(technicianName, technicianId));
+            //    }
 
-                    reader.Close();
+            //        reader.Close();
                 
             }
 
