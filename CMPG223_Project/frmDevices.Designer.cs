@@ -69,7 +69,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnAddDevice);
             this.panel1.Controls.Add(this.button1);
@@ -133,7 +133,7 @@
             // 
             // pnlAddDevice
             // 
-            this.pnlAddDevice.BackColor = System.Drawing.Color.White;
+            this.pnlAddDevice.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlAddDevice.Controls.Add(this.grpbxRemove);
             this.pnlAddDevice.Controls.Add(this.grpbxAddDevices);
             this.pnlAddDevice.Dock = System.Windows.Forms.DockStyle.Left;
@@ -180,9 +180,9 @@
             this.pnlDevices.Controls.Add(this.label3);
             this.pnlDevices.Controls.Add(this.txtFind);
             this.pnlDevices.Controls.Add(this.lstDevices);
-            this.pnlDevices.Location = new System.Drawing.Point(397, 29);
+            this.pnlDevices.Location = new System.Drawing.Point(397, 14);
             this.pnlDevices.Name = "pnlDevices";
-            this.pnlDevices.Size = new System.Drawing.Size(406, 522);
+            this.pnlDevices.Size = new System.Drawing.Size(406, 537);
             this.pnlDevices.TabIndex = 9;
             this.pnlDevices.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDevices_Paint);
             // 
@@ -209,7 +209,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, -1);
+            this.label5.Location = new System.Drawing.Point(123, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(195, 29);
             this.label5.TabIndex = 12;
@@ -260,7 +260,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(121, 401);
+            this.label4.Location = new System.Drawing.Point(214, 411);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 8;
@@ -407,7 +407,7 @@
             // cmbDevices
             // 
             this.cmbDevices.FormattingEnabled = true;
-            this.cmbDevices.Location = new System.Drawing.Point(23, 69);
+            this.cmbDevices.Location = new System.Drawing.Point(23, 74);
             this.cmbDevices.Name = "cmbDevices";
             this.cmbDevices.Size = new System.Drawing.Size(181, 33);
             this.cmbDevices.TabIndex = 0;

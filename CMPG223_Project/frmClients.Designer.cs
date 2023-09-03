@@ -130,6 +130,7 @@ namespace CMPG223_Project
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Client";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtLNUpdate
             // 
@@ -209,6 +210,7 @@ namespace CMPG223_Project
             this.btnRemoveClient.TabIndex = 7;
             this.btnRemoveClient.Text = "Remove Client";
             this.btnRemoveClient.UseVisualStyleBackColor = true;
+            this.btnRemoveClient.Click += new System.EventHandler(this.btnRemoveClient_Click);
             // 
             // lblClientID
             // 
@@ -303,6 +305,7 @@ namespace CMPG223_Project
             this.btnAddClient.TabIndex = 7;
             this.btnAddClient.Text = "Add Client";
             this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // txtLastName
             // 
@@ -393,7 +396,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.gbxRemoveClient);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbxAddClient);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmClients";
             this.Text = "frmClients";
             this.gbxUpdateClient.ResumeLayout(false);
