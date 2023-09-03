@@ -82,6 +82,10 @@ namespace CMPG223_Project
             this.cbxKeyboard = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbTechnician = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -529,7 +533,7 @@ namespace CMPG223_Project
             this.listBoxInvoice.FormattingEnabled = true;
             this.listBoxInvoice.Location = new System.Drawing.Point(709, 24);
             this.listBoxInvoice.Name = "listBoxInvoice";
-            this.listBoxInvoice.Size = new System.Drawing.Size(280, 394);
+            this.listBoxInvoice.Size = new System.Drawing.Size(280, 238);
             this.listBoxInvoice.TabIndex = 8;
             // 
             // groupBox3
@@ -675,6 +679,42 @@ namespace CMPG223_Project
             this.label1.TabIndex = 0;
             this.label1.Text = "Base Inspection Fee:";
             // 
+            // cmbTechnician
+            // 
+            this.cmbTechnician.FormattingEnabled = true;
+            this.cmbTechnician.Location = new System.Drawing.Point(734, 312);
+            this.cmbTechnician.Name = "cmbTechnician";
+            this.cmbTechnician.Size = new System.Drawing.Size(121, 21);
+            this.cmbTechnician.TabIndex = 10;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(734, 379);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 11;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label28.Location = new System.Drawing.Point(722, 285);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(143, 18);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "Assigned Technician";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label29.Location = new System.Drawing.Point(722, 355);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(142, 18);
+            this.label29.TabIndex = 17;
+            this.label29.Text = "Assigned Customer:";
+            // 
             // frmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -682,6 +722,10 @@ namespace CMPG223_Project
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 513);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbTechnician);
             this.Controls.Add(this.btnPrintInvoice);
             this.Controls.Add(this.listBoxInvoice);
             this.Controls.Add(this.groupBox3);
@@ -698,6 +742,7 @@ namespace CMPG223_Project
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -755,5 +800,9 @@ namespace CMPG223_Project
         private System.Windows.Forms.CheckBox cbxKeyboard;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbTechnician;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }
