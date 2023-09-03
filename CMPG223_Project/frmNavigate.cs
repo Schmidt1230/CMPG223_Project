@@ -53,5 +53,10 @@ namespace CMPG223_Project
             this.pnldashBoard.Controls.Add(frmtechnician);
             frmtechnician.Show();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

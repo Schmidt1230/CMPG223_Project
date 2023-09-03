@@ -200,7 +200,7 @@ namespace CMPG223_Project
             dispDevices(sqlstatement);
         }
 
-        private Boolean verifyAction(int ID,String Heading,String message)
+        public Boolean verifyAction(int ID,String Heading,String message)
         {
             DialogResult result = MessageBox.Show($"{Heading} with ID {ID}?", message, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
