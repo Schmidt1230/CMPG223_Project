@@ -48,7 +48,7 @@ namespace CMPG223_Project
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(203, 620);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 28);
             this.button1.TabIndex = 14;
@@ -67,6 +67,7 @@ namespace CMPG223_Project
             this.chbForm.TabIndex = 19;
             this.chbForm.Text = "checkBox1";
             this.chbForm.UseVisualStyleBackColor = false;
+            this.chbForm.CheckStateChanged += new System.EventHandler(this.chbForm_CheckedChanged);
             // 
             // lblDate
             // 
@@ -113,6 +114,7 @@ namespace CMPG223_Project
             this.chbShow.TabIndex = 8;
             this.chbShow.Text = "Show Password";
             this.chbShow.UseVisualStyleBackColor = true;
+            this.chbShow.CheckedChanged += new System.EventHandler(this.chbShow_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -127,6 +129,7 @@ namespace CMPG223_Project
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Proceed";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 

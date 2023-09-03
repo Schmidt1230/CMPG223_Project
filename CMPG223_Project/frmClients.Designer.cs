@@ -43,7 +43,6 @@ namespace CMPG223_Project
             this.gbxUpdateClient = new System.Windows.Forms.GroupBox();
             this.btnRemoveClient = new System.Windows.Forms.Button();
             this.lblClientID = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.gbxRemoveClient = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace CMPG223_Project
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbxAddClient = new System.Windows.Forms.GroupBox();
+            this.txtRemoveClient = new System.Windows.Forms.TextBox();
             this.gbxUpdateClient.SuspendLayout();
             this.gbxRemoveClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -223,22 +223,12 @@ namespace CMPG223_Project
             this.lblClientID.TabIndex = 4;
             this.lblClientID.Text = "Client_ID:";
             // 
-            // textBox4
-            // 
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(39, 76);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(247, 29);
-            this.textBox4.TabIndex = 0;
-            // 
             // gbxRemoveClient
             // 
             this.gbxRemoveClient.BackColor = System.Drawing.Color.Transparent;
             this.gbxRemoveClient.Controls.Add(this.btnRemoveClient);
             this.gbxRemoveClient.Controls.Add(this.lblClientID);
-            this.gbxRemoveClient.Controls.Add(this.textBox4);
+            this.gbxRemoveClient.Controls.Add(this.txtRemoveClient);
             this.gbxRemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxRemoveClient.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxRemoveClient.ForeColor = System.Drawing.Color.White;
@@ -384,6 +374,16 @@ namespace CMPG223_Project
             this.gbxAddClient.TabStop = false;
             this.gbxAddClient.Text = "Add Client";
             // 
+            // txtRemoveClient
+            // 
+            this.txtRemoveClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtRemoveClient.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemoveClient.Location = new System.Drawing.Point(39, 76);
+            this.txtRemoveClient.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRemoveClient.Name = "txtRemoveClient";
+            this.txtRemoveClient.Size = new System.Drawing.Size(247, 29);
+            this.txtRemoveClient.TabIndex = 0;
+            // 
             // frmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -426,7 +426,6 @@ namespace CMPG223_Project
         private System.Windows.Forms.GroupBox gbxUpdateClient;
         private System.Windows.Forms.Button btnRemoveClient;
         private System.Windows.Forms.Label lblClientID;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox gbxRemoveClient;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
@@ -439,5 +438,6 @@ namespace CMPG223_Project
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox gbxAddClient;
+        private System.Windows.Forms.TextBox txtRemoveClient;
     }
 }

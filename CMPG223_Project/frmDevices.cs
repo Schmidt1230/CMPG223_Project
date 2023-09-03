@@ -13,7 +13,7 @@ namespace CMPG223_Project
 {
     public partial class frmDevices : Form
     {
-        SqlConnection conn = new SqlConnection(@"");
+        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
         SqlCommand comm = new SqlCommand();
         String sqlstatement;
         SqlDataAdapter adap = new SqlDataAdapter();
@@ -53,15 +53,18 @@ namespace CMPG223_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            AddDevice();
+            sqlstatement = "Select * From Devices";
+            dispDevices(sqlstatement);
         }
 
         private void frmDevices_Load(object sender, EventArgs e)
         {
-
+            sqlstatement = "Select * From Devices";
+            dispDevices(sqlstatement);
         }
 
-        private void AddDevice(String sqlStatement)
+        private void AddDevice()
         {
             Boolean fixable = false;
             try
@@ -71,8 +74,8 @@ namespace CMPG223_Project
                 {
                     fixable = true;
                 }
-                sqlstatement = $"Insert Into Devices (Device_Type,Fixable,Details,Repair_History) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
-                comm = new SqlCommand(sqlStatement, conn);
+                String sqlstatement = $"Insert Into Devices (Device_Type,Fixable,Details,Repair_History) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
+                comm = new SqlCommand(sqlstatement, conn);
                 adap.InsertCommand = comm;
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Device was added successfully");
@@ -152,7 +155,7 @@ namespace CMPG223_Project
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            sqlstatement = $"Select * from devices where ID LIKE %{txtFind.Text}%";
+            sqlstatement = $"Select * from devices where Device_ID = {txtFind.Text}";
             dispDevices(sqlstatement);
 
         }
@@ -168,6 +171,8 @@ namespace CMPG223_Project
                     MessageBox.Show("Please enter a valid ID for the device you wish to delete");
                     txtRemove.Focus();
                 }
+            sqlstatement = "Select * From Devices";
+            dispDevices(sqlstatement);
         }
 
         private Boolean verifyDelete(int deleteID)
@@ -185,6 +190,13 @@ namespace CMPG223_Project
                 return false;
 
             }
+        }
+
+        private void cmbFind_TextChanged(object sender, EventArgs e)
+        {
+            //Filter Devices by their Type
+            sqlstatement = $"Select * From Devices where Device_Type = '{cmbFind.Text}'";
+            dispDevices(sqlstatement);
         }
     }
 }

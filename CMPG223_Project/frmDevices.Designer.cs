@@ -200,10 +200,19 @@
             // cmbFind
             // 
             this.cmbFind.FormattingEnabled = true;
+            this.cmbFind.Items.AddRange(new object[] {
+            "Tablet",
+            "Cellphone",
+            "Desktop",
+            "Monitor",
+            "Notebook",
+            "Laptop",
+            "Mac"});
             this.cmbFind.Location = new System.Drawing.Point(208, 68);
             this.cmbFind.Name = "cmbFind";
             this.cmbFind.Size = new System.Drawing.Size(181, 33);
             this.cmbFind.TabIndex = 13;
+            this.cmbFind.TextChanged += new System.EventHandler(this.cmbFind_TextChanged);
             // 
             // label5
             // 
@@ -407,6 +416,14 @@
             // cmbDevices
             // 
             this.cmbDevices.FormattingEnabled = true;
+            this.cmbDevices.Items.AddRange(new object[] {
+            "Tablet",
+            "Cellphone",
+            "Desktop",
+            "Monitor",
+            "Notebook",
+            "Laptop",
+            "Mac"});
             this.cmbDevices.Location = new System.Drawing.Point(23, 74);
             this.cmbDevices.Name = "cmbDevices";
             this.cmbDevices.Size = new System.Drawing.Size(181, 33);
