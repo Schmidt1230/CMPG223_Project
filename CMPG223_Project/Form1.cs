@@ -42,7 +42,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                String sqlstatement = "Select user_name,user_password From Users";
+                String sqlstatement = "Select user_name,user_password From SystemUsers";
                 comm = new SqlCommand(sqlstatement, conn);
                 read= comm.ExecuteReader();
 

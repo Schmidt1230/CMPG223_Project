@@ -52,3 +52,6 @@ C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG2
 C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.pdb
 C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmInvoices.resources
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmInvoices.resources
+C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase.mdf
+C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase_log.ldf
+C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.csproj.SuggestedBindingRedirects.cache

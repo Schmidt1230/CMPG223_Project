@@ -53,9 +53,14 @@ namespace CMPG223_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            AddDevice();
-            sqlstatement = "Select * From Devices";
-            dispDevices(sqlstatement);
+            String message = "Add device";
+            String heading = "Are you sure you wish to ADD Device";
+            if (verifyAction(0, message, heading))
+            {
+                AddDevice();
+                sqlstatement = "Select * From Devices";
+                dispDevices(sqlstatement);
+            }
         }
 
         private void frmDevices_Load(object sender, EventArgs e)
@@ -67,6 +72,7 @@ namespace CMPG223_Project
         private void AddDevice()
         {
             Boolean fixable = false;
+
             try
             {
                 conn.Open();
@@ -107,10 +113,21 @@ namespace CMPG223_Project
 
         private void updateDevices(int ID)
         {
+            bool fixable = false;
+            if(chbRepairable.Checked)
+                fixable= true;
+            
             try
             {
                 conn.Open();
-                sqlstatement = $"Update Devices SET ";
+                sqlstatement = $"Update Devices SET Fixable = '{fixable}'";
+                
+                //Tests whether the details should be updated asswell
+                if (txtUpdateDetails.Text.Length > 0)
+                    sqlstatement = sqlstatement + $", Details = '{txtUpdateDetails.Text}' WHERE Device_ID = {ID}";
+                else
+                    sqlstatement = sqlstatement + $"WHERE Device_ID = {ID}";
+
                 comm = new SqlCommand(sqlstatement, conn);
                 adap.UpdateCommand = comm;
                 adap.UpdateCommand.ExecuteNonQuery();
@@ -155,16 +172,24 @@ namespace CMPG223_Project
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            sqlstatement = $"Select * from devices where Device_ID = {txtFind.Text}";
-            dispDevices(sqlstatement);
+            if (txtFind.Text.Length > 0)    //Tests wheter the user has entered a Value or not
+                sqlstatement = $"Select * from devices where Device_ID = {txtFind.Text}";
+            else
+                sqlstatement = "Select * from Devices";
+                
+          dispDevices(sqlstatement);
+
+
 
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            String heading = "Are you sure you wish to DELETE device ";
+            String message = "Delete Confirmation";
             int ID;
             if (int.TryParse(txtRemove.Text, out ID))
-                if (verifyDelete(ID) == true)
+                if (verifyAction(ID,heading,message) == true)
                     removeDevice(ID);
                 else
                 {
@@ -175,18 +200,18 @@ namespace CMPG223_Project
             dispDevices(sqlstatement);
         }
 
-        private Boolean verifyDelete(int deleteID)
+        private Boolean verifyAction(int ID,String Heading,String message)
         {
-            DialogResult result = MessageBox.Show($"Are you sure you want to delete device with ID {deleteID}?", "Delete Device Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"{Heading} with ID {ID}?", message, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Device has been deleted");
+                MessageBox.Show("Action completed");
                 return true;
             }
             else
             {
-                MessageBox.Show("Deletion process has been aborted");
+                MessageBox.Show("Action has been aborted");
                 return false;
 
             }
@@ -197,6 +222,25 @@ namespace CMPG223_Project
             //Filter Devices by their Type
             sqlstatement = $"Select * From Devices where Device_Type = '{cmbFind.Text}'";
             dispDevices(sqlstatement);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (int.TryParse(txtUpdateID.Text, out id))
+            {
+                String heading = "Are you sure you wish to UPDATE device";
+                String message = "Update Device";
+                if (verifyAction(id, heading, message) == true)
+                {
+                    updateDevices(id);
+                    sqlstatement = "Select * from Devices";
+                    dispDevices(sqlstatement);
+                }
+
+            }
+            else
+                MessageBox.Show("Please enter a valid ID for the device");
         }
     }
 }

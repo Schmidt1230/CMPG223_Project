@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACi7SURBVHhe7d15
+        0wAADdMBvdUcagAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACi7SURBVHhe7d15
         kKR1nedxxzVmnY3YiQl3dmZ2nQjXiJ2IiY3d2Y3d8HZAkZtu+r4v+j7pbu4b7xMERQURAccZDxhREUFE
         ARGQU265r25UYECQmVHDUXn2+TWUVFd9n67MqieznueXrz9eHk93V3X1k/l83lWVlfmyoigAgAETHgQA
         8hYeBADyFh4EAPIWHgQA8hYeBADyFh4EAPIWHgQA8hYeBADyFh4EAPIWHgQA8hYeBADyFh4EAPIWHgQA
@@ -298,9 +298,6 @@
         gwBA3sKDAEDewoMAQN7CgwBA3sKDAEDewoMAQN7CgwBAzoqX/X8i6ENm8mqejgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

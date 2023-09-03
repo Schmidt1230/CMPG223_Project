@@ -40,7 +40,6 @@
             this.pnlDevices = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbFind = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.lstDevices = new System.Windows.Forms.ListBox();
@@ -48,9 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtRemove = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUpdateDetails = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chbRepairable = new System.Windows.Forms.CheckBox();
             this.grpbxAddDevices = new System.Windows.Forms.GroupBox();
             this.lblWords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.chbFixable = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDevices = new System.Windows.Forms.ComboBox();
+            this.txtUpdateID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAddDevice.SuspendLayout();
@@ -144,15 +144,16 @@
             // 
             // grpbxRemove
             // 
+            this.grpbxRemove.Controls.Add(this.txtUpdateID);
             this.grpbxRemove.Controls.Add(this.lblDeviceID);
             this.grpbxRemove.Controls.Add(this.pnlDevices);
             this.grpbxRemove.Controls.Add(this.btnUpdate);
             this.grpbxRemove.Controls.Add(this.label4);
             this.grpbxRemove.Controls.Add(this.txtRemove);
             this.grpbxRemove.Controls.Add(this.label7);
-            this.grpbxRemove.Controls.Add(this.textBox2);
+            this.grpbxRemove.Controls.Add(this.txtUpdateDetails);
             this.grpbxRemove.Controls.Add(this.btnRemove);
-            this.grpbxRemove.Controls.Add(this.checkBox2);
+            this.grpbxRemove.Controls.Add(this.chbRepairable);
             this.grpbxRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbxRemove.Location = new System.Drawing.Point(420, 35);
@@ -165,7 +166,7 @@
             // lblDeviceID
             // 
             this.lblDeviceID.AutoSize = true;
-            this.lblDeviceID.Location = new System.Drawing.Point(13, 68);
+            this.lblDeviceID.Location = new System.Drawing.Point(13, 41);
             this.lblDeviceID.Name = "lblDeviceID";
             this.lblDeviceID.Size = new System.Drawing.Size(118, 25);
             this.lblDeviceID.TabIndex = 11;
@@ -176,7 +177,6 @@
             this.pnlDevices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlDevices.Controls.Add(this.label6);
             this.pnlDevices.Controls.Add(this.cmbFind);
-            this.pnlDevices.Controls.Add(this.label5);
             this.pnlDevices.Controls.Add(this.label3);
             this.pnlDevices.Controls.Add(this.txtFind);
             this.pnlDevices.Controls.Add(this.lstDevices);
@@ -191,7 +191,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(15, 72);
+            this.label6.Location = new System.Drawing.Point(15, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 14;
@@ -208,28 +208,18 @@
             "Notebook",
             "Laptop",
             "Mac"});
-            this.cmbFind.Location = new System.Drawing.Point(208, 68);
+            this.cmbFind.Location = new System.Drawing.Point(220, 41);
             this.cmbFind.Name = "cmbFind";
             this.cmbFind.Size = new System.Drawing.Size(181, 33);
             this.cmbFind.TabIndex = 13;
             this.cmbFind.TextChanged += new System.EventHandler(this.cmbFind_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 29);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Select a Device";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(3, 35);
+            this.label3.Location = new System.Drawing.Point(15, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 20);
             this.label3.TabIndex = 7;
@@ -238,7 +228,7 @@
             // txtFind
             // 
             this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFind.Location = new System.Drawing.Point(253, 32);
+            this.txtFind.Location = new System.Drawing.Point(253, 4);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(136, 30);
             this.txtFind.TabIndex = 1;
@@ -263,6 +253,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -293,14 +284,14 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Device/Repair details";
             // 
-            // textBox2
+            // txtUpdateDetails
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(18, 164);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(353, 123);
-            this.textBox2.TabIndex = 3;
+            this.txtUpdateDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateDetails.Location = new System.Drawing.Point(18, 164);
+            this.txtUpdateDetails.Multiline = true;
+            this.txtUpdateDetails.Name = "txtUpdateDetails";
+            this.txtUpdateDetails.Size = new System.Drawing.Size(353, 123);
+            this.txtUpdateDetails.TabIndex = 3;
             // 
             // btnRemove
             // 
@@ -314,18 +305,18 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // checkBox2
+            // chbRepairable
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(18, 102);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(219, 29);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Is Device Repairable?";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chbRepairable.AutoSize = true;
+            this.chbRepairable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chbRepairable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbRepairable.ForeColor = System.Drawing.Color.Black;
+            this.chbRepairable.Location = new System.Drawing.Point(18, 78);
+            this.chbRepairable.Name = "chbRepairable";
+            this.chbRepairable.Size = new System.Drawing.Size(219, 29);
+            this.chbRepairable.TabIndex = 2;
+            this.chbRepairable.Text = "Is Device Repairable?";
+            this.chbRepairable.UseVisualStyleBackColor = true;
             // 
             // grpbxAddDevices
             // 
@@ -429,6 +420,13 @@
             this.cmbDevices.Size = new System.Drawing.Size(181, 33);
             this.cmbDevices.TabIndex = 0;
             // 
+            // txtUpdateID
+            // 
+            this.txtUpdateID.Location = new System.Drawing.Point(158, 38);
+            this.txtUpdateID.Name = "txtUpdateID";
+            this.txtUpdateID.Size = new System.Drawing.Size(100, 30);
+            this.txtUpdateID.TabIndex = 12;
+            // 
             // frmDevices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -472,8 +470,8 @@
         private System.Windows.Forms.GroupBox grpbxRemove;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox txtUpdateDetails;
+        private System.Windows.Forms.CheckBox chbRepairable;
         private System.Windows.Forms.Panel pnlDevices;
         private System.Windows.Forms.ListBox lstDevices;
         private System.Windows.Forms.TextBox txtFind;
@@ -482,8 +480,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblDeviceID;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbFind;
+        private System.Windows.Forms.TextBox txtUpdateID;
     }
 }
