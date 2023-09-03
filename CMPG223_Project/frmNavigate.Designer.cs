@@ -31,14 +31,14 @@ namespace CMPG223_Project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavigate));
             this.pnlNavi = new System.Windows.Forms.Panel();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
             this.btnInvoices = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnDevices = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnldashBoard = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.pnlNavi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,36 @@ namespace CMPG223_Project
             this.pnlNavi.Name = "pnlNavi";
             this.pnlNavi.Size = new System.Drawing.Size(255, 669);
             this.pnlNavi.TabIndex = 0;
+            // 
+            // btnReports
+            // 
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.PaleGreen;
+            this.btnReports.Location = new System.Drawing.Point(0, 457);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(255, 72);
+            this.btnReports.TabIndex = 6;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.PaleGreen;
+            this.btnExit.Location = new System.Drawing.Point(0, 597);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(255, 72);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnTechnicians
             // 
@@ -141,35 +171,6 @@ namespace CMPG223_Project
             this.pnldashBoard.Name = "pnldashBoard";
             this.pnldashBoard.Size = new System.Drawing.Size(2575, 669);
             this.pnldashBoard.TabIndex = 1;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnExit.Location = new System.Drawing.Point(0, 597);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(255, 72);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Yu Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnReports.Location = new System.Drawing.Point(0, 457);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(255, 72);
-            this.btnReports.TabIndex = 6;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = true;
             // 
             // frmNavigate
             // 

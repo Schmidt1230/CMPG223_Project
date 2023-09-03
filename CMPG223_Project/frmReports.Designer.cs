@@ -30,20 +30,20 @@ namespace CMPG223_Project
         private void InitializeComponent()
         {
             this.pnlReports = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbTechnician = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbAscending = new System.Windows.Forms.RadioButton();
             this.rdbDescending = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cmbTechnician = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lstReport = new System.Windows.Forms.ListBox();
             this.btnDevice = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lstReport = new System.Windows.Forms.ListBox();
             this.pnlReports.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlReports
@@ -57,35 +57,22 @@ namespace CMPG223_Project
             this.pnlReports.Size = new System.Drawing.Size(469, 528);
             this.pnlReports.TabIndex = 0;
             // 
-            // label1
+            // groupBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label1.Location = new System.Drawing.Point(773, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Generate a Report";
-            // 
-            // cmbTechnician
-            // 
-            this.cmbTechnician.FormattingEnabled = true;
-            this.cmbTechnician.Location = new System.Drawing.Point(228, 41);
-            this.cmbTechnician.Name = "cmbTechnician";
-            this.cmbTechnician.Size = new System.Drawing.Size(179, 35);
-            this.cmbTechnician.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label2.Location = new System.Drawing.Point(26, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Select a Technician";
+            this.groupBox2.Controls.Add(this.rdbAscending);
+            this.groupBox2.Controls.Add(this.rdbDescending);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.cmbTechnician);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Font = new System.Drawing.Font("Cascadia Code", 12F);
+            this.groupBox2.ForeColor = System.Drawing.Color.SpringGreen;
+            this.groupBox2.Location = new System.Drawing.Point(19, 48);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(427, 227);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Technicians Report";
             // 
             // rdbAscending
             // 
@@ -113,6 +100,36 @@ namespace CMPG223_Project
             this.rdbDescending.Text = "Descending";
             this.rdbDescending.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label2.Location = new System.Drawing.Point(26, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Select a Technician";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(277, 82);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 31);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Show All";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // cmbTechnician
+            // 
+            this.cmbTechnician.FormattingEnabled = true;
+            this.cmbTechnician.Location = new System.Drawing.Point(228, 41);
+            this.cmbTechnician.Name = "cmbTechnician";
+            this.cmbTechnician.Size = new System.Drawing.Size(179, 35);
+            this.cmbTechnician.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -123,17 +140,6 @@ namespace CMPG223_Project
             this.label3.Size = new System.Drawing.Size(324, 27);
             this.label3.TabIndex = 5;
             this.label3.Text = "Order By Repairs Completed";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(194, 92);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 31);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Show All";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -147,15 +153,6 @@ namespace CMPG223_Project
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Devices Report";
             // 
-            // lstReport
-            // 
-            this.lstReport.FormattingEnabled = true;
-            this.lstReport.ItemHeight = 16;
-            this.lstReport.Location = new System.Drawing.Point(528, 65);
-            this.lstReport.Name = "lstReport";
-            this.lstReport.Size = new System.Drawing.Size(478, 404);
-            this.lstReport.TabIndex = 1;
-            // 
             // btnDevice
             // 
             this.btnDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,22 +163,25 @@ namespace CMPG223_Project
             this.btnDevice.Text = "Most Repaired Device";
             this.btnDevice.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // label1
             // 
-            this.groupBox2.Controls.Add(this.rdbAscending);
-            this.groupBox2.Controls.Add(this.rdbDescending);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.cmbTechnician);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Font = new System.Drawing.Font("Cascadia Code", 12F);
-            this.groupBox2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.groupBox2.Location = new System.Drawing.Point(19, 48);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 227);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Technicians Report";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label1.Location = new System.Drawing.Point(773, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Generate a Report";
+            // 
+            // lstReport
+            // 
+            this.lstReport.FormattingEnabled = true;
+            this.lstReport.ItemHeight = 16;
+            this.lstReport.Location = new System.Drawing.Point(528, 65);
+            this.lstReport.Name = "lstReport";
+            this.lstReport.Size = new System.Drawing.Size(478, 404);
+            this.lstReport.TabIndex = 1;
             // 
             // frmReports
             // 
@@ -196,9 +196,9 @@ namespace CMPG223_Project
             this.Text = "frmReports";
             this.Load += new System.EventHandler(this.frmReports_Load);
             this.pnlReports.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
