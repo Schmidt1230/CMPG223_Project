@@ -14,21 +14,10 @@ namespace CMPG223_Project
 {
     public partial class Technician : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
         SqlCommand com = new SqlCommand();
         String query;
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
-
-        //Declare public variables.
-        public string technicianFN;
-        public string technicianLN;
-        public string technicianCN;
-        public string technicianEmail;
-
-        public string technicianFNUpdate;
-        public string technicianLNUpdate;
-        public string technicianCNUpdate;
-        public string technicianEmailUpdate;
 
         public int technicianID;
         public int hours_worked;
@@ -44,7 +33,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                query = $"INSERT INTO Technicians (First_Name, Last_Name, Cellphone_Number, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmailUpdate.Text}')";
+                query = $"INSERT INTO Technicians (FirstName, LastName, CellphoneNumber, Email) VALUES ('{txtFirstName.Text}', '{txtLastName.Text}', '{txtCellNumber.Text}', '{txtEmail.Text}')";
                 com = new SqlCommand(query, conn);
                 dataAdapter.InsertCommand = com;
                 com.ExecuteNonQuery();
@@ -67,7 +56,6 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                int technicianID = int.Parse(txtTech_ID.Text);
                 string message = "Update technician information?";
                 string title = "Update Technician Information";
 
@@ -77,7 +65,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Technicians SET First_Name = '{txtFirstName.Text}', Last_Name = '{txtLastName.Text}', Cellphone_Number = '{txtCellNumber.Text}', Email = '{txtEmail.Text}'";
+                    query = $"UPDATE Technicians SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', CellphoneNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}'";
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
@@ -114,7 +102,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"DELETE FROM Technicians WHERE TechnicianID = {technicianID}";
+                    query = $"DELETE FROM Technicians WHERE Technician_ID = '{txtTech_ID.Text}'";
                     com = new SqlCommand(query, conn);
                     dataAdapter.DeleteCommand = com;
                     com.ExecuteNonQuery();
@@ -148,16 +136,19 @@ namespace CMPG223_Project
 
         private void Technician_Load(object sender, EventArgs e)
         {
+            //Display Clients table in DataGridView.
+            query = "SELECT * FROM Technicians";
+            com = new SqlCommand(query, conn);
+            DataSet ds = new DataSet();
+            dataAdapter.SelectCommand = com;
+            dataAdapter.Fill(ds, "Technicians");
 
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "Technicians";
         }
 
         private void btnAddTechnician_Click(object sender, EventArgs e)
         {
-            technicianFN = txtFirstName.Text;
-            technicianLN = txtLastName.Text;
-            technicianCN = txtCellNumber.Text;
-            technicianEmail = txtEmail.Text;
-
             //Call Add Method
             AddTechnician();
 
@@ -170,11 +161,6 @@ namespace CMPG223_Project
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
         {
-            technicianFNUpdate = txtFNUpdate.Text;
-            technicianLNUpdate = txtLNUpdate.Text;
-            technicianCNUpdate = txtCNUpdate.Text;
-            technicianEmailUpdate = txtEmailUpdate.Text;
-
             //Call Update Method
             UpdateTechnician();
 
