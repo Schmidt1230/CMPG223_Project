@@ -14,7 +14,7 @@ namespace CMPG223_Project
 {
     public partial class Technician : Form
     {
-        SqlConnection conn = new SqlConnection(@"");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
         SqlCommand com = new SqlCommand();
         String query;
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
@@ -38,33 +38,14 @@ namespace CMPG223_Project
             InitializeComponent();
         }
 
-        //MessageBox method.
-        private void showMessage(string message, string title)
-        {
-            int technicianID = int.Parse(txtTech_ID.Text);
-
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-
-            //Display messagebox.
-            if (result == DialogResult.Yes)
-            {
-                
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-
         //AddTechnician Client
-        private void AddTechnician(string query)
+        private void AddTechnician()
         {
             try
             {
                 conn.Open();
 
-                query = "";
+                query = $"INSERT INTO Technicians (FirstName, LastName, CellphoneNumber, Email) VALUES ({technicianFN}, {technicianLN}, {technicianCN}, {technicianEmail})";
                 com = new SqlCommand(query, conn);
                 dataAdapter.InsertCommand = com;
                 com.ExecuteNonQuery();
@@ -81,18 +62,33 @@ namespace CMPG223_Project
         }
 
         //UpdateTechnician Method
-        private void UpdateTechnician(string query)
+        private void UpdateTechnician()
         {
             try
             {
                 conn.Open();
 
-                query = "";
-                com = new SqlCommand(query, conn);
-                dataAdapter.UpdateCommand = com;
-                com.ExecuteNonQuery();
+                int technicianID = int.Parse(txtTech_ID.Text);
+                string message = "Update technician information?";
+                string title = "Update Technician Information";
 
-                MessageBox.Show("Technician information updated successfully.");
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+
+                //Display messagebox.
+                if (result == DialogResult.Yes)
+                {
+                    query = $"UPDATE Technicians SET FirstName = {technicianFNUpdate}, LastName = {technicianLNUpdate}, CellphoneNumber = {technicianCNUpdate}, Email = {technicianEmail}";
+                    com = new SqlCommand(query, conn);
+                    dataAdapter.UpdateCommand = com;
+                    com.ExecuteNonQuery();
+
+                    MessageBox.Show("Technician information updated successfully.");
+                }
+                else
+                {
+                    this.Close();
+                }
 
                 conn.Close();
             }
@@ -104,18 +100,32 @@ namespace CMPG223_Project
         }
 
         //RemoveTechnician Method
-        private void RemoveTechnician(string query, int technicianID)
+        private void RemoveTechnician()
         {
             try
             {
                 conn.Open();
 
-                query = "";
-                com = new SqlCommand(query, conn);
-                dataAdapter.DeleteCommand = com;
-                com.ExecuteNonQuery();
+                string message = "Permanently remove technician information?";
+                string title = "Remove Technician Information";
 
-                MessageBox.Show("Technician information deleted successfully.");
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+
+                //Display messagebox.
+                if (result == DialogResult.Yes)
+                {
+                    query = $"DELETE FROM Technicians WHERE TechnicianID = {technicianID}";
+                    com = new SqlCommand(query, conn);
+                    dataAdapter.DeleteCommand = com;
+                    com.ExecuteNonQuery();
+
+                    MessageBox.Show("Technician information deleted successfully.");
+                }
+                else
+                {
+                    this.Close();
+                }
 
                 conn.Close();
             }
@@ -150,7 +160,7 @@ namespace CMPG223_Project
             technicianEmail = txtEmail.Text;
 
             //Call Add Method
-            AddTechnician($"INSERT INTO Technicians (FirstName, LastName, CellphoneNumber, Email) VALUES ({technicianFN}, {technicianLN}, {technicianCN}, {technicianEmail})");
+            AddTechnician();
 
             //Clear textboxes
             txtFirstName.Clear();
@@ -167,20 +177,18 @@ namespace CMPG223_Project
             technicianEmailUpdate = txtEmailUpdate.Text;
 
             //Call Update Method
+            UpdateTechnician();
 
-            //Call showMessage Method
-            showMessage("Update client information?", "Update Client Information");
+            txtFNUpdate.Clear();
+            txtLNUpdate.Clear();
+            txtCNUpdate.Clear();
+            txtEmailUpdate.Clear();
         }
 
         private void btnRemoveTechnician_Click(object sender, EventArgs e)
         {
-            //Call showMessage method.
-            showMessage("Permanently remove technician information?", "Remove Technician Information");
-
-            int technicianID = int.Parse(txtTech_ID.Text);
-
             //Call RemoveTechnician Method
-            RemoveTechnician($"DELETE FROM Technicians WHERE TechnicianID = {technicianID}", technicianID);
+            RemoveTechnician();
         }
     }
 }

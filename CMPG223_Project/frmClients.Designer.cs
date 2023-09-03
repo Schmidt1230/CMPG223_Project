@@ -684,7 +684,12 @@ namespace CMPG223_Project
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxAddClient);
             this.Name = "frmClients";
+<<<<<<< Updated upstream
             this.Text = "Client Information";
+=======
+            this.Text = "frmClients";
+            this.Load += new System.EventHandler(this.frmClients_Load);
+>>>>>>> Stashed changes
             this.gbxUpdateClient.ResumeLayout(false);
             this.gbxUpdateClient.PerformLayout();
             this.gbxRemoveClient.ResumeLayout(false);
