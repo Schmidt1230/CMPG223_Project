@@ -88,5 +88,10 @@ namespace CMPG223_Project
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void cmbTechnician_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

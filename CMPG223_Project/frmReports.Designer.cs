@@ -129,6 +129,7 @@ namespace CMPG223_Project
             this.cmbTechnician.Name = "cmbTechnician";
             this.cmbTechnician.Size = new System.Drawing.Size(179, 35);
             this.cmbTechnician.TabIndex = 1;
+            this.cmbTechnician.TextChanged += new System.EventHandler(this.cmbTechnician_TextChanged);
             // 
             // label3
             // 
