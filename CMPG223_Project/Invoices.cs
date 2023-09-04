@@ -20,7 +20,7 @@ namespace CMPG223_Project
         String sqlStatement;
         SqlDataReader read;
         SqlCommand command;
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlexandersDatabase.mdf;Integrated Security=True";
+        string connectionString = @"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False";
 
         private int selectedTechnicianId = -1; 
         private int selectedClientId = -1;
@@ -33,7 +33,7 @@ namespace CMPG223_Project
 
         private void PopulateTechniciansComboBox()
         {
-            string query = "SELECT FirstName FROM Technicians";
+            string query = "SELECT First_Name FROM Technicians";
 
             connection = new SqlConnection(connectionString);
 
@@ -56,7 +56,7 @@ namespace CMPG223_Project
 
         private void PopulateClientsComboBox()
         {
-            string query = "SELECT FirstName FROM Clients";
+            string query = "SELECT First_Name FROM Clients";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -431,7 +431,7 @@ namespace CMPG223_Project
                     string insertQuery = "INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) " +
                                          "VALUES (@Technician_ID, @TotalAmount, @A_Date, @Base_Inspection_Fee, @Repair_Cost, @Client_ID)";
 
-                    command = new SqlCommand(insertQuery, connection);
+                   
                     
                     
 
@@ -440,10 +440,12 @@ namespace CMPG223_Project
                     command.Parameters.AddWithValue("@A_Date", DateTime.Now); 
                     command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); 
                     command.Parameters.AddWithValue("@Repair_Cost", repairCost); 
-                    command.Parameters.AddWithValue("@Client_ID", selectedClientId); 
+                    command.Parameters.AddWithValue("@Client_ID", selectedClientId);
 
-                       
-                    int rowsAffected = command.ExecuteNonQuery();
+                   command = new SqlCommand(insertQuery, connection);
+
+
+                int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
