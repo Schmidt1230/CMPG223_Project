@@ -33,7 +33,7 @@ namespace CMPG223_Project
         }
         private Boolean verifyUser(string Username,String password)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
             SqlDataReader read;
             SqlCommand comm;
             Boolean flag = false;
@@ -62,14 +62,8 @@ namespace CMPG223_Project
                         }
                 }//While
 
-                
-                if (flag == true)
-                {
-                    MessageBox.Show("Login Successfull");
-                }
-                else
+                if (flag == false)
                     MessageBox.Show("System Access Denied");
-
 
                 conn.Close();
                 return flag;
@@ -87,7 +81,10 @@ namespace CMPG223_Project
             string username = txtUsername.Text, password = txtPassword.Text;
             if (verifyUser(username,password) == true)
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Welcome " + txtUsername.Text);
+                frmNavigate frmNavi = new frmNavigate();
+                frmNavi.Show();
+                this.Hide();
             }
         }
 
