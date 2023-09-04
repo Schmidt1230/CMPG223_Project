@@ -102,21 +102,6 @@ namespace CMPG223_Project
             return 0;
         }
 
-        private void dispReport(string sql)
-        {
-            try
-            {
-                conn.Open();
-                
-                conn.Close();
-
-            }
-            catch (SqlException err)
-            {
-                MessageBox.Show(err.Message);
-            }
-        }
-
         private string getName(int id)
         {
             String name = "";

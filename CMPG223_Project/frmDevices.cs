@@ -235,7 +235,7 @@ namespace CMPG223_Project
         private void cmbFind_TextChanged(object sender, EventArgs e)
         {
             //Filter Devices by their Type
-            sqlstatement = $"Select * From Devices where Device_Type = '{cmbFind.Text}'";
+            sqlstatement = $"Select * From Devices where DeviceType = '{cmbFind.Text}'";
             dispDevices(sqlstatement);
         }
 
