@@ -31,6 +31,7 @@ namespace CMPG223_Project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavigate));
             this.pnlNavi = new System.Windows.Forms.Panel();
+            this.lblRole = new System.Windows.Forms.Label();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@ namespace CMPG223_Project
             // pnlNavi
             // 
             this.pnlNavi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(69)))), ((int)(((byte)(79)))));
+            this.pnlNavi.Controls.Add(this.lblRole);
             this.pnlNavi.Controls.Add(this.btnReports);
             this.pnlNavi.Controls.Add(this.btnExit);
             this.pnlNavi.Controls.Add(this.btnTechnicians);
@@ -59,6 +61,17 @@ namespace CMPG223_Project
             this.pnlNavi.Name = "pnlNavi";
             this.pnlNavi.Size = new System.Drawing.Size(255, 670);
             this.pnlNavi.TabIndex = 0;
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.Lime;
+            this.lblRole.Location = new System.Drawing.Point(86, 557);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(64, 28);
+            this.lblRole.TabIndex = 2;
+            this.lblRole.Text = "Role";
             // 
             // btnReports
             // 
@@ -192,7 +205,9 @@ namespace CMPG223_Project
             this.Name = "frmNavigate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Alexander Tech Repairs";
+            this.Load += new System.EventHandler(this.frmNavigate_Load);
             this.pnlNavi.ResumeLayout(false);
+            this.pnlNavi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -209,5 +224,6 @@ namespace CMPG223_Project
         private System.Windows.Forms.Button btnTechnicians;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnReports;
+        public System.Windows.Forms.Label lblRole;
     }
 }

@@ -68,5 +68,19 @@ namespace CMPG223_Project
             this.pnldashBoard.Controls.Add(reportForm);
             reportForm.Show();
         }
+
+        private void frmNavigate_Load(object sender, EventArgs e)
+        {
+            if (lblRole.Text == "Secretary")
+            {
+                btnReports.Visible = false;
+                btnTechnicians.Visible = false;
+            }
+            else if(lblRole.Text == "admin")
+            {
+                btnReports.Visible = true;
+                btnTechnicians.Visible = true;
+            }
+        }
     }
 }

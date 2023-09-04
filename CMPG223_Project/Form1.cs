@@ -18,6 +18,8 @@ namespace CMPG223_Project
             InitializeComponent();
         }
 
+        public string role;
+
         private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShow.Checked)
@@ -58,7 +60,8 @@ namespace CMPG223_Project
                     else if (dUser==Username && dPassword==password) 
                         {
                             MessageBox.Show("Login Successfull");
-                        flag = true;
+                            flag = true;
+                            role = read.GetString(3);
                         }
                 }//While
 
@@ -83,6 +86,7 @@ namespace CMPG223_Project
             {
                 MessageBox.Show("Welcome " + txtUsername.Text);
                 frmNavigate frmNavi = new frmNavigate();
+                frmNavi.lblRole.Text = role;
                 frmNavi.Show();
                 this.Hide();
             }
