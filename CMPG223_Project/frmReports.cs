@@ -15,7 +15,7 @@ namespace CMPG223_Project
     {
 
         SqlDataAdapter adap;
-        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
         String sqlStatement;
         SqlDataReader read;
         SqlCommand comm;

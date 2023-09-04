@@ -35,7 +35,7 @@ namespace CMPG223_Project
         }
         private Boolean verifyUser(string Username,String password)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
             SqlDataReader read;
             SqlCommand comm;
             Boolean flag = false;
@@ -96,22 +96,6 @@ namespace CMPG223_Project
         {
             frmNavigate n1 = new frmNavigate();
             n1.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //IGNORE THIS
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmInvoices invoices = new frmInvoices();
-            invoices.Show();
-        }
-
-        private void chbForm_CheckedChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

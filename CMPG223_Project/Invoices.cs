@@ -16,7 +16,7 @@ namespace CMPG223_Project
     public partial class frmInvoices : Form
     {
         SqlDataAdapter adap;
-        SqlConnection connection = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
         String sqlStatement;
         SqlDataReader read;
         SqlCommand command;
@@ -33,7 +33,7 @@ namespace CMPG223_Project
 
         private void PopulateTechniciansComboBox()
         {
-            string query = "SELECT First_Name FROM Technicians";
+            string query = "SELECT FirstName FROM Technicians";
 
 
             command = new SqlCommand(query, connection);
@@ -55,7 +55,7 @@ namespace CMPG223_Project
 
         private void PopulateClientsComboBox()
         {
-            string query = "SELECT Client_Name FROM Clients";
+            string query = "SELECT FirstName FROM Clients";
             try
             {
                 connection.Open();
@@ -351,7 +351,7 @@ namespace CMPG223_Project
             try
             {
                 connection.Open();
-                string query = $"SELECT Technician_ID FROM Technicians WHERE First_Name = '{name}'";
+                string query = $"SELECT Technician_ID FROM Technicians WHERE FirstName = '{name}'";
                 command = new SqlCommand(query, connection);
 
                 read = command.ExecuteReader();
@@ -376,7 +376,7 @@ namespace CMPG223_Project
             try
             { 
                 connection.Open();
-                string query = $"SELECT Client_ID FROM Clients WHERE Client_Name = '{name}'";
+                string query = $"SELECT Client_ID FROM Clients WHERE FirstName = '{name}'";
 
                 command = new SqlCommand(query, connection);
 
@@ -441,7 +441,7 @@ namespace CMPG223_Project
                 if (proceed == true)                        //If all inputs were received
                 {//if
                     String now = DateTime.Now.ToString("d");
-                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES (@tID,@total, @date, @base, @repair, @cID)";
+                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES (@tID,@total, @date, @base, @repair, @cID)";
 
                     command = new SqlCommand(insertQuery, connection);
 
