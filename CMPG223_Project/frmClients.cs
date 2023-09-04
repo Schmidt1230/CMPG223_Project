@@ -209,7 +209,7 @@ namespace CMPG223_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtFNUpdate.Text == "" && txtLNUpdate.Text == "" && txtCNUpdate.Text == "" && txtEmailUpdate.Text == "")
+            if (txtFNUpdate.Text == "" && txtLNUpdate.Text == "" && txtCNUpdate.Text == "" && txtEmailUpdate.Text == "" || txtClientUpdateID.Text == "")
             {
                 MessageBox.Show("Please enter valid values to update.");
             }
