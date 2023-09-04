@@ -40,6 +40,16 @@ namespace CMPG223_Project
 
                 MessageBox.Show("Technician added successfully");
 
+                //Display Technicians table in DataGridView.
+                query = "SELECT * FROM Technicians";
+                com = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                dataAdapter.SelectCommand = com;
+                dataAdapter.Fill(ds, "Technicians");
+
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Technicians";
+
                 conn.Close();
             }
             catch (SqlException error)
@@ -66,11 +76,11 @@ namespace CMPG223_Project
                 if (result == DialogResult.Yes)
                 {
                     string place = "";
-                    query = $"UPDATE Clients SET ";
+                    query = $"UPDATE Technicians SET ";
 
                     if (txtFNUpdate.Text.Length > 0)
                     {
-                        query = query + $"FirstName = '{txtFNUpdate.Text}";
+                        query = query + $"FirstName = '{txtFNUpdate.Text}'";
                         place = ",";
                     }
 
@@ -79,19 +89,19 @@ namespace CMPG223_Project
                         query = query + place + $" LastName = '{txtLNUpdate.Text}'";
                         place = ",";    //Adds a coma between each set if the First part of Query is full
                     }
-                    if (txtCellNumber.Text.Length > 0)
+                    if (txtCNUpdate.Text.Length > 0)
                     {
-                        query = query + place + $" ContactNumber = '{txtCNUpdate.Text}'";
+                        query = query + place + $" CellphoneNumber = '{txtCNUpdate.Text}'";
                         place = ",";   //Adds a coma between each set if the First part of Query is full
                     }
 
-                    if (txtEmail.Text.Length > 5)
+                    if (txtEmailUpdate.Text.Length > 5)
                     {
-                        query = query + $" Email = '{txtEmailUpdate.Text}'";
+                        query = query + place + $" Email = '{txtEmailUpdate.Text}'";
                         place = ",";  //Adds a coma between each set if the First part of Query is full
                     }
 
-                    query = query + $" WHERE ClientID = '{txtTechIDUpdate.Text}'";
+                    query = query + $" WHERE Technician_ID = '{txtTechIDUpdate.Text}'";
 
 
                     com = new SqlCommand(query, conn);
@@ -99,6 +109,16 @@ namespace CMPG223_Project
                     com.ExecuteNonQuery();
 
                     MessageBox.Show("Technician information updated successfully.");
+
+                    //Display Technicians table in DataGridView.
+                    query = "SELECT * FROM Technicians";
+                    com = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    dataAdapter.SelectCommand = com;
+                    dataAdapter.Fill(ds, "Technicians");
+
+                    dataGridView1.DataSource = ds;
+                    dataGridView1.DataMember = "Technicians";
                 }
                 else
                 {
@@ -136,6 +156,16 @@ namespace CMPG223_Project
                     com.ExecuteNonQuery();
 
                     MessageBox.Show("Technician information deleted successfully.");
+
+                    //Display Technicians table in DataGridView.
+                    query = "SELECT * FROM Technicians";
+                    com = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    dataAdapter.SelectCommand = com;
+                    dataAdapter.Fill(ds, "Technicians");
+
+                    dataGridView1.DataSource = ds;
+                    dataGridView1.DataMember = "Technicians";
                 }
                 else
                 {
@@ -151,12 +181,6 @@ namespace CMPG223_Project
             }
         }
 
-        //calcSalary Method
-        private void calcSalary()
-        {
-
-        }
-
         private void gbxAddClient_Enter(object sender, EventArgs e)
         {
 
@@ -164,7 +188,7 @@ namespace CMPG223_Project
 
         private void Technician_Load(object sender, EventArgs e)
         {
-            //Display Clients table in DataGridView.
+            //Display Technicians table in DataGridView.
             query = "SELECT * FROM Technicians";
             com = new SqlCommand(query, conn);
             DataSet ds = new DataSet();
@@ -192,7 +216,7 @@ namespace CMPG223_Project
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
         {
-            if (txtFNUpdate.Text == "" || txtLNUpdate.Text == "" || txtCNUpdate.Text == "" || txtEmailUpdate.Text == "")
+            if (txtFNUpdate.Text == "" && txtLNUpdate.Text == "" && txtCNUpdate.Text == "" && txtEmailUpdate.Text == "" || txtTechIDUpdate.Text == "")
             {
                 MessageBox.Show("Please enter valid values.");
             }
@@ -214,12 +238,14 @@ namespace CMPG223_Project
         {
             if (txtTech_ID.Text == "")
             {
-                MessageBox.Show("Please enter valid values.");
+                MessageBox.Show("Please enter a valid technician ID.");
             }
             else
             {
                 //Call RemoveTechnician Method
                 RemoveTechnician();
+
+                txtTech_ID.Clear();
             }
         }
 
@@ -227,13 +253,13 @@ namespace CMPG223_Project
         {
             bool flag = false;
             if (txtFirstName.Text.Length <= 0)
-                MessageBox.Show("Please enter a name for the client");
+                MessageBox.Show("Please enter a name for the technician");
             else if (txtLastName.Text.Length <= 0)
-                MessageBox.Show("Please enter a last name for the client");
+                MessageBox.Show("Please enter a last name for the technician");
             else if (txtCellNumber.Text.Length != 10)
                 MessageBox.Show("Please enter a valid 10 digit cellphone number");
             else if (txtEmail.Text.Length < 5)
-                MessageBox.Show("Please enter a valid Email for the client");
+                MessageBox.Show("Please enter a valid Email for the technician");
             else
                 flag = true;            //If input validation succeeds
 
