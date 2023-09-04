@@ -30,7 +30,6 @@ namespace CMPG223_Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.chbForm = new System.Windows.Forms.CheckBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chbShow = new System.Windows.Forms.CheckBox();
@@ -43,19 +42,6 @@ namespace CMPG223_Project
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // chbForm
-            // 
-            this.chbForm.AutoSize = true;
-            this.chbForm.BackColor = System.Drawing.Color.Transparent;
-            this.chbForm.Location = new System.Drawing.Point(76, 567);
-            this.chbForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbForm.Name = "chbForm";
-            this.chbForm.Size = new System.Drawing.Size(98, 21);
-            this.chbForm.TabIndex = 19;
-            this.chbForm.Text = "checkBox1";
-            this.chbForm.UseVisualStyleBackColor = false;
-            this.chbForm.CheckStateChanged += new System.EventHandler(this.chbForm_CheckedChanged);
             // 
             // lblDate
             // 
@@ -83,9 +69,9 @@ namespace CMPG223_Project
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(76, 194);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(373, 353);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
@@ -96,7 +82,7 @@ namespace CMPG223_Project
             this.chbShow.AutoSize = true;
             this.chbShow.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbShow.Location = new System.Drawing.Point(103, 218);
-            this.chbShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbShow.Margin = new System.Windows.Forms.Padding(4);
             this.chbShow.Name = "chbShow";
             this.chbShow.Size = new System.Drawing.Size(164, 26);
             this.chbShow.TabIndex = 8;
@@ -111,7 +97,7 @@ namespace CMPG223_Project
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(61, 270);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(248, 52);
             this.btnLogin.TabIndex = 7;
@@ -123,7 +109,7 @@ namespace CMPG223_Project
             // 
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPassword.Location = new System.Drawing.Point(61, 177);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(247, 32);
             this.txtPassword.TabIndex = 6;
@@ -154,7 +140,7 @@ namespace CMPG223_Project
             // 
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtUsername.Location = new System.Drawing.Point(61, 76);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(247, 32);
             this.txtUsername.TabIndex = 0;
@@ -193,7 +179,6 @@ namespace CMPG223_Project
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(504, 670);
-            this.Controls.Add(this.chbForm);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
@@ -212,7 +197,6 @@ namespace CMPG223_Project
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox chbForm;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chbShow;
