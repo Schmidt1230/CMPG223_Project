@@ -412,31 +412,37 @@ namespace CMPG223_Project
         {
             try
             {
-                
+                Boolean proceed = false;
                     connection.Open();
 
                   
 
                     decimal repairCost = 0;
-                    decimal total = 0; 
+                    decimal total = 0;
 
-                    
-                    if (IsComputerRepair()) 
-                    {
-                        repairCost = decimal.Parse(txtCompTotal.Text); 
-                        total = decimal.Parse(txtCompTotal.Text); 
-                    }
-                    else
-                    {
-                        repairCost = decimal.Parse(txtCellTotal.Text); 
-                        total = decimal.Parse(txtCellTotal.Text); 
-                    }
 
+                if (IsComputerRepair())
+                {
+                    repairCost = decimal.Parse(txtCompTotal.Text);
+                    total = decimal.Parse(txtCompTotal.Text);
+                    proceed = true;
+                }
+                else if (txtCellTotal.Text.Length>0)
+                {
+                    proceed = true;
+                    repairCost = decimal.Parse(txtCellTotal.Text);
+                    total = decimal.Parse(txtCellTotal.Text);
+                }
+                else
+                    MessageBox.Show("Please ensure all necessary input is provided");
+
+                if (proceed == true)                        //If all inputs were received
+                {//if
                     String now = DateTime.Now.ToString("d");
                     string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES (@tID,@total, @date, @base, @repair, @cID)";
 
-                command = new SqlCommand(insertQuery, connection);
-                    
+                    command = new SqlCommand(insertQuery, connection);
+
                     command.Parameters.AddWithValue("@tID", selectedTechnicianId);
                     command.Parameters.AddWithValue("@tOtal", total);
                     command.Parameters.AddWithValue("@date", DateTime.Today.ToShortDateString());
@@ -444,24 +450,18 @@ namespace CMPG223_Project
                     command.Parameters.AddWithValue("@repair", repairCost);
                     command.Parameters.AddWithValue("@cID", selectedClientId);
 
-                    
-                    /*
-                    adap = new SqlDataAdapter();
-                    adap.InsertCommand = command;
-                    */
+                    int rowsAffected = command.ExecuteNonQuery();
 
-                int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Invoice data has been successfully inserted into the database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to insert invoice data into the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Invoice data has been successfully inserted into the database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to insert invoice data into the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    
-                
+                }//If
             }
             catch (SqlException ex)
             {
