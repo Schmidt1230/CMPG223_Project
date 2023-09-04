@@ -19,7 +19,7 @@ namespace CMPG223_Project
         String sqlStatement;
         SqlDataReader read;
         SqlCommand comm;
-
+        int[] tIDs = new int [10];
 
         public frmReports()
         {
@@ -183,8 +183,10 @@ namespace CMPG223_Project
                 read = comm.ExecuteReader();
 
                 while (read.Read())
+                {
+                    tIDs[count] = read.GetInt32(0);         //Populate Array with Indexes of Technicians
                     count++;
-
+                }
                 conn.Close();
             }
             catch (SqlException sqe)
@@ -202,8 +204,8 @@ namespace CMPG223_Project
                 lstReport.Items.Clear();
                 for (int i = 1; i <= countTechnicians(); i++)
                 {
-                    lstReport.Items.Add("Report for : " + getName(i));
-                    lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(i));
+                    lstReport.Items.Add("Report for : " + getName(tIDs[i]));
+                    lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(tIDs[i]));
                     lstReport.Items.Add("........................................");
                 }
             }
