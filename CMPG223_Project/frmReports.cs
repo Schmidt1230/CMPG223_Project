@@ -60,7 +60,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                sqlStatement = "Select Distinct First_Name from Technicians";
+                sqlStatement = "Select Distinct FirstName from Technicians";
                 comm = new SqlCommand(sqlStatement, conn);
 
                 read = comm.ExecuteReader();
@@ -82,7 +82,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                sqlStatement = $"Select Technician_ID From Technicians Where First_Name = '{name}'";
+                sqlStatement = $"Select Technician_ID From Technicians Where FirstName = '{name}'";
                 comm = new SqlCommand(sqlStatement,conn);
                 read = comm.ExecuteReader();
                 while (read.Read())
@@ -123,7 +123,7 @@ namespace CMPG223_Project
             try
             {
                 conn.Open();
-                sqlStatement = $"Select First_Name From Technicians Where Technician_ID = {id}";
+                sqlStatement = $"Select FirstName From Technicians Where Technician_ID = {id}";
                 comm = new SqlCommand(sqlStatement, conn);
 
                 read = comm.ExecuteReader();
