@@ -74,7 +74,7 @@ namespace CMPG223_Project
             // btnBestPerforming
             // 
             this.btnBestPerforming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBestPerforming.Location = new System.Drawing.Point(31, 255);
+            this.btnBestPerforming.Location = new System.Drawing.Point(31, 312);
             this.btnBestPerforming.Name = "btnBestPerforming";
             this.btnBestPerforming.Size = new System.Drawing.Size(367, 78);
             this.btnBestPerforming.TabIndex = 1;
@@ -155,9 +155,9 @@ namespace CMPG223_Project
             // 
             this.lstReport.FormattingEnabled = true;
             this.lstReport.ItemHeight = 16;
-            this.lstReport.Location = new System.Drawing.Point(528, 60);
+            this.lstReport.Location = new System.Drawing.Point(494, 60);
             this.lstReport.Name = "lstReport";
-            this.lstReport.Size = new System.Drawing.Size(478, 404);
+            this.lstReport.Size = new System.Drawing.Size(512, 404);
             this.lstReport.TabIndex = 1;
             // 
             // frmReports
