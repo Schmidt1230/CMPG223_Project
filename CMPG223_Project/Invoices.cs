@@ -16,11 +16,11 @@ namespace CMPG223_Project
     public partial class frmInvoices : Form
     {
         SqlDataAdapter adap;
-        SqlConnection connection; 
+        SqlConnection connection = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
         String sqlStatement;
         SqlDataReader read;
         SqlCommand command;
-        string connectionString = @"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False";
+       
 
         private int selectedTechnicianId = -1; 
         private int selectedClientId = -1;
@@ -35,7 +35,6 @@ namespace CMPG223_Project
         {
             string query = "SELECT First_Name FROM Technicians";
 
-            connection = new SqlConnection(connectionString);
 
             command = new SqlCommand(query, connection);
                 
@@ -56,24 +55,24 @@ namespace CMPG223_Project
 
         private void PopulateClientsComboBox()
         {
-            string query = "SELECT First_Name FROM Clients";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string query = "SELECT Client_Name FROM Clients";
+            try
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                command = new SqlCommand(query,connection);
+                read = command.ExecuteReader();
+                while (read.Read())
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string clientName = reader.GetString(0);
-                        cmbClient.Items.Add(clientName);
-                    }
-
-                    reader.Close();
+                    cmbClient.Items.Add(read.GetString(0));
                 }
+                connection.Close();
             }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            command = new SqlCommand(query, connection);
+
         }
 
         private void UpdateCompTotal()
@@ -349,44 +348,51 @@ namespace CMPG223_Project
         private int GetTechnicianIdByName(string name)
         {
             int technicianId = -1; // Initialize with an invalid value
-
-            string query = "SELECT Technician_ID FROM Technicians WHERE FirstName = @Name";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Name", name);
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-                    if (result != null && result != DBNull.Value)
-                    {
-                        technicianId = Convert.ToInt32(result);
-                    }
-                }
-            }
+                connection.Open();
+                string query = $"SELECT Technician_ID FROM Technicians WHERE First_Name = '{name}'";
+                command = new SqlCommand(query, connection);
 
+                read = command.ExecuteReader();
+
+                while (read.Read())
+                {
+                    technicianId = read.GetInt32(0);
+                }
+                connection.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+                connection.Close();
+            }
             return technicianId;
         }
 
         private int GetClientIdByName(string name)
         {
-            int clientId = -1; 
+            int clientId = -1;
+            try
+            { 
+                connection.Open();
+                string query = $"SELECT Client_ID FROM Clients WHERE Client_Name = '{name}'";
 
-            string query = "SELECT Client_ID FROM Clients WHERE FirstName = @Name";
+                command = new SqlCommand(query, connection);
 
-            connection = new SqlConnection(connectionString);
+                read = command.ExecuteReader();
 
-            command = new SqlCommand(query, connection);
-                
-            command.Parameters.AddWithValue("@Name", name);
-            connection.Open();
-            object result = command.ExecuteScalar();
-             if (result != null && result != DBNull.Value)
-             {
-                 clientId = Convert.ToInt32(result);             
-             }                
-            
+                while (read.Read())
+                {
+                    clientId = read.GetInt32(0);
+                }
+
+                connection.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+            }
             return clientId;
         }
 
@@ -406,7 +412,6 @@ namespace CMPG223_Project
         {
             try
             {
-                    connection = new SqlConnection(connectionString);
                 
                     connection.Open();
 
@@ -427,22 +432,13 @@ namespace CMPG223_Project
                         total = decimal.Parse(txtCellTotal.Text); 
                     }
 
-                    
-                    string insertQuery = "INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) " +
-                                         "VALUES (@Technician_ID, @TotalAmount, @A_Date, @Base_Inspection_Fee, @Repair_Cost, @Client_ID)";
+                    String now = DateTime.Now.ToString("d");
+                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES ({selectedTechnicianId}, {500}, {2023/09/04}, {250}, {500}, {selectedClientId})";
 
-                   
-                    
-                    
 
-                    command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); 
-                    command.Parameters.AddWithValue("@TotalAmount", total); 
-                    command.Parameters.AddWithValue("@A_Date", DateTime.Now); 
-                    command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); 
-                    command.Parameters.AddWithValue("@Repair_Cost", repairCost); 
-                    command.Parameters.AddWithValue("@Client_ID", selectedClientId);
-
-                   command = new SqlCommand(insertQuery, connection);
+                    command = new SqlCommand(insertQuery, connection);
+                    adap = new SqlDataAdapter();
+                    adap.InsertCommand = command;
 
 
                 int rowsAffected = command.ExecuteNonQuery();
@@ -458,9 +454,9 @@ namespace CMPG223_Project
                     
                 
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
