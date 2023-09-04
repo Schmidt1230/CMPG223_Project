@@ -74,32 +74,33 @@ namespace CMPG223_Project
                 if (result == DialogResult.Yes)
                 {
                     string place = "";
-                    query = $"UPDATE Clients SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', ContactNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE ClientID = '{txtClientUpdateID.Text}'";
-                   
+                    query = $"UPDATE Clients SET ";
+
                     if (txtFNUpdate.Text.Length > 0)
-                        query = query  + $"FirstName = '{txtFNUpdate.Text}";
-                    
-                    if (txtFNUpdate.Text.Length > 0)
-                        place = ",";      //Adds a coma between each set if the First part of Query is full
+                    {
+                        query = query + $"FirstName = '{txtFNUpdate.Text}";
+                        place = ",";
+                    }
 
                     if (txtLNUpdate.Text.Length > 0)
                     {
                         query = query + place + $" LastName = '{txtLNUpdate.Text}'";
-                        place = ",";
+                        place = ",";    //Adds a coma between each set if the First part of Query is full
                     }
                     if (txtCellNumber.Text.Length > 0)
                     {
                         query = query + place + $" ContactNumber = '{txtCNUpdate.Text}'";
-                        place = ",";
+                        place = ",";   //Adds a coma between each set if the First part of Query is full
                     }
 
                     if (txtEmail.Text.Length > 5)
                     {
                         query = query + $" Email = '{txtEmailUpdate.Text}'";
-                        place = ",";
+                        place = ",";  //Adds a coma between each set if the First part of Query is full
                     }
                     
                     query = query + $" WHERE ClientID = '{txtClientUpdateID.Text}'";
+                    
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
