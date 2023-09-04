@@ -36,9 +36,11 @@ namespace CMPG223_Project
             int repairs = 0;
             try
             {
+                conn.Close();
                 conn.Open();
                 sqlStatement = $"Select * from Repair_Orders WHERE Technician_ID = {tech_id}";
                 comm = new SqlCommand(sqlStatement, conn);
+                read = comm.ExecuteReader();
                 while (read.Read())
                 {
                     repairs += 1;
@@ -70,8 +72,34 @@ namespace CMPG223_Project
             }
             catch (SqlException exception)
             {
+                conn.Close();
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private int getID(string name)
+        {
+            try
+            {
+                conn.Open();
+                sqlStatement = $"Select Technician_ID From Technicians Where First_Name = '{name}'";
+                comm = new SqlCommand(sqlStatement,conn);
+                read = comm.ExecuteReader();
+                while (read.Read())
+                {
+                    return read.GetInt32(0);    
+                }
+
+                read.Close();
+                return 0;
+                conn.Close();
+            }
+            catch (SqlException sqe)
+            {
+                MessageBox.Show(sqe.Message);
+            }
+
+            return 0;
         }
 
         private void dispReport(string sql)
@@ -82,6 +110,43 @@ namespace CMPG223_Project
                 
                 conn.Close();
 
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void cmbTechnician_TextChanged(object sender, EventArgs e)
+        {
+            lstReport.Items.Clear();
+            lstReport.Items.Add("Technician Name : "+cmbTechnician.Text);
+            lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(getID(cmbTechnician.Text)));
+            lstReport.Items.Add("............................................................");
+        }
+
+        private void chbAllTechnicians_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbDescending_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBestPerforming_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                
+                conn.Close();
             }
             catch (SqlException err)
             {

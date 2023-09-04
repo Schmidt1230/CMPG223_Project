@@ -53,13 +53,21 @@ namespace CMPG223_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            String message = "Add device";
-            String heading = "Are you sure you wish to ADD Device";
-            if (verifyAction(0, message, heading))
+
+            if (cmbDevices.Text.Length <= 0 || txtNewDetails.Text.Length <= 0)
+                MessageBox.Show("Please ensure you have entered the correct data!");
+            else if (txtNewDetails.Text.Length > 100)
+                MessageBox.Show("Please do net enter more than 100 characters for the details field");
+            else
             {
-                AddDevice();
-                sqlstatement = "Select * From Devices";
-                dispDevices(sqlstatement);
+                String message = "Add device";
+                String heading = "Are you sure you wish to ADD Device";
+            if (verifyAction(0, message, heading))
+                {
+                    AddDevice();
+                    sqlstatement = "Select * From Devices";
+                    dispDevices(sqlstatement);
+                }
             }
         }
 

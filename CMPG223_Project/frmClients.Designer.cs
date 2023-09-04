@@ -360,6 +360,7 @@ namespace CMPG223_Project
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(791, 109);
             this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // gbxAddClient
             // 
@@ -685,6 +686,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.gbxAddClient);
             this.Name = "frmClients";
             this.Text = "Client Information";
+            this.Load += new System.EventHandler(this.frmClients_Load);
             this.gbxUpdateClient.ResumeLayout(false);
             this.gbxUpdateClient.PerformLayout();
             this.gbxRemoveClient.ResumeLayout(false);
