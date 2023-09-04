@@ -234,9 +234,9 @@ namespace CMPG223_Project
         private bool verifyUserInput()
         {
             bool flag = false;
-            if (txtFirstName.Text.Length < 0)
+            if (txtFirstName.Text.Length <= 0)
                 MessageBox.Show("Please enter a name for the client");
-            else if (txtLastName.Text.Length < 0)
+            else if (txtLastName.Text.Length <= 0)
                 MessageBox.Show("Please enter a last name for the client");
             else if (txtCellNumber.Text.Length != 10)
                 MessageBox.Show("Please enter a valid 10 digit cellphone number");
