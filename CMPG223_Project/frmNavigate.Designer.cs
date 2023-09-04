@@ -67,7 +67,7 @@ namespace CMPG223_Project
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.Lime;
-            this.lblRole.Location = new System.Drawing.Point(86, 557);
+            this.lblRole.Location = new System.Drawing.Point(91, 559);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(64, 28);
             this.lblRole.TabIndex = 2;
