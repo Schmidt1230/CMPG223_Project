@@ -133,11 +133,7 @@ namespace CMPG223_Project
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtCellNumber.Text == "" || txtEmail.Text == "")
-            {
-                MessageBox.Show("Please enter valid values.");
-            }
-            else
+            if (verifyUserInput() == true)      //Only proceed if user entered all input
             {
                 //Call addClient Method
                 addClient();
@@ -206,6 +202,23 @@ namespace CMPG223_Project
         private void txtFNUpdate_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private bool verifyUserInput()
+        {
+            bool flag = false;
+            if (txtFirstName.Text.Length < 0)
+                MessageBox.Show("Please enter a name for the client");
+            else if (txtLastName.Text.Length < 0)
+                MessageBox.Show("Please enter a last name for the client");
+            else if (txtCellNumber.Text.Length != 10)
+                MessageBox.Show("Please enter a valid 10 digit cellphone number");
+            else if (txtEmail.Text.Length < 5)
+                MessageBox.Show("Please enter a valid Email for the client");
+            else
+                flag = true;            //If input validation succeeds
+
+            return flag;
         }
     }
 }

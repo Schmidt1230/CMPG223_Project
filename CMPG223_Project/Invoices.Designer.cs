@@ -97,8 +97,8 @@ namespace CMPG223_Project
             // txtCellTotal
             // 
             this.txtCellTotal.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCellTotal.Location = new System.Drawing.Point(224, 412);
-            this.txtCellTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellTotal.Location = new System.Drawing.Point(209, 426);
+            this.txtCellTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtCellTotal.Name = "txtCellTotal";
             this.txtCellTotal.ReadOnly = true;
             this.txtCellTotal.Size = new System.Drawing.Size(203, 31);
@@ -119,7 +119,7 @@ namespace CMPG223_Project
             // 
             this.txtCellVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtCellVAT.Location = new System.Drawing.Point(224, 359);
-            this.txtCellVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellVAT.Margin = new System.Windows.Forms.Padding(4);
             this.txtCellVAT.Name = "txtCellVAT";
             this.txtCellVAT.ReadOnly = true;
             this.txtCellVAT.Size = new System.Drawing.Size(203, 28);
@@ -129,7 +129,7 @@ namespace CMPG223_Project
             // 
             this.txtCellExcVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtCellExcVAT.Location = new System.Drawing.Point(224, 326);
-            this.txtCellExcVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCellExcVAT.Margin = new System.Windows.Forms.Padding(4);
             this.txtCellExcVAT.Name = "txtCellExcVAT";
             this.txtCellExcVAT.ReadOnly = true;
             this.txtCellExcVAT.Size = new System.Drawing.Size(203, 28);
@@ -151,7 +151,7 @@ namespace CMPG223_Project
             this.cbxCharge.AutoSize = true;
             this.cbxCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbxCharge.Location = new System.Drawing.Point(19, 214);
-            this.cbxCharge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCharge.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCharge.Name = "cbxCharge";
             this.cbxCharge.Size = new System.Drawing.Size(234, 28);
             this.cbxCharge.TabIndex = 9;
@@ -164,7 +164,7 @@ namespace CMPG223_Project
             this.cbxDisk.AutoSize = true;
             this.cbxDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDisk.Location = new System.Drawing.Point(24, 246);
-            this.cbxDisk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxDisk.Margin = new System.Windows.Forms.Padding(4);
             this.cbxDisk.Name = "cbxDisk";
             this.cbxDisk.Size = new System.Drawing.Size(179, 28);
             this.cbxDisk.TabIndex = 7;
@@ -177,7 +177,7 @@ namespace CMPG223_Project
             this.cbxCompMotherboard.AutoSize = true;
             this.cbxCompMotherboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCompMotherboard.Location = new System.Drawing.Point(24, 218);
-            this.cbxCompMotherboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompMotherboard.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCompMotherboard.Name = "cbxCompMotherboard";
             this.cbxCompMotherboard.Size = new System.Drawing.Size(203, 28);
             this.cbxCompMotherboard.TabIndex = 6;
@@ -190,7 +190,7 @@ namespace CMPG223_Project
             this.cbxCompVirus.AutoSize = true;
             this.cbxCompVirus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCompVirus.Location = new System.Drawing.Point(24, 190);
-            this.cbxCompVirus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompVirus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCompVirus.Name = "cbxCompVirus";
             this.cbxCompVirus.Size = new System.Drawing.Size(150, 28);
             this.cbxCompVirus.TabIndex = 5;
@@ -209,9 +209,9 @@ namespace CMPG223_Project
             this.groupBox4.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(345, 26);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(93, 247);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
@@ -306,7 +306,7 @@ namespace CMPG223_Project
             // txtCompTotal
             // 
             this.txtCompTotal.Location = new System.Drawing.Point(225, 422);
-            this.txtCompTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompTotal.Name = "txtCompTotal";
             this.txtCompTotal.ReadOnly = true;
             this.txtCompTotal.Size = new System.Drawing.Size(173, 31);
@@ -317,7 +317,7 @@ namespace CMPG223_Project
             this.btnCompViewInvoice.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCompViewInvoice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompViewInvoice.Location = new System.Drawing.Point(23, 490);
-            this.btnCompViewInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompViewInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompViewInvoice.Name = "btnCompViewInvoice";
             this.btnCompViewInvoice.Size = new System.Drawing.Size(375, 44);
             this.btnCompViewInvoice.TabIndex = 4;
@@ -351,7 +351,7 @@ namespace CMPG223_Project
             // 
             this.txtCompVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompVAT.Location = new System.Drawing.Point(223, 359);
-            this.txtCompVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompVAT.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompVAT.Name = "txtCompVAT";
             this.txtCompVAT.ReadOnly = true;
             this.txtCompVAT.Size = new System.Drawing.Size(173, 29);
@@ -361,7 +361,7 @@ namespace CMPG223_Project
             // 
             this.txtCompExcVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompExcVAT.Location = new System.Drawing.Point(223, 326);
-            this.txtCompExcVAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompExcVAT.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompExcVAT.Name = "txtCompExcVAT";
             this.txtCompExcVAT.ReadOnly = true;
             this.txtCompExcVAT.Size = new System.Drawing.Size(173, 29);
@@ -390,9 +390,9 @@ namespace CMPG223_Project
             this.groupBox2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(301, 23);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(96, 260);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -479,7 +479,7 @@ namespace CMPG223_Project
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(13, 416);
+            this.label21.Location = new System.Drawing.Point(14, 433);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(143, 25);
@@ -491,7 +491,7 @@ namespace CMPG223_Project
             this.cbxCellMotherboard.AutoSize = true;
             this.cbxCellMotherboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbxCellMotherboard.Location = new System.Drawing.Point(19, 186);
-            this.cbxCellMotherboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellMotherboard.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCellMotherboard.Name = "cbxCellMotherboard";
             this.cbxCellMotherboard.Size = new System.Drawing.Size(203, 28);
             this.cbxCellMotherboard.TabIndex = 6;
@@ -504,7 +504,7 @@ namespace CMPG223_Project
             this.cbxCellVirus.AutoSize = true;
             this.cbxCellVirus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbxCellVirus.Location = new System.Drawing.Point(19, 158);
-            this.cbxCellVirus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellVirus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCellVirus.Name = "cbxCellVirus";
             this.cbxCellVirus.Size = new System.Drawing.Size(150, 28);
             this.cbxCellVirus.TabIndex = 5;
@@ -517,7 +517,7 @@ namespace CMPG223_Project
             this.cbxCellBattery.AutoSize = true;
             this.cbxCellBattery.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbxCellBattery.Location = new System.Drawing.Point(19, 133);
-            this.cbxCellBattery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellBattery.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCellBattery.Name = "cbxCellBattery";
             this.cbxCellBattery.Size = new System.Drawing.Size(153, 28);
             this.cbxCellBattery.TabIndex = 4;
@@ -530,7 +530,7 @@ namespace CMPG223_Project
             this.cbxCellScreen.AutoSize = true;
             this.cbxCellScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbxCellScreen.Location = new System.Drawing.Point(19, 105);
-            this.cbxCellScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCellScreen.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCellScreen.Name = "cbxCellScreen";
             this.cbxCellScreen.Size = new System.Drawing.Size(158, 28);
             this.cbxCellScreen.TabIndex = 3;
@@ -554,7 +554,7 @@ namespace CMPG223_Project
             this.cbxCompBattery.AutoSize = true;
             this.cbxCompBattery.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCompBattery.Location = new System.Drawing.Point(24, 161);
-            this.cbxCompBattery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompBattery.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCompBattery.Name = "cbxCompBattery";
             this.cbxCompBattery.Size = new System.Drawing.Size(153, 28);
             this.cbxCompBattery.TabIndex = 4;
@@ -565,8 +565,8 @@ namespace CMPG223_Project
             // btnPrintInvoice
             // 
             this.btnPrintInvoice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintInvoice.Location = new System.Drawing.Point(945, 522);
-            this.btnPrintInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrintInvoice.Location = new System.Drawing.Point(967, 515);
+            this.btnPrintInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
             this.btnPrintInvoice.Size = new System.Drawing.Size(373, 50);
             this.btnPrintInvoice.TabIndex = 9;
@@ -579,7 +579,7 @@ namespace CMPG223_Project
             this.listBoxInvoice.FormattingEnabled = true;
             this.listBoxInvoice.ItemHeight = 16;
             this.listBoxInvoice.Location = new System.Drawing.Point(945, 30);
-            this.listBoxInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxInvoice.Name = "listBoxInvoice";
             this.listBoxInvoice.Size = new System.Drawing.Size(372, 292);
             this.listBoxInvoice.TabIndex = 8;
@@ -607,9 +607,9 @@ namespace CMPG223_Project
             this.groupBox3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(491, 25);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(447, 560);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
@@ -640,7 +640,7 @@ namespace CMPG223_Project
             this.btnCellViewInvoice.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCellViewInvoice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCellViewInvoice.Location = new System.Drawing.Point(17, 490);
-            this.btnCellViewInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCellViewInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnCellViewInvoice.Name = "btnCellViewInvoice";
             this.btnCellViewInvoice.Size = new System.Drawing.Size(411, 44);
             this.btnCellViewInvoice.TabIndex = 21;
@@ -683,9 +683,9 @@ namespace CMPG223_Project
             this.groupBox1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(61, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(421, 560);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -696,7 +696,7 @@ namespace CMPG223_Project
             this.cbxCompScreen.AutoSize = true;
             this.cbxCompScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCompScreen.Location = new System.Drawing.Point(24, 133);
-            this.cbxCompScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCompScreen.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCompScreen.Name = "cbxCompScreen";
             this.cbxCompScreen.Size = new System.Drawing.Size(158, 28);
             this.cbxCompScreen.TabIndex = 3;
@@ -709,7 +709,7 @@ namespace CMPG223_Project
             this.cbxKeyboard.AutoSize = true;
             this.cbxKeyboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxKeyboard.Location = new System.Drawing.Point(24, 105);
-            this.cbxKeyboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxKeyboard.Margin = new System.Windows.Forms.Padding(4);
             this.cbxKeyboard.Name = "cbxKeyboard";
             this.cbxKeyboard.Size = new System.Drawing.Size(178, 28);
             this.cbxKeyboard.TabIndex = 2;
@@ -743,7 +743,7 @@ namespace CMPG223_Project
             // 
             this.cmbTechnician.FormattingEnabled = true;
             this.cmbTechnician.Location = new System.Drawing.Point(979, 384);
-            this.cmbTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTechnician.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTechnician.Name = "cmbTechnician";
             this.cmbTechnician.Size = new System.Drawing.Size(160, 24);
             this.cmbTechnician.TabIndex = 10;
@@ -753,7 +753,7 @@ namespace CMPG223_Project
             // 
             this.cmbClient.FormattingEnabled = true;
             this.cmbClient.Location = new System.Drawing.Point(1198, 384);
-            this.cmbClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbClient.Margin = new System.Windows.Forms.Padding(4);
             this.cmbClient.Name = "cmbClient";
             this.cmbClient.Size = new System.Drawing.Size(160, 24);
             this.cmbClient.TabIndex = 11;
@@ -817,7 +817,7 @@ namespace CMPG223_Project
             this.Controls.Add(this.listBoxInvoice);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInvoices";
             this.Text = "Invoices";
             this.Load += new System.EventHandler(this.frmInvoices_Load);
