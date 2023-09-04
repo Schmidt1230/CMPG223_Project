@@ -31,12 +31,12 @@ namespace CMPG223_Project
         {
             this.pnlReports = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chbAll = new System.Windows.Forms.CheckBox();
             this.btnBestPerforming = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTechnician = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstReport = new System.Windows.Forms.ListBox();
-            this.chbAll = new System.Windows.Forms.CheckBox();
             this.pnlReports.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,17 @@ namespace CMPG223_Project
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Technicians Report";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // chbAll
+            // 
+            this.chbAll.AutoSize = true;
+            this.chbAll.Location = new System.Drawing.Point(114, 98);
+            this.chbAll.Name = "chbAll";
+            this.chbAll.Size = new System.Drawing.Size(214, 31);
+            this.chbAll.TabIndex = 6;
+            this.chbAll.Text = "All Technicians";
+            this.chbAll.UseVisualStyleBackColor = true;
+            this.chbAll.CheckedChanged += new System.EventHandler(this.chbAll_CheckedChanged);
             // 
             // btnBestPerforming
             // 
@@ -117,17 +128,6 @@ namespace CMPG223_Project
             this.lstReport.Name = "lstReport";
             this.lstReport.Size = new System.Drawing.Size(512, 404);
             this.lstReport.TabIndex = 1;
-            // 
-            // chbAll
-            // 
-            this.chbAll.AutoSize = true;
-            this.chbAll.Location = new System.Drawing.Point(31, 113);
-            this.chbAll.Name = "chbAll";
-            this.chbAll.Size = new System.Drawing.Size(214, 31);
-            this.chbAll.TabIndex = 6;
-            this.chbAll.Text = "All Technicians";
-            this.chbAll.UseVisualStyleBackColor = true;
-            this.chbAll.CheckedChanged += new System.EventHandler(this.chbAll_CheckedChanged);
             // 
             // frmReports
             // 
