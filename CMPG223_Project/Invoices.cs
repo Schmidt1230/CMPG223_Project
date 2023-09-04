@@ -433,12 +433,22 @@ namespace CMPG223_Project
                     }
 
                     String now = DateTime.Now.ToString("d");
-                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES ({selectedTechnicianId}, {250,00}, {DateTime.Today.ToShortDateString()}, {250,00}, {500,00}, {selectedClientId})";
+                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES (@tID,@total, @date, @base, @repair, @cID)";
 
-                    command = new SqlCommand(insertQuery, connection);
+                command = new SqlCommand(insertQuery, connection);
+                    
+                    command.Parameters.AddWithValue("@tID", selectedTechnicianId);
+                    command.Parameters.AddWithValue("@tOtal", total);
+                    command.Parameters.AddWithValue("@date", DateTime.Today.ToShortDateString());
+                    command.Parameters.AddWithValue("@base", BASE_FEE);
+                    command.Parameters.AddWithValue("@repair", repairCost);
+                    command.Parameters.AddWithValue("@cID", selectedClientId);
+
+                    
+                    /*
                     adap = new SqlDataAdapter();
                     adap.InsertCommand = command;
-
+                    */
 
                 int rowsAffected = command.ExecuteNonQuery();
 
