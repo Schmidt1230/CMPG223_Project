@@ -13,7 +13,7 @@ namespace CMPG223_Project
 {
     public partial class frmDevices : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
         SqlCommand comm = new SqlCommand();
         String sqlstatement;
         SqlDataAdapter adap = new SqlDataAdapter();
@@ -88,7 +88,7 @@ namespace CMPG223_Project
                 {
                     fixable = true;
                 }
-                String sqlstatement = $"Insert Into Devices (Device_Type,Fixable,Details,Repair_History) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
+                String sqlstatement = $"Insert Into Devices (DeviceType,Fixable,Details,RepairHistory) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
                 comm = new SqlCommand(sqlstatement, conn);
                 adap.InsertCommand = comm;
                 comm.ExecuteNonQuery();

@@ -65,7 +65,35 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Technicians SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', CellphoneNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE Technician_ID = '{txtTechIDUpdate.Text}'";
+                    string place = "";
+                    query = $"UPDATE Clients SET ";
+
+                    if (txtFNUpdate.Text.Length > 0)
+                    {
+                        query = query + $"FirstName = '{txtFNUpdate.Text}";
+                        place = ",";
+                    }
+
+                    if (txtLNUpdate.Text.Length > 0)
+                    {
+                        query = query + place + $" LastName = '{txtLNUpdate.Text}'";
+                        place = ",";    //Adds a coma between each set if the First part of Query is full
+                    }
+                    if (txtCellNumber.Text.Length > 0)
+                    {
+                        query = query + place + $" ContactNumber = '{txtCNUpdate.Text}'";
+                        place = ",";   //Adds a coma between each set if the First part of Query is full
+                    }
+
+                    if (txtEmail.Text.Length > 5)
+                    {
+                        query = query + $" Email = '{txtEmailUpdate.Text}'";
+                        place = ",";  //Adds a coma between each set if the First part of Query is full
+                    }
+
+                    query = query + $" WHERE ClientID = '{txtTechIDUpdate.Text}'";
+
+
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
@@ -149,11 +177,7 @@ namespace CMPG223_Project
 
         private void btnAddTechnician_Click(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtCellNumber.Text == "" || txtEmail.Text == "")
-            {
-                MessageBox.Show("Please enter valid values.");
-            }
-            else
+           if(verifyUserInput() == true)  // Verify if user input is true
             {
                 //Call Add Method
                 AddTechnician();
@@ -197,6 +221,23 @@ namespace CMPG223_Project
                 //Call RemoveTechnician Method
                 RemoveTechnician();
             }
+        }
+
+        private bool verifyUserInput()
+        {
+            bool flag = false;
+            if (txtFirstName.Text.Length <= 0)
+                MessageBox.Show("Please enter a name for the client");
+            else if (txtLastName.Text.Length <= 0)
+                MessageBox.Show("Please enter a last name for the client");
+            else if (txtCellNumber.Text.Length != 10)
+                MessageBox.Show("Please enter a valid 10 digit cellphone number");
+            else if (txtEmail.Text.Length < 5)
+                MessageBox.Show("Please enter a valid Email for the client");
+            else
+                flag = true;            //If input validation succeeds
+
+            return flag;
         }
     }
 }
