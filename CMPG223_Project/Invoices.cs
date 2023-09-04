@@ -16,12 +16,15 @@ namespace CMPG223_Project
     public partial class frmInvoices : Form
     {
         SqlDataAdapter adap;
-        SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection connection; 
         String sqlStatement;
         SqlDataReader read;
-        SqlCommand comm;
-        string connectionString = @"";
-        
+        SqlCommand command;
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlexandersDatabase.mdf;Integrated Security=True";
+
+        private int selectedTechnicianId = -1; 
+        private int selectedClientId = -1;
+
 
         public frmInvoices()
         {
@@ -30,30 +33,52 @@ namespace CMPG223_Project
 
         private void PopulateTechniciansComboBox()
         {
-            // SQL query to retrieve technician names and IDs from the Technicians table
-            string query = "SELECT TechnicianID, TechnicianName FROM Technicians";
+            string query = "SELECT FirstName FROM Technicians";
 
-            conn = new SqlConnection(connectionString);
+            connection = new SqlConnection(connectionString);
 
-            comm = new SqlCommand(query, conn);
+            command = new SqlCommand(query, connection);
                 
-            conn.Open();
-            read = comm.ExecuteReader();
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
 
-            //while (reader.Read())
-            //    {
-            //       int technicianId = read.GetInt32(0);
-            //       string technicianName = read.GetString(1);
-            //       cmbTechnician.Items.Add(new ComboBoxItem(technicianName, technicianId));
-            //    }
-
-            //        reader.Close();
-                
+            while (reader.Read())
+            {
+               string technicianName = reader.GetString(0);
+               cmbTechnician.Items.Add(technicianName);
             }
 
-            private void UpdateCompTotal()
+            reader.Close();
+            connection.Close();
+                
+            
+        }
+
+        private void PopulateClientsComboBox()
         {
-            decimal total = 0;
+            string query = "SELECT FirstName FROM Clients";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string clientName = reader.GetString(0);
+                        cmbClient.Items.Add(clientName);
+                    }
+
+                    reader.Close();
+                }
+            }
+        }
+
+        private void UpdateCompTotal()
+        {
+            decimal total = 250;
 
             if (cbxKeyboard.Checked)
             {                
@@ -126,11 +151,13 @@ namespace CMPG223_Project
         private void frmInvoices_Load(object sender, EventArgs e)
         {
             UpdateCompTotal();
+            PopulateTechniciansComboBox();
+            PopulateClientsComboBox();
         }
 
         private void UpdateCellTotal()
         {
-            decimal cellTotal = 0;
+            decimal cellTotal = 250;
 
             if (cbxCellScreen.Checked)
             {
@@ -295,9 +322,157 @@ namespace CMPG223_Project
             
         }
 
+        private void cmbTechnician_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTechnician.SelectedItem != null)
+            {
+                // Retrieve the selected technician name
+                string technicianName = cmbTechnician.SelectedItem.ToString();
+
+                // Retrieve the selected technician ID based on the name
+                selectedTechnicianId = GetTechnicianIdByName(technicianName);
+            }
+        }
+
+        private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbClient.SelectedItem != null)
+            {
+                // Retrieve the selected client name
+                string clientName = cmbClient.SelectedItem.ToString();
+
+                // Retrieve the selected client ID based on the name
+                selectedClientId = GetClientIdByName(clientName);
+            }
+        }
+
+        private int GetTechnicianIdByName(string name)
+        {
+            int technicianId = -1; // Initialize with an invalid value
+
+            string query = "SELECT Technician_ID FROM Technicians WHERE FirstName = @Name";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", name);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        technicianId = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return technicianId;
+        }
+
+        private int GetClientIdByName(string name)
+        {
+            int clientId = -1; // Initialize with an invalid value
+
+            string query = "SELECT Client_ID FROM Clients WHERE FirstName = @Name";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", name);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        clientId = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return clientId;
+        }
+
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
-
+            if (listBoxInvoice.Items.Count > 0)
+            {
+                InsertInvoiceData();
+            }
+            else
+            {
+                MessageBox.Show("There are no items in the invoice.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void InsertInvoiceData()
+        {
+            try
+            {
+                    connection = new SqlConnection(connectionString);
+                
+                    connection.Open();
+
+                    decimal baseInspectionFee = 250.00m; // Fixed base inspection fee
+
+                    decimal repairCost = 0; // Initialize repair cost
+                    decimal total = 0; // Initialize total
+
+                    // Determine if it's a computer or cell phone repair
+                    if (IsComputerRepair()) // Assuming you have a method to check if it's a computer repair
+                    {
+                        repairCost = decimal.Parse(txtCompTotal.Text); // Use computer repair cost
+                        total = decimal.Parse(txtCompTotal.Text); // Use computer total
+                    }
+                    else
+                    {
+                        repairCost = decimal.Parse(txtCellTotal.Text); // Use cell phone repair cost
+                        total = decimal.Parse(txtCellTotal.Text); // Use cell phone total
+                    }
+
+                    // Example INSERT statement for your "Invoices" table without specifying InvoiceNumber
+                    string insertQuery = "INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) " +
+                                         "VALUES (@Technician_ID, @TotalAmount, @A_Date, @Base_Inspection_Fee, @Repair_Cost, @Client_ID)";
+
+                    command = new SqlCommand(insertQuery, connection);
+                    
+                    // Assuming you have appropriate values for these parameters
+
+                    command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); // Use the selected technician ID
+                    command.Parameters.AddWithValue("@TotalAmount", total); // Use the total amount
+                    command.Parameters.AddWithValue("@A_Date", DateTime.Now); // Use the current date/time
+                    command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); // Fixed base inspection fee
+                    command.Parameters.AddWithValue("@Repair_Cost", repairCost); // Use the repair cost
+                    command.Parameters.AddWithValue("@Client_ID", selectedClientId); // Use the selected client ID
+
+                       
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Invoice data has been successfully inserted into the database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to insert invoice data into the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool IsComputerRepair()
+        {
+            bool isComputerRepair = cbxKeyboard.Checked || cbxCompScreen.Checked || cbxCompBattery.Checked ||
+                            cbxCompVirus.Checked || cbxCompMotherboard.Checked || cbxDisk.Checked;
+
+            return isComputerRepair;
+        }
+
+
     }
 }
+

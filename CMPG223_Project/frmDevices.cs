@@ -250,5 +250,10 @@ namespace CMPG223_Project
             else
                 MessageBox.Show("Please enter a valid ID for the device");
         }
+
+        private void pnlAddDevice_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
