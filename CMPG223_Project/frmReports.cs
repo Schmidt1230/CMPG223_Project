@@ -180,7 +180,10 @@ namespace CMPG223_Project
                 }
             }
 
-            MessageBox.Show(getName(index) + " has the most repairs : " + highest);
+            lstReport.Items.Add("Report for Most Repairs by a technician");
+            lstReport.Items.Add("Technician : " + getName(index));
+            lstReport.Items.Add("Total Repairs Completed : " + calcTotalRepairs(index));
+            lstReport.Items.Add(".....................................................");
             
             
         }
@@ -206,6 +209,20 @@ namespace CMPG223_Project
             }
 
             return count;
+        }
+
+        private void chbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbAll.Checked)
+            {
+                lstReport.Items.Clear();
+                for (int i = 1; i <= countTechnicians(); i++)
+                {
+                    lstReport.Items.Add("Report for : " + getName(i));
+                    lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(i));
+                    lstReport.Items.Add("........................................");
+                }
+            }
         }
     }
 }

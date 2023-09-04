@@ -401,6 +401,7 @@ namespace CMPG223_Project
             if (listBoxInvoice.Items.Count > 0)
             {
                 InsertInvoiceData();
+                repairOrder(); // Add the current repair to the repair Orders database
             }
             else
             {
@@ -412,8 +413,9 @@ namespace CMPG223_Project
         {
             try
             {
-                Boolean proceed = false;
-                    connection.Open();
+                    Boolean proceed = false;
+                connection.Close();    
+                connection.Open();
 
                   
 
@@ -451,10 +453,11 @@ namespace CMPG223_Project
                     command.Parameters.AddWithValue("@cID", selectedClientId);
 
                     int rowsAffected = command.ExecuteNonQuery();
-
+                    connection.Close();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Invoice data has been successfully inserted into the database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                     }
                     else
                     {
@@ -475,6 +478,30 @@ namespace CMPG223_Project
                             cbxCompVirus.Checked || cbxCompMotherboard.Checked || cbxDisk.Checked;
 
             return isComputerRepair;
+        }
+
+        private void repairOrder()
+        {
+            int id = 0;
+            if (int.TryParse(txtDevice.Text, out id))
+                try
+                {
+                    connection.Close();
+                    connection.Open();
+                    sqlStatement = $"Insert Into Repair_Orders (Device_ID,Technician_ID,Order_Date,Repair_Details) VALUES ({id},{selectedTechnicianId},{DateTime.Today.ToShortDateString()},'{"Text"}')";
+                    command = new SqlCommand(sqlStatement, connection);
+
+                    adap = new SqlDataAdapter();
+                    adap.InsertCommand = command;
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (SqlException sqe)
+                {
+                    MessageBox.Show(sqe.Message);
+                }
+            else
+                MessageBox.Show("Please ensure you have entered a correct device ID");
         }
 
 
