@@ -36,36 +36,43 @@ namespace CMPG223_Project
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
             SqlDataReader read;
             SqlCommand comm;
-
+            Boolean flag = false;
 
 
             try
             {
                 conn.Open();
-                String sqlstatement = "Select user_name,user_password From SystemUsers";
+                String sqlstatement = $"Select * From Users";
                 comm = new SqlCommand(sqlstatement, conn);
                 read= comm.ExecuteReader();
 
                 while (read.Read()) 
                 {//While
-                    if(read.GetString(0)==Username && read.GetString(1)!= password) 
+                    String dUser = read.GetString(1);
+                    String dPassword = read.GetString(2);
+                    if(dUser==Username && dPassword != password) 
                         {
                             MessageBox.Show("Password was incorrect for " + Username);
-                            conn.Close();
-                            return false;
+                            flag = false;
                         }
-                    else if ((read.GetString(0)==Username) && (read.GetString(1)==password)) 
+                    else if (dUser==Username && dPassword==password) 
                         {
                             MessageBox.Show("Login Successfull");
-                            conn.Close();
-                            return true;
+                        flag = true;
                         }
                 }//While
 
-                //If User was not found and while loop execution has finished.
-                MessageBox.Show("User was not found");
+                
+                if (flag == true)
+                {
+                    MessageBox.Show("Login Successfull");
+                }
+                else
+                    MessageBox.Show("System Access Denied");
+
+
                 conn.Close();
-                return false;
+                return flag;
             }
             catch (SqlException exc)
             {
@@ -77,7 +84,8 @@ namespace CMPG223_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (verifyUser(txtUsername.Text,txtPassword.Text) == true)
+            string username = txtUsername.Text, password = txtPassword.Text;
+            if (verifyUser(username,password) == true)
             {
                 MessageBox.Show("Success");
             }
