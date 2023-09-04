@@ -16,10 +16,10 @@ namespace CMPG223_Project
     public partial class frmInvoices : Form
     {
         SqlDataAdapter adap;
-        SqlConnection conn; //= new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Initial Catalog=Data;Integrated Security=True;Pooling=False");
+        SqlConnection connection; 
         String sqlStatement;
         SqlDataReader read;
-        SqlCommand comm;
+        SqlCommand command;
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlexandersDatabase.mdf;Integrated Security=True";
 
         private int selectedTechnicianId = -1; 
@@ -35,22 +35,23 @@ namespace CMPG223_Project
         {
             string query = "SELECT FirstName FROM Technicians";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            connection = new SqlConnection(connectionString);
+
+            command = new SqlCommand(query, connection);
+                
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string technicianName = reader.GetString(0);
-                        cmbTechnician.Items.Add(technicianName);
-                    }
-
-                    reader.Close();
-                }
+               string technicianName = reader.GetString(0);
+               cmbTechnician.Items.Add(technicianName);
             }
+
+            reader.Close();
+            connection.Close();
+                
+            
         }
 
         private void PopulateClientsComboBox()
@@ -407,8 +408,8 @@ namespace CMPG223_Project
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
+                    connection = new SqlConnection(connectionString);
+                
                     connection.Open();
 
                     decimal baseInspectionFee = 250.00m; // Fixed base inspection fee
@@ -432,19 +433,19 @@ namespace CMPG223_Project
                     string insertQuery = "INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) " +
                                          "VALUES (@Technician_ID, @TotalAmount, @A_Date, @Base_Inspection_Fee, @Repair_Cost, @Client_ID)";
 
-                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                    {
-                        // Assuming you have appropriate values for these parameters
+                    command = new SqlCommand(insertQuery, connection);
+                    
+                    // Assuming you have appropriate values for these parameters
 
-                        command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); // Use the selected technician ID
-                        command.Parameters.AddWithValue("@TotalAmount", total); // Use the total amount
-                        command.Parameters.AddWithValue("@A_Date", DateTime.Now); // Use the current date/time
-                        command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); // Fixed base inspection fee
-                        command.Parameters.AddWithValue("@Repair_Cost", repairCost); // Use the repair cost
-                        command.Parameters.AddWithValue("@Client_ID", selectedClientId); // Use the selected client ID
+                    command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); // Use the selected technician ID
+                    command.Parameters.AddWithValue("@TotalAmount", total); // Use the total amount
+                    command.Parameters.AddWithValue("@A_Date", DateTime.Now); // Use the current date/time
+                    command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); // Fixed base inspection fee
+                    command.Parameters.AddWithValue("@Repair_Cost", repairCost); // Use the repair cost
+                    command.Parameters.AddWithValue("@Client_ID", selectedClientId); // Use the selected client ID
 
-                        // Execute the INSERT statement
-                        int rowsAffected = command.ExecuteNonQuery();
+                       
+                    int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
@@ -454,8 +455,8 @@ namespace CMPG223_Project
                         {
                             MessageBox.Show("Failed to insert invoice data into the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                    }
-                }
+                    
+                
             }
             catch (Exception ex)
             {
