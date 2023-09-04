@@ -68,7 +68,7 @@ namespace CMPG223_Project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 548);
+            this.label1.Location = new System.Drawing.Point(1095, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(414, 41);
@@ -79,11 +79,11 @@ namespace CMPG223_Project
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 602);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(1082, 54);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1069, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(483, 521);
             this.dataGridView1.TabIndex = 21;
             // 
             // gbxUpdateTechnician
@@ -102,9 +102,9 @@ namespace CMPG223_Project
             this.gbxUpdateTechnician.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxUpdateTechnician.ForeColor = System.Drawing.Color.White;
             this.gbxUpdateTechnician.Location = new System.Drawing.Point(697, 7);
-            this.gbxUpdateTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxUpdateTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxUpdateTechnician.Name = "gbxUpdateTechnician";
-            this.gbxUpdateTechnician.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxUpdateTechnician.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxUpdateTechnician.Size = new System.Drawing.Size(377, 527);
             this.gbxUpdateTechnician.TabIndex = 19;
             this.gbxUpdateTechnician.TabStop = false;
@@ -114,7 +114,7 @@ namespace CMPG223_Project
             // 
             this.txtEmailUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtEmailUpdate.Location = new System.Drawing.Point(69, 385);
-            this.txtEmailUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmailUpdate.Name = "txtEmailUpdate";
             this.txtEmailUpdate.Size = new System.Drawing.Size(247, 31);
             this.txtEmailUpdate.TabIndex = 11;
@@ -145,7 +145,7 @@ namespace CMPG223_Project
             // 
             this.txtCNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCNUpdate.Location = new System.Drawing.Point(69, 284);
-            this.txtCNUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCNUpdate.Name = "txtCNUpdate";
             this.txtCNUpdate.Size = new System.Drawing.Size(247, 31);
             this.txtCNUpdate.TabIndex = 8;
@@ -156,7 +156,7 @@ namespace CMPG223_Project
             this.btnUpdateTechnician.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnUpdateTechnician.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTechnician.Location = new System.Drawing.Point(69, 452);
-            this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateTechnician.Name = "btnUpdateTechnician";
             this.btnUpdateTechnician.Size = new System.Drawing.Size(248, 49);
             this.btnUpdateTechnician.TabIndex = 7;
@@ -168,7 +168,7 @@ namespace CMPG223_Project
             // 
             this.txtLNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLNUpdate.Location = new System.Drawing.Point(69, 177);
-            this.txtLNUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLNUpdate.Name = "txtLNUpdate";
             this.txtLNUpdate.Size = new System.Drawing.Size(247, 31);
             this.txtLNUpdate.TabIndex = 6;
@@ -199,7 +199,7 @@ namespace CMPG223_Project
             // 
             this.txtFNUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtFNUpdate.Location = new System.Drawing.Point(69, 76);
-            this.txtFNUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFNUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFNUpdate.Name = "txtFNUpdate";
             this.txtFNUpdate.Size = new System.Drawing.Size(247, 31);
             this.txtFNUpdate.TabIndex = 0;
@@ -213,10 +213,10 @@ namespace CMPG223_Project
             this.gbxRemoveTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxRemoveTechnician.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxRemoveTechnician.ForeColor = System.Drawing.Color.White;
-            this.gbxRemoveTechnician.Location = new System.Drawing.Point(358, 7);
-            this.gbxRemoveTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxRemoveTechnician.Location = new System.Drawing.Point(357, 7);
+            this.gbxRemoveTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxRemoveTechnician.Name = "gbxRemoveTechnician";
-            this.gbxRemoveTechnician.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxRemoveTechnician.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxRemoveTechnician.Size = new System.Drawing.Size(331, 249);
             this.gbxRemoveTechnician.TabIndex = 20;
             this.gbxRemoveTechnician.TabStop = false;
@@ -228,7 +228,7 @@ namespace CMPG223_Project
             this.btnRemoveTechnician.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRemoveTechnician.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveTechnician.Location = new System.Drawing.Point(39, 160);
-            this.btnRemoveTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoveTechnician.Name = "btnRemoveTechnician";
             this.btnRemoveTechnician.Size = new System.Drawing.Size(248, 49);
             this.btnRemoveTechnician.TabIndex = 7;
@@ -251,7 +251,7 @@ namespace CMPG223_Project
             // 
             this.txtTech_ID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtTech_ID.Location = new System.Drawing.Point(39, 76);
-            this.txtTech_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTech_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTech_ID.Name = "txtTech_ID";
             this.txtTech_ID.Size = new System.Drawing.Size(247, 32);
             this.txtTech_ID.TabIndex = 0;
@@ -271,10 +271,10 @@ namespace CMPG223_Project
             this.gbxAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxAddTechnician.Font = new System.Drawing.Font("Bookman Old Style", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAddTechnician.ForeColor = System.Drawing.Color.White;
-            this.gbxAddTechnician.Location = new System.Drawing.Point(2, 7);
-            this.gbxAddTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxAddTechnician.Location = new System.Drawing.Point(3, 7);
+            this.gbxAddTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxAddTechnician.Name = "gbxAddTechnician";
-            this.gbxAddTechnician.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxAddTechnician.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxAddTechnician.Size = new System.Drawing.Size(348, 527);
             this.gbxAddTechnician.TabIndex = 18;
             this.gbxAddTechnician.TabStop = false;
@@ -284,7 +284,7 @@ namespace CMPG223_Project
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtEmail.Location = new System.Drawing.Point(39, 385);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(247, 32);
             this.txtEmail.TabIndex = 11;
@@ -315,7 +315,7 @@ namespace CMPG223_Project
             // 
             this.txtCellNumber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCellNumber.Location = new System.Drawing.Point(39, 284);
-            this.txtCellNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCellNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCellNumber.Name = "txtCellNumber";
             this.txtCellNumber.Size = new System.Drawing.Size(247, 32);
             this.txtCellNumber.TabIndex = 8;
@@ -326,7 +326,7 @@ namespace CMPG223_Project
             this.btnAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAddTechnician.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTechnician.Location = new System.Drawing.Point(39, 452);
-            this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddTechnician.Name = "btnAddTechnician";
             this.btnAddTechnician.Size = new System.Drawing.Size(248, 49);
             this.btnAddTechnician.TabIndex = 7;
@@ -338,7 +338,7 @@ namespace CMPG223_Project
             // 
             this.txtLastName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLastName.Location = new System.Drawing.Point(39, 177);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(247, 32);
             this.txtLastName.TabIndex = 6;
@@ -369,7 +369,7 @@ namespace CMPG223_Project
             // 
             this.txtFirstName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtFirstName.Location = new System.Drawing.Point(39, 76);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(247, 32);
             this.txtFirstName.TabIndex = 0;
@@ -378,17 +378,18 @@ namespace CMPG223_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(69)))), ((int)(((byte)(79)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1076, 922);
+            this.ClientSize = new System.Drawing.Size(1809, 791);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbxUpdateTechnician);
             this.Controls.Add(this.gbxRemoveTechnician);
             this.Controls.Add(this.gbxAddTechnician);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Technician";
-            this.Text = " ";
+            this.Text = " Technician Information";
             this.Load += new System.EventHandler(this.Technician_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxUpdateTechnician.ResumeLayout(false);
