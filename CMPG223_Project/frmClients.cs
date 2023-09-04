@@ -45,6 +45,17 @@ namespace CMPG223_Project
                 MessageBox.Show("Client added successfully");
 
                 conn.Close();
+
+
+                //Display Clients table in DataGridView.
+                query = "SELECT * FROM Clients";
+                com = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                dataAdapter.SelectCommand = com;
+                dataAdapter.Fill(ds, "Clients");
+
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Clients";
             }
             catch (SqlException error)
             {
@@ -162,6 +173,8 @@ namespace CMPG223_Project
         private void frmClients_Load(object sender, EventArgs e)
         {
             //Display Clients table in DataGridView.
+            conn.Open();
+
             query = "SELECT * FROM Clients";
             com = new SqlCommand(query, conn);
             DataSet ds = new DataSet();
@@ -171,6 +184,7 @@ namespace CMPG223_Project
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "Clients";
 
+            conn.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
