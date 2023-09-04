@@ -117,6 +117,32 @@ namespace CMPG223_Project
             }
         }
 
+        private string getName(int id)
+        {
+            String name = "";
+            try
+            {
+                conn.Open();
+                sqlStatement = $"Select First_Name From Technicians Where Technician_ID = {id}";
+                comm = new SqlCommand(sqlStatement, conn);
+
+                read = comm.ExecuteReader();
+
+                while (read.Read())
+                { 
+                    name = read.GetString(0);
+                }
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+            return name;
+        }
+
+
         private void cmbTechnician_TextChanged(object sender, EventArgs e)
         {
             lstReport.Items.Clear();
@@ -142,16 +168,44 @@ namespace CMPG223_Project
 
         private void btnBestPerforming_Click(object sender, EventArgs e)
         {
+            int highest = 0;
+            int index = -1;
+            MessageBox.Show(countTechnicians().ToString());
+            for (int i = 1; i < countTechnicians(); i++)
+            {
+                if (highest < calcTotalRepairs(i))
+                {
+                    highest = calcTotalRepairs(i);
+                    index = i;                                                      //Store Most repairs index
+                }
+            }
+
+            MessageBox.Show(getName(index) + " has the most repairs : " + highest);
+            
+            
+        }
+
+        private int countTechnicians()
+        {
+            int count = 0;
             try
             {
                 conn.Open();
-                
+                sqlStatement = "Select * from Technicians";
+                comm = new SqlCommand(sqlStatement, conn);
+                read = comm.ExecuteReader();
+
+                while (read.Read())
+                    count++;
+
                 conn.Close();
             }
-            catch (SqlException err)
+            catch (SqlException sqe)
             {
-                MessageBox.Show(err.Message);
+                MessageBox.Show(sqe.Message);
             }
+
+            return count;
         }
     }
 }

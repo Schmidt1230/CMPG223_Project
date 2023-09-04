@@ -87,7 +87,7 @@ namespace CMPG223_Project
             this.rdbAscending.AutoSize = true;
             this.rdbAscending.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAscending.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.rdbAscending.Location = new System.Drawing.Point(42, 170);
+            this.rdbAscending.Location = new System.Drawing.Point(174, 201);
             this.rdbAscending.Name = "rdbAscending";
             this.rdbAscending.Size = new System.Drawing.Size(126, 29);
             this.rdbAscending.TabIndex = 3;
@@ -100,7 +100,7 @@ namespace CMPG223_Project
             this.rdbDescending.AutoSize = true;
             this.rdbDescending.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbDescending.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.rdbDescending.Location = new System.Drawing.Point(42, 135);
+            this.rdbDescending.Location = new System.Drawing.Point(31, 201);
             this.rdbDescending.Name = "rdbDescending";
             this.rdbDescending.Size = new System.Drawing.Size(137, 29);
             this.rdbDescending.TabIndex = 4;
@@ -134,7 +134,7 @@ namespace CMPG223_Project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label3.Location = new System.Drawing.Point(37, 105);
+            this.label3.Location = new System.Drawing.Point(26, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(324, 27);
             this.label3.TabIndex = 5;
