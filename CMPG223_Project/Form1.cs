@@ -91,11 +91,5 @@ namespace CMPG223_Project
                 this.Hide();
             }
         }
-
-        private void chbForm_CheckedChanged(object sender, EventArgs e)
-        {
-            frmNavigate n1 = new frmNavigate();
-            n1.Show();
-        }
     }
 }
