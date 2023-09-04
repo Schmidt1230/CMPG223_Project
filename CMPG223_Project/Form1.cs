@@ -33,7 +33,7 @@ namespace CMPG223_Project
         }
         private Boolean verifyUser(string Username,String password)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=SCHMIDTL\SQLEXPRESS05;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\AlexandersDatabase.mdf;Integrated Security=True");
             SqlDataReader read;
             SqlCommand comm;
 
