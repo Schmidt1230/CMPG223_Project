@@ -78,7 +78,7 @@ namespace CMPG223_Project
 
                     if (txtFNUpdate.Text.Length > 0)
                     {
-                        query = query + $"FirstName = '{txtFNUpdate.Text}";
+                        query = query + $"FirstName = '{txtFNUpdate.Text}'";
                         place = ",";
                     }
 
@@ -87,19 +87,19 @@ namespace CMPG223_Project
                         query = query + place + $" LastName = '{txtLNUpdate.Text}'";
                         place = ",";    //Adds a coma between each set if the First part of Query is full
                     }
-                    if (txtCellNumber.Text.Length > 0)
+                    if (txtCNUpdate.Text.Length > 0)
                     {
                         query = query + place + $" ContactNumber = '{txtCNUpdate.Text}'";
                         place = ",";   //Adds a coma between each set if the First part of Query is full
                     }
 
-                    if (txtEmail.Text.Length > 5)
+                    if (txtEmailUpdate.Text.Length > 5)
                     {
-                        query = query + $" Email = '{txtEmailUpdate.Text}'";
+                        query = query + place + $" Email = '{txtEmailUpdate.Text}'";
                         place = ",";  //Adds a coma between each set if the First part of Query is full
                     }
                     
-                    query = query + $" WHERE ClientID = '{txtClientUpdateID.Text}'";
+                    query = query + $" WHERE Client_ID = '{txtClientUpdateID.Text}'";
                     
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
@@ -111,6 +111,16 @@ namespace CMPG223_Project
                 {
                     
                 }
+
+                //Display Clients table in DataGridView.
+                query = "SELECT * FROM Clients";
+                com = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                dataAdapter.SelectCommand = com;
+                dataAdapter.Fill(ds, "Clients");
+
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Clients";
 
                 conn.Close();
             }
@@ -142,7 +152,7 @@ namespace CMPG223_Project
                     dataAdapter.DeleteCommand = com;
                     com.ExecuteNonQuery();
 
-                    MessageBox.Show("Client information updated successfully.");
+                    MessageBox.Show("Client information deleted successfully.");
                 }
                 else
                 {
@@ -150,6 +160,16 @@ namespace CMPG223_Project
                 }
 
                 conn.Close();
+
+                //Display Clients table in DataGridView.
+                query = "SELECT * FROM Clients";
+                com = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                dataAdapter.SelectCommand = com;
+                dataAdapter.Fill(ds, "Clients");
+
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Clients";
             }
             catch (SqlException error)
             {
@@ -182,6 +202,8 @@ namespace CMPG223_Project
             {
                 //Call DeleteClient Method
                 DeleteClient();
+
+                txtRemoveClient.Clear();
             }
         }
 
@@ -201,6 +223,7 @@ namespace CMPG223_Project
                 txtLNUpdate.Clear();
                 txtCNUpdate.Clear();
                 txtEmailUpdate.Clear();
+                txtClientUpdateID.Clear();
             }
         }
 
