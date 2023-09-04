@@ -20,8 +20,8 @@ namespace CMPG223_Project
         String sqlStatement;
         SqlDataReader read;
         SqlCommand command;
-       
 
+        private const decimal BASE_FEE = 250;
         private int selectedTechnicianId = -1; 
         private int selectedClientId = -1;
 
@@ -415,25 +415,25 @@ namespace CMPG223_Project
                 
                     connection.Open();
 
-                    decimal baseInspectionFee = 250.00m; 
+                  
 
-                    decimal repairCost = 0; 
-                    decimal total = 0; 
+                    double repairCost = 0; 
+                    double total = 0; 
 
                     
                     if (IsComputerRepair()) 
                     {
-                        repairCost = decimal.Parse(txtCompTotal.Text); 
-                        total = decimal.Parse(txtCompTotal.Text); 
+                        repairCost = Double.Parse(txtCompTotal.Text); 
+                        total =  Double.Parse(txtCompTotal.Text); 
                     }
                     else
                     {
-                        repairCost = decimal.Parse(txtCellTotal.Text); 
-                        total = decimal.Parse(txtCellTotal.Text); 
+                        repairCost = double.Parse(txtCellTotal.Text); 
+                        total = double.Parse(txtCellTotal.Text); 
                     }
 
                     String now = DateTime.Now.ToString("d");
-                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES ({selectedTechnicianId}, {500}, {2023/09/04}, {250}, {500}, {selectedClientId})";
+                    string insertQuery = $"INSERT INTO Invoices (Technician_ID, Total_Amount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) VALUES ({selectedTechnicianId}, {total}, {DateTime.Today.ToShortDateString()}, {250,00}, {repairCost}, {selectedClientId})";
 
 
                     command = new SqlCommand(insertQuery, connection);
