@@ -33,6 +33,8 @@ namespace CMPG223_Project
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbxUpdateTechnician = new System.Windows.Forms.GroupBox();
+            this.lblTechUpdate_ID = new System.Windows.Forms.Label();
+            this.txtTechIDUpdate = new System.Windows.Forms.TextBox();
             this.txtEmailUpdate = new System.Windows.Forms.TextBox();
             this.lblEmailUpdate = new System.Windows.Forms.Label();
             this.lblCNUpdate = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace CMPG223_Project
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.lblTechUpdate_ID = new System.Windows.Forms.Label();
-            this.txtTechIDUpdate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxUpdateTechnician.SuspendLayout();
             this.gbxRemoveTechnician.SuspendLayout();
@@ -109,6 +109,24 @@ namespace CMPG223_Project
             this.gbxUpdateTechnician.TabIndex = 19;
             this.gbxUpdateTechnician.TabStop = false;
             this.gbxUpdateTechnician.Text = "Update Technician Information";
+            // 
+            // lblTechUpdate_ID
+            // 
+            this.lblTechUpdate_ID.AutoSize = true;
+            this.lblTechUpdate_ID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTechUpdate_ID.Location = new System.Drawing.Point(84, 28);
+            this.lblTechUpdate_ID.Name = "lblTechUpdate_ID";
+            this.lblTechUpdate_ID.Size = new System.Drawing.Size(127, 22);
+            this.lblTechUpdate_ID.TabIndex = 13;
+            this.lblTechUpdate_ID.Text = "Technician ID:";
+            // 
+            // txtTechIDUpdate
+            // 
+            this.txtTechIDUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtTechIDUpdate.Location = new System.Drawing.Point(53, 61);
+            this.txtTechIDUpdate.Name = "txtTechIDUpdate";
+            this.txtTechIDUpdate.Size = new System.Drawing.Size(186, 26);
+            this.txtTechIDUpdate.TabIndex = 12;
             // 
             // txtEmailUpdate
             // 
@@ -305,7 +323,7 @@ namespace CMPG223_Project
             this.btnAddTechnician.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAddTechnician.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTechnician.Location = new System.Drawing.Point(28, 395);
+            this.btnAddTechnician.Location = new System.Drawing.Point(30, 449);
             this.btnAddTechnician.Name = "btnAddTechnician";
             this.btnAddTechnician.Size = new System.Drawing.Size(186, 40);
             this.btnAddTechnician.TabIndex = 7;
@@ -348,24 +366,6 @@ namespace CMPG223_Project
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(186, 27);
             this.txtFirstName.TabIndex = 0;
-            // 
-            // lblTechUpdate_ID
-            // 
-            this.lblTechUpdate_ID.AutoSize = true;
-            this.lblTechUpdate_ID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTechUpdate_ID.Location = new System.Drawing.Point(84, 28);
-            this.lblTechUpdate_ID.Name = "lblTechUpdate_ID";
-            this.lblTechUpdate_ID.Size = new System.Drawing.Size(127, 22);
-            this.lblTechUpdate_ID.TabIndex = 13;
-            this.lblTechUpdate_ID.Text = "Technician ID:";
-            // 
-            // txtTechIDUpdate
-            // 
-            this.txtTechIDUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtTechIDUpdate.Location = new System.Drawing.Point(53, 61);
-            this.txtTechIDUpdate.Name = "txtTechIDUpdate";
-            this.txtTechIDUpdate.Size = new System.Drawing.Size(186, 26);
-            this.txtTechIDUpdate.TabIndex = 12;
             // 
             // Technician
             // 

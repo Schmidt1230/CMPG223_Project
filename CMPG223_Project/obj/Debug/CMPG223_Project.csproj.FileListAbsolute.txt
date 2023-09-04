@@ -82,3 +82,8 @@ C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\bin\Debug\Alexa
 C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmNavigate.resources
 C:\Users\jlbeg\Documents\CMPG223\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmReports.resources
 C:\Users\steph\OneDrive\Desktop\Tech Repairs\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmReports.resources
+C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase.mdf
+C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\bin\Debug\AlexandersDatabase_log.ldf
+C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmNavigate.resources
+C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmReports.resources
+C:\Users\andre\OneDrive\Desktop\CMPG223_Project\CMPG223_Project\obj\Debug\CMPG223_Project.frmInvoices.resources
