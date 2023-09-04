@@ -109,7 +109,7 @@ namespace CMPG223_Project
                 }
                 else
                 {
-                    this.Close();
+                    
                 }
 
                 conn.Close();
@@ -146,7 +146,7 @@ namespace CMPG223_Project
                 }
                 else
                 {
-                    this.Close();
+
                 }
 
                 conn.Close();
@@ -187,9 +187,9 @@ namespace CMPG223_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtFNUpdate.Text == "" || txtLNUpdate.Text == "" || txtCNUpdate.Text == "" || txtEmailUpdate.Text == "")
+            if (txtFNUpdate.Text == "" && txtLNUpdate.Text == "" && txtCNUpdate.Text == "" && txtEmailUpdate.Text == "")
             {
-                MessageBox.Show("Please enter valid values.");
+                MessageBox.Show("Please enter valid values to update.");
             }
             else
             {
