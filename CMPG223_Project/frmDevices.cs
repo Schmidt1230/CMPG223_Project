@@ -88,7 +88,7 @@ namespace CMPG223_Project
                 {
                     fixable = true;
                 }
-                String sqlstatement = $"Insert Into Devices (Device_Type,Fixable,Details,Repair_History) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
+                String sqlstatement = $"Insert Into Devices (DeviceType,Fixable,Details,RepairHistory) VALUES ('{cmbDevices.Text}','{fixable}','{txtNewDetails.Text}','{null}')";
                 comm = new SqlCommand(sqlstatement, conn);
                 adap.InsertCommand = comm;
                 comm.ExecuteNonQuery();
