@@ -371,24 +371,22 @@ namespace CMPG223_Project
 
         private int GetClientIdByName(string name)
         {
-            int clientId = -1; // Initialize with an invalid value
+            int clientId = -1; 
 
             string query = "SELECT Client_ID FROM Clients WHERE FirstName = @Name";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Name", name);
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-                    if (result != null && result != DBNull.Value)
-                    {
-                        clientId = Convert.ToInt32(result);
-                    }
-                }
-            }
+            connection = new SqlConnection(connectionString);
 
+            command = new SqlCommand(query, connection);
+                
+            command.Parameters.AddWithValue("@Name", name);
+            connection.Open();
+            object result = command.ExecuteScalar();
+             if (result != null && result != DBNull.Value)
+             {
+                 clientId = Convert.ToInt32(result);             
+             }                
+            
             return clientId;
         }
 
@@ -412,37 +410,37 @@ namespace CMPG223_Project
                 
                     connection.Open();
 
-                    decimal baseInspectionFee = 250.00m; // Fixed base inspection fee
+                    decimal baseInspectionFee = 250.00m; 
 
-                    decimal repairCost = 0; // Initialize repair cost
-                    decimal total = 0; // Initialize total
+                    decimal repairCost = 0; 
+                    decimal total = 0; 
 
-                    // Determine if it's a computer or cell phone repair
-                    if (IsComputerRepair()) // Assuming you have a method to check if it's a computer repair
+                    
+                    if (IsComputerRepair()) 
                     {
-                        repairCost = decimal.Parse(txtCompTotal.Text); // Use computer repair cost
-                        total = decimal.Parse(txtCompTotal.Text); // Use computer total
+                        repairCost = decimal.Parse(txtCompTotal.Text); 
+                        total = decimal.Parse(txtCompTotal.Text); 
                     }
                     else
                     {
-                        repairCost = decimal.Parse(txtCellTotal.Text); // Use cell phone repair cost
-                        total = decimal.Parse(txtCellTotal.Text); // Use cell phone total
+                        repairCost = decimal.Parse(txtCellTotal.Text); 
+                        total = decimal.Parse(txtCellTotal.Text); 
                     }
 
-                    // Example INSERT statement for your "Invoices" table without specifying InvoiceNumber
+                    
                     string insertQuery = "INSERT INTO Invoices (Technician_ID, TotalAmount, A_Date, Base_Inspection_Fee, Repair_Cost, Client_ID) " +
                                          "VALUES (@Technician_ID, @TotalAmount, @A_Date, @Base_Inspection_Fee, @Repair_Cost, @Client_ID)";
 
                     command = new SqlCommand(insertQuery, connection);
                     
-                    // Assuming you have appropriate values for these parameters
+                    
 
-                    command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); // Use the selected technician ID
-                    command.Parameters.AddWithValue("@TotalAmount", total); // Use the total amount
-                    command.Parameters.AddWithValue("@A_Date", DateTime.Now); // Use the current date/time
-                    command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); // Fixed base inspection fee
-                    command.Parameters.AddWithValue("@Repair_Cost", repairCost); // Use the repair cost
-                    command.Parameters.AddWithValue("@Client_ID", selectedClientId); // Use the selected client ID
+                    command.Parameters.AddWithValue("@Technician_ID", selectedTechnicianId); 
+                    command.Parameters.AddWithValue("@TotalAmount", total); 
+                    command.Parameters.AddWithValue("@A_Date", DateTime.Now); 
+                    command.Parameters.AddWithValue("@Base_Inspection_Fee", baseInspectionFee); 
+                    command.Parameters.AddWithValue("@Repair_Cost", repairCost); 
+                    command.Parameters.AddWithValue("@Client_ID", selectedClientId); 
 
                        
                     int rowsAffected = command.ExecuteNonQuery();
