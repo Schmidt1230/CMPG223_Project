@@ -65,8 +65,8 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Technicians SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', CellphoneNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}'";
-                    com = new SqlCommand(query, conn);
+                    query = $"UPDATE Technicians SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', CellphoneNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE Technician_ID = '{txtTechIDUpdate.Text}'";
+                    ////////com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
 
@@ -149,8 +149,15 @@ namespace CMPG223_Project
 
         private void btnAddTechnician_Click(object sender, EventArgs e)
         {
-            //Call Add Method
-            AddTechnician();
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtCellNumber.Text == "" || txtEmail.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call Add Method
+                AddTechnician();
+            }
 
             //Clear textboxes
             txtFirstName.Clear();
@@ -161,19 +168,35 @@ namespace CMPG223_Project
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
         {
-            //Call Update Method
-            UpdateTechnician();
+            if (txtFNUpdate.Text == "" || txtLNUpdate.Text == "" || txtCNUpdate.Text == "" || txtEmailUpdate.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call Update Method
+                UpdateTechnician();
+            }
 
+            //Clear textboxes.
             txtFNUpdate.Clear();
             txtLNUpdate.Clear();
             txtCNUpdate.Clear();
             txtEmailUpdate.Clear();
+            txtTechIDUpdate.Clear();
         }
 
         private void btnRemoveTechnician_Click(object sender, EventArgs e)
         {
-            //Call RemoveTechnician Method
-            RemoveTechnician();
+            if (txtTech_ID.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call RemoveTechnician Method
+                RemoveTechnician();
+            }
         }
     }
 }
