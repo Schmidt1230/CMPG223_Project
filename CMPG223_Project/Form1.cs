@@ -53,22 +53,19 @@ namespace CMPG223_Project
                     if(dUser==Username && dPassword != password) 
                         {
                             MessageBox.Show("Password was incorrect for " + Username);
-                            conn.Close();
                             flag = false;
                         }
                     else if (dUser==Username && dPassword==password) 
                         {
                             MessageBox.Show("Login Successfull");
-                            conn.Close();
                         flag = true;
                         }
                 }//While
 
-                //If User was not found and while loop execution has finished.
+                
                 if (flag == true)
                 {
                     MessageBox.Show("Login Successfull");
-                    return flag;
                 }
                 else
                     MessageBox.Show("System Access Denied");
