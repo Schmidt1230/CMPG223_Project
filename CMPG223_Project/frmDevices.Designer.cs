@@ -74,6 +74,7 @@
             this.pnlAddDevice.Name = "pnlAddDevice";
             this.pnlAddDevice.Size = new System.Drawing.Size(1332, 544);
             this.pnlAddDevice.TabIndex = 1;
+            this.pnlAddDevice.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddDevice_Paint);
             // 
             // grpbxRemove
             // 
