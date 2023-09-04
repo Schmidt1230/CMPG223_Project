@@ -18,13 +18,6 @@ namespace CMPG223_Project
         String query;
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
 
-        public string clientFNUpdate;
-        public string clientLNUpdate;
-        public string clientCNUpdate;
-        public string clientEmailUpdate;
-
-        public int clientID;
-
         public frmClients()
         {
             InitializeComponent();
@@ -71,8 +64,6 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                int clientID = int.Parse(txtRemoveClient.Text);
-
                 string message = "Update client information?";
                 string title = "Update Client Information";
 
@@ -82,7 +73,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"UPDATE Clients SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', ContactNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE FirstName = '{txtFirstName.Text}'";
+                    query = $"UPDATE Clients SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', ContactNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE ClientID = '{txtClientUpdateID.Text}'";
                     com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
@@ -119,7 +110,7 @@ namespace CMPG223_Project
                 //Display messagebox.
                 if (result == DialogResult.Yes)
                 {
-                    query = $"DELETE FROM Clients WHERE Client_ID = {clientID}";
+                    query = $"DELETE FROM Clients WHERE Client_ID = {txtRemoveClient.Text}";
                     com = new SqlCommand(query, conn);
                     dataAdapter.DeleteCommand = com;
                     com.ExecuteNonQuery();
@@ -142,32 +133,52 @@ namespace CMPG223_Project
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            //Call addClient Method
-            addClient();
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtCellNumber.Text == "" || txtEmail.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call addClient Method
+                addClient();
 
-            txtFirstName.Clear();
-            txtLastName.Clear();
-            txtCellNumber.Clear();
-            txtEmail.Clear();
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtCellNumber.Clear();
+                txtEmail.Clear();
+            }
         }
 
         private void btnRemoveClient_Click(object sender, EventArgs e)
         {
-            clientID = int.Parse(txtRemoveClient.Text);
-
-            //Call DeleteClient Method
-            DeleteClient();
+            if (txtRemoveClient.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call DeleteClient Method
+                DeleteClient();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            clientFNUpdate = txtFNUpdate.Text;
-            clientLNUpdate = txtLNUpdate.Text;
-            clientCNUpdate = txtCNUpdate.Text;
-            clientEmailUpdate = txtEmailUpdate.Text;
+            if (txtFNUpdate.Text == "" || txtLNUpdate.Text == "" || txtCNUpdate.Text == "" || txtEmailUpdate.Text == "")
+            {
+                MessageBox.Show("Please enter valid values.");
+            }
+            else
+            {
+                //Call Update Method
+                UpdateClient();
 
-            //Call Update Method
-            UpdateClient();
+                //Clear textboxes after successfull update.
+                txtFNUpdate.Clear();
+                txtLNUpdate.Clear();
+                txtCNUpdate.Clear();
+                txtEmailUpdate.Clear();
+            }
         }
 
         private void frmClients_Load(object sender, EventArgs e)

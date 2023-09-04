@@ -56,7 +56,7 @@ namespace CMPG223_Project
             {
                 conn.Open();
 
-                string message = "Update technician information?";
+                string message = "Are you sure you want to update selected technician information?";
                 string title = "Update Technician Information";
 
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -66,7 +66,7 @@ namespace CMPG223_Project
                 if (result == DialogResult.Yes)
                 {
                     query = $"UPDATE Technicians SET FirstName = '{txtFNUpdate.Text}', LastName = '{txtLNUpdate.Text}', CellphoneNumber = '{txtCNUpdate.Text}', Email = '{txtEmailUpdate.Text}' WHERE Technician_ID = '{txtTechIDUpdate.Text}'";
-                    ////////com = new SqlCommand(query, conn);
+                    com = new SqlCommand(query, conn);
                     dataAdapter.UpdateCommand = com;
                     com.ExecuteNonQuery();
 
@@ -74,7 +74,7 @@ namespace CMPG223_Project
                 }
                 else
                 {
-                    this.Close();
+                    
                 }
 
                 conn.Close();
@@ -111,7 +111,7 @@ namespace CMPG223_Project
                 }
                 else
                 {
-                    this.Close();
+                    
                 }
 
                 conn.Close();
@@ -157,13 +157,13 @@ namespace CMPG223_Project
             {
                 //Call Add Method
                 AddTechnician();
-            }
 
-            //Clear textboxes
-            txtFirstName.Clear();
-            txtLastName.Clear();
-            txtCellNumber.Clear();
-            txtEmail.Clear();
+                //Clear textboxes
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtCellNumber.Clear();
+                txtEmail.Clear();
+            }
         }
 
         private void btnUpdateTechnician_Click(object sender, EventArgs e)
@@ -176,14 +176,14 @@ namespace CMPG223_Project
             {
                 //Call Update Method
                 UpdateTechnician();
-            }
 
-            //Clear textboxes.
-            txtFNUpdate.Clear();
-            txtLNUpdate.Clear();
-            txtCNUpdate.Clear();
-            txtEmailUpdate.Clear();
-            txtTechIDUpdate.Clear();
+                //Clear textboxes.
+                txtFNUpdate.Clear();
+                txtLNUpdate.Clear();
+                txtCNUpdate.Clear();
+                txtEmailUpdate.Clear();
+                txtTechIDUpdate.Clear();
+            }
         }
 
         private void btnRemoveTechnician_Click(object sender, EventArgs e)
