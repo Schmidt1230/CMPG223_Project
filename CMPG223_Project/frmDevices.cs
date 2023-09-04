@@ -94,12 +94,17 @@ namespace CMPG223_Project
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Device was added successfully");
                 conn.Close();
+                txtNewDetails.Clear();
+                chbFixable.Checked = false;
+
+
             }
             catch (SqlException sqe)
             {
                 MessageBox.Show(sqe.Message);
 
             }
+            
         }
         private void removeDevice(int ID)
         {
@@ -140,6 +145,8 @@ namespace CMPG223_Project
                 adap.UpdateCommand = comm;
                 adap.UpdateCommand.ExecuteNonQuery();
                 MessageBox.Show($"Device with ID {ID} has been updated successfully!");
+                txtUpdateDetails.Clear();
+                chbRepairable.Checked = false;
                 conn.Close();
             }
             catch (SqlException sqe)
@@ -234,8 +241,8 @@ namespace CMPG223_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int id;
-            if (int.TryParse(txtUpdateDetails.Text, out id))
+            int id = 0;
+            if (int.TryParse(txtUpdateID.Text, out id))
             {
                 String heading = "Are you sure you wish to UPDATE device";
                 String message = "Update Device";

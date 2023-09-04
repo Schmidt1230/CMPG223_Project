@@ -170,7 +170,6 @@ namespace CMPG223_Project
         {
             int highest = 0;
             int index = -1;
-            MessageBox.Show(countTechnicians().ToString());
             for (int i = 1; i < countTechnicians(); i++)
             {
                 if (highest < calcTotalRepairs(i))

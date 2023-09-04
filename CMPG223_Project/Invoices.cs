@@ -309,7 +309,7 @@ namespace CMPG223_Project
 
                
                 listBoxInvoice.Items.Add("***************************************************************************************************************************");
-                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): \tR{cellTotal.ToString("R0.00")}");
+                listBoxInvoice.Items.Add($"\nComponent Total (excluding VAT): \tR{cellTotal.ToString("0.00")}");
                 listBoxInvoice.Items.Add($"Component VAT (15%): \t\tR{cellVat.ToString("0.00")}");
                 listBoxInvoice.Items.Add($"Component Total (including VAT): \tR{cellTotalWithVat.ToString("0.00")}");
                 listBoxInvoice.Items.Add(" ");
