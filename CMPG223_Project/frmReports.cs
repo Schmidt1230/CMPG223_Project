@@ -157,9 +157,9 @@ namespace CMPG223_Project
             int index = -1;
             for (int i = 1; i < countTechnicians(); i++)
             {
-                if (highest < calcTotalRepairs(i))
+                if (highest < calcTotalRepairs(tIDs[i]))
                 {
-                    highest = calcTotalRepairs(i);
+                    highest = calcTotalRepairs(tIDs[i]);
                     index = i;                                                      //Store Most repairs index
                 }
             }
