@@ -207,6 +207,7 @@ namespace CMPG223_Project
                     lstReport.Items.Add("Report for : " + getName(tIDs[i]));
                     lstReport.Items.Add("Total Repairs : " + calcTotalRepairs(tIDs[i]));
                     lstReport.Items.Add("........................................");
+                    //change 1
                 }
             }
         }
